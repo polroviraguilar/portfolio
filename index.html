@@ -43,17 +43,47 @@
     <button class="carousel-btn prev" onclick="scrollCarousel('carousel-projects', -1)">‹</button>
 
     <div class="carousel" id="carousel-projects">
-      <div class="carousel-item">
-        <img src="assets/images/project1.gif" alt="Game 1" />
-        <h3>Pixel Knight</h3>
-        <p>Retro platformer in Godot.</p>
+      <div class="carousel-item project-card">
+        <img src="assets/images/bomberbots.gif" alt="Bömberbots gameplay" class="project-gif" />
+        <div class="project-meta">
+          <span>👥 2</span>
+          <span>🕒 4 Months</span>
+          <span>⚙️ Löve2D (Lua)</span>
+        </div>
+        <h3 class="project-title">Bömberbots <span class="year">(2022)</span></h3>
+        <p class="project-role">Gameplay Programmer</p>
+        <p class="project-description">
+          Bomberman clone created with Lua and Löve2D. Built during my time at FutureGames with a teammate.
+        </p>
       </div>
-      <div class="carousel-item">
-        <img src="assets/images/project2.gif" alt="Game 2" />
-        <h3>Star Drift</h3>
-        <p>Neon space racer in Unity.</p>
+
+      <div class="carousel-item project-card">
+        <img src="assets/images/project1.gif" alt="Pixel Knight gameplay" class="project-gif" />
+        <div class="project-meta">
+          <span>👥 Solo</span>
+          <span>🕒 2 Weeks</span>
+          <span>⚙️ Godot</span>
+        </div>
+        <h3 class="project-title">Pixel Knight <span class="year">(2023)</span></h3>
+        <p class="project-role">Solo Developer</p>
+        <p class="project-description">
+          Retro-style action platformer featuring melee combat, enemies and bosses. Designed levels and codebase.
+        </p>
       </div>
-      <!-- Pots afegir més jocs aquí -->
+
+      <div class="carousel-item project-card">
+        <img src="assets/images/project2.gif" alt="Star Drift gameplay" class="project-gif" />
+        <div class="project-meta">
+          <span>👥 3</span>
+          <span>🕒 6 Weeks</span>
+          <span>⚙️ Unity</span>
+        </div>
+        <h3 class="project-title">Star Drift <span class="year">(2023)</span></h3>
+        <p class="project-role">Systems & UX Design</p>
+        <p class="project-description">
+          Futuristic racer with neon visuals and tight drift-based mechanics. Focused on controls and game feel.
+        </p>
+      </div>
     </div>
 
     <button class="carousel-btn next" onclick="scrollCarousel('carousel-projects', 1)">›</button>
@@ -69,20 +99,46 @@
     <button class="carousel-btn prev" onclick="scrollCarousel('carousel-pixelart', -1)">‹</button>
 
     <div class="carousel" id="carousel-pixelart">
-      <div class="carousel-item">
-        <img src="assets/images/pixel1.png" alt="Pixel Art 1" />
-        <h3>Character Sprite</h3>
-        <p>Idle + Walk cycle animation.</p>
+      <div class="carousel-item project-card">
+        <img src="assets/images/pixel1.gif" alt="Idle animation" class="project-gif" />
+        <div class="project-meta">
+          <span>🧩 Sprite</span>
+          <span>🎨 Aseprite</span>
+          <span>🕒 1 Day</span>
+        </div>
+        <h3 class="project-title">Knight Idle</h3>
+        <p class="project-role">Character Animation</p>
+        <p class="project-description">
+          4-frame idle loop for a pixel knight character, made for prototyping.
+        </p>
       </div>
-      <div class="carousel-item">
-        <img src="assets/images/pixel2.png" alt="Pixel Art 2" />
-        <h3>Tileset</h3>
-        <p>Pixel-perfect tiles for platformer level.</p>
+
+      <div class="carousel-item project-card">
+        <img src="assets/images/pixel2.png" alt="Tileset" class="project-gif" />
+        <div class="project-meta">
+          <span>🧱 Tileset</span>
+          <span>🎨 Photoshop</span>
+          <span>🕒 2 Days</span>
+        </div>
+        <h3 class="project-title">Forest Platform Tiles</h3>
+        <p class="project-role">Environment Art</p>
+        <p class="project-description">
+          Tileset designed for 2D platformers: terrain, trees and modular assets.
+        </p>
       </div>
-      <div class="carousel-item">
-        <img src="assets/images/pixel3.gif" alt="Pixel Art Animation" />
-        <h3>Magic FX</h3>
-        <p>Animated spell effect using 6 frames.</p>
+
+      <div class="carousel-item project-card">
+        <img src="assets/images/pixel3.gif" alt="FX animation" class="project-gif" />
+        <div class="project-meta">
+          <span>💥 VFX</span>
+          <span>🎨 Aseprite</span>
+          <span>🕒 4 Hours</span>
+        </div>
+        <h3 class="project-title">Magic Explosion</h3>
+        <p class="project-role">Visual Effects</p>
+        <p class="project-description">
+          Animated spell effect used in a top-down arena prototype.
+        </p>
       </div>
     </div>
 
@@ -99,20 +155,46 @@
     <button class="carousel-btn prev" onclick="scrollCarousel('carousel-3dmodels', -1)">‹</button>
 
     <div class="carousel" id="carousel-3dmodels">
-      <div class="carousel-item">
-        <img src="assets/images/model1.png" alt="3D Model 1" />
-        <h3>Sci-Fi Crate</h3>
-        <p>Low-poly with PBR materials.</p>
+      <div class="carousel-item project-card">
+        <img src="assets/images/model1.png" alt="Crate model" class="project-gif" />
+        <div class="project-meta">
+          <span>📦 Prop</span>
+          <span>🛠️ Blender</span>
+          <span>🕒 1 Day</span>
+        </div>
+        <h3 class="project-title">Sci-Fi Crate</h3>
+        <p class="project-role">Low Poly Model</p>
+        <p class="project-description">
+          Stylized crate with simple PBR material, designed for use in space-themed game.
+        </p>
       </div>
-      <div class="carousel-item">
-        <img src="assets/images/model2.png" alt="3D Model 2" />
-        <h3>Fantasy Sword</h3>
-        <p>Hand-painted texture, ready for Unity.</p>
+
+      <div class="carousel-item project-card">
+        <img src="assets/images/model2.png" alt="Sword model" class="project-gif" />
+        <div class="project-meta">
+          <span>🗡 Weapon</span>
+          <span>🛠️ Blockbench</span>
+          <span>🕒 2 Days</span>
+        </div>
+        <h3 class="project-title">Fantasy Sword</h3>
+        <p class="project-role">Hand-Painted Model</p>
+        <p class="project-description">
+          Sword asset for an RPG prototype. Painted manually for a stylized look.
+        </p>
       </div>
-      <div class="carousel-item">
-        <img src="assets/images/model3.png" alt="3D Model 3" />
-        <h3>Alien Creature</h3>
-        <p>Animated rig with IK bones.</p>
+
+      <div class="carousel-item project-card">
+        <img src="assets/images/model3.png" alt="Alien Creature" class="project-gif" />
+        <div class="project-meta">
+          <span>🧬 Character</span>
+          <span>🛠️ Blender</span>
+          <span>🕒 1 Week</span>
+        </div>
+        <h3 class="project-title">Alien Creature</h3>
+        <p class="project-role">Rigged & Animated</p>
+        <p class="project-description">
+          Game-ready creature with IK rig and idle/walk animations. Ready for Unity import.
+        </p>
       </div>
     </div>
 
