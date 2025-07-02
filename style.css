@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d0d0d;
+  color: #f1f1f1;
+}
+
+nav {
+  background: #111;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover, nav .active {
+  color: #00ffcc;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h1 {
+  font-size: 3rem;
+}
+.hero span {
+  color: #00ffcc;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+.hero .btn {
+  padding: 10px 25px;
+  background: #00ffcc;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.featured {
+  padding: 60px 20px;
+  text-align: center;
+}
+.featured h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+.project-card {
+  background: #1a1a1a;
+  padding: 20px;
+  max-width: 300px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 0 10px #000;
+}
+.project-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+.project-card h3 {
+  margin-top: 10px;
+  color: #00ffcc;
+}
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #111;
+  font-size: 0.9rem;
+}
+footer .socials a {
+  color: #00ffcc;
+  margin: 0 10px;
+  text-decoration: none;
+}
