@@ -145,26 +145,61 @@ nav li a.active {
 /* FOOTER */
 footer {
   background: #111;
-  padding: 60px 20px;
-  text-align: center;
+  padding: 80px 20px;
+  font-size: 1rem;
+  color: #ddd;
 }
 
-footer h2 {
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.footer-content h2 {
+  color: #f8de7e;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.footer-content a {
+  color: #fada5e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer-content .socials {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-content .socials a {
+  color: #fada5e;
+}
+
+.footer-content strong {
+  color: #f48067;
+  font-weight: 600;
+}
+
+.footer-content em {
+  font-style: italic;
   color: #f8de7e;
 }
 
-footer a {
-  margin: 0 10px;
-}
-
-footer .socials {
-  margin-top: 15px;
-}
-
 footer .copyright {
-  margin-top: 30px;
-  font-size: 0.9rem;
+  margin-top: 40px;
+  font-size: 0.85rem;
   color: #777;
+  text-align: center;
 }
 
 /* HERO - BACKGROUND + PROFILE */
