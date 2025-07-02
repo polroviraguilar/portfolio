@@ -328,7 +328,11 @@ footer .copyright {
 }
 
 /* SPAN destacat */
-span, .highlight-yellow {
+span{
+  font-weight: bold;
+}
+
+.highlight-yellow {
   color: #fada5e !important;
   font-weight: bold;
 }
