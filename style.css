@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #112f2c;
+  background: #1a1a1a;
   color: #f1f1f1;
   scroll-behavior: smooth;
 }
@@ -207,8 +207,8 @@ footer .copyright {
 }
 
 .tech-badges span {
-  border: 1px solid #fada5e;
-  color: #fada5e;
+  border: 1px solid #f48067;
+  color: #f48067;
   padding: 6px 12px;
   border-radius: 12px;
   font-size: 0.95rem;
@@ -217,7 +217,7 @@ footer .copyright {
 }
 
 .tech-badges span:hover {
-  background: #fada5e;
+  background: #f48067;
   color: #1a1a1a;
   cursor: default;
 }
