@@ -67,7 +67,7 @@ nav li a.active {
 }
 
 .hero span {
-  color: #f8de7e;
+  color: #f48067;;
 }
 
 .hero p {
@@ -328,8 +328,8 @@ footer .copyright {
 }
 
 /* SPAN destacat */
-span, .highlight-orange {
-  color: var(--accent-orange);
+span, .highlight-yellow {
+  color: #fada5e;
   font-weight: bold;
 }
 
