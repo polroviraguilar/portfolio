@@ -223,3 +223,66 @@ footer .copyright {
   color: #111;
   cursor: default;
 }
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 40px auto;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 30px;
+  padding: 20px 10px;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  min-width: 280px;
+  flex-shrink: 0;
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px #000;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #00ffcc;
+  border: none;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  padding: 8px 12px;
+  z-index: 2;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.carousel-btn:hover {
+  opacity: 1;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
