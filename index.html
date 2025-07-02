@@ -3,52 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pol Rovira - Portfolio</title>
+  <title>My GameDev Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav>
-    <div class="logo">Pol Rovira</div>
+    <div class="logo">🎮 DevName</div>
     <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#pixelart">Pixel Art</a></li>
+      <li><a href="#models3d">3D Models</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- HERO SECTION -->
-  <section class="hero">
-    <h1>Hi, I'm <span>Pol Rovira</span></h1>
-    <p>Game Developer crafting digital worlds with Unity</p>
-    <a href="projects.html" class="btn">View My Games</a>
+  <section class="hero" id="home">
+    <h1>Hi, I'm <span>DevName</span></h1>
+    <p>Game Developer building worlds with code, pixels & polygons</p>
+    <a href="#projects" class="btn">🎮 View My Work</a>
   </section>
 
-  <!-- FEATURED PROJECTS -->
-  <section class="featured">
-    <h2>Featured Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="assets/images/project1.gif" alt="Game 1" />
+  <!-- PROJECTS SECTION -->
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/images/project1.gif" alt="Game 1">
         <h3>Pixel Knight</h3>
-        <p>Retro action platformer made in Godot. Magic, swords and bosses!</p>
-        <a href="projects/game1.html">→ Learn more</a>
+        <p>Retro platformer made in Godot. Swords, magic, and pixel bosses!</p>
       </div>
-      <div class="project-card">
-        <img src="assets/images/project2.gif" alt="Game 2" />
+      <div class="card">
+        <img src="assets/images/project2.gif" alt="Game 2">
         <h3>Star Drift</h3>
-        <p>Futuristic space racer with neon visuals and synthwave vibes. Unity-powered.</p>
-        <a href="projects/game2.html">→ Learn more</a>
+        <p>Neon space racing game with Unity. Speed and synthwave vibes.</p>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 DevName · <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+  <!-- PIXEL ART SECTION -->
+  <section class="section" id="pixelart">
+    <h2>Pixel Art</h2>
+    <p class="section-description">Sprites, tilesets and character animations created in Aseprite and Photoshop.</p>
+    <div class="grid">
+      <img src="assets/images/pixel1.png" alt="Pixel Art 1">
+      <img src="assets/images/pixel2.png" alt="Pixel Art 2">
+      <img src="assets/images/pixel3.gif" alt="Pixel Art Animation">
+    </div>
+  </section>
+
+  <!-- 3D MODELS SECTION -->
+  <section class="section" id="models3d">
+    <h2>3D Models</h2>
+    <p class="section-description">Game-ready 3D assets modeled and textured in Blender.</p>
+    <div class="grid">
+      <img src="assets/images/model1.png" alt="3D Model 1">
+      <img src="assets/images/model2.png" alt="3D Model 2">
+      <img src="assets/images/model3.png" alt="3D Model 3">
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out or follow me on my platforms:</p>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
     <div class="socials">
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a> ·
-      <a href="https://itch.io/profile/yourusername" target="_blank">itch.io</a> ·
-      <a href="https://linkedin.com/in/yourusername
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://itch.io/profile/yourusername" target="_blank">itch.io</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    </div>
+    <p class="copyright">© 2025 DevName</p>
+  </footer>
+
+</body>
+</html>
