@@ -37,42 +37,87 @@
   
   <!-- PROJECTS SECTION -->
   <section class="section" id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="assets/images/project1.gif" alt="Game 1">
+  <h2>Projects</h2>
+  <div class="carousel-container">
+    <button class="carousel-btn prev" onclick="scrollCarousel('carousel-projects', -1)">‹</button>
+
+    <div class="carousel" id="carousel-projects">
+      <div class="carousel-item">
+        <img src="assets/images/project1.gif" alt="Game 1" />
         <h3>Pixel Knight</h3>
-        <p>Retro platformer made in Godot. Swords, magic, and pixel bosses!</p>
+        <p>Retro platformer in Godot.</p>
       </div>
-      <div class="card">
-        <img src="assets/images/project2.gif" alt="Game 2">
+      <div class="carousel-item">
+        <img src="assets/images/project2.gif" alt="Game 2" />
         <h3>Star Drift</h3>
-        <p>Neon space racing game with Unity. Speed and synthwave vibes.</p>
+        <p>Neon space racer in Unity.</p>
       </div>
+      <!-- Pots afegir més jocs aquí -->
     </div>
-  </section>
+
+    <button class="carousel-btn next" onclick="scrollCarousel('carousel-projects', 1)">›</button>
+  </div>
+</section>
 
   <!-- PIXEL ART SECTION -->
   <section class="section" id="pixelart">
-    <h2>Pixel Art</h2>
-    <p class="section-description">Sprites, tilesets and character animations created in Aseprite and Photoshop.</p>
-    <div class="grid">
-      <img src="assets/images/pixel1.png" alt="Pixel Art 1">
-      <img src="assets/images/pixel2.png" alt="Pixel Art 2">
-      <img src="assets/images/pixel3.gif" alt="Pixel Art Animation">
+  <h2>Pixel Art</h2>
+  <p class="section-description">Sprites, tilesets and character animations made with Aseprite and Photoshop.</p>
+
+  <div class="carousel-container">
+    <button class="carousel-btn prev" onclick="scrollCarousel('carousel-pixelart', -1)">‹</button>
+
+    <div class="carousel" id="carousel-pixelart">
+      <div class="carousel-item">
+        <img src="assets/images/pixel1.png" alt="Pixel Art 1" />
+        <h3>Character Sprite</h3>
+        <p>Idle + Walk cycle animation.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/pixel2.png" alt="Pixel Art 2" />
+        <h3>Tileset</h3>
+        <p>Pixel-perfect tiles for platformer level.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/pixel3.gif" alt="Pixel Art Animation" />
+        <h3>Magic FX</h3>
+        <p>Animated spell effect using 6 frames.</p>
+      </div>
     </div>
-  </section>
+
+    <button class="carousel-btn next" onclick="scrollCarousel('carousel-pixelart', 1)">›</button>
+  </div>
+</section>
 
   <!-- 3D MODELS SECTION -->
   <section class="section" id="models3d">
-    <h2>3D Models</h2>
-    <p class="section-description">Game-ready 3D assets modeled and textured in Blender.</p>
-    <div class="grid">
-      <img src="assets/images/model1.png" alt="3D Model 1">
-      <img src="assets/images/model2.png" alt="3D Model 2">
-      <img src="assets/images/model3.png" alt="3D Model 3">
+  <h2>3D Models</h2>
+  <p class="section-description">Game-ready 3D assets modeled in Blender, optimized for real-time rendering.</p>
+
+  <div class="carousel-container">
+    <button class="carousel-btn prev" onclick="scrollCarousel('carousel-3dmodels', -1)">‹</button>
+
+    <div class="carousel" id="carousel-3dmodels">
+      <div class="carousel-item">
+        <img src="assets/images/model1.png" alt="3D Model 1" />
+        <h3>Sci-Fi Crate</h3>
+        <p>Low-poly with PBR materials.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/model2.png" alt="3D Model 2" />
+        <h3>Fantasy Sword</h3>
+        <p>Hand-painted texture, ready for Unity.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/model3.png" alt="3D Model 3" />
+        <h3>Alien Creature</h3>
+        <p>Animated rig with IK bones.</p>
+      </div>
     </div>
-  </section>
+
+    <button class="carousel-btn next" onclick="scrollCarousel('carousel-3dmodels', 1)">›</button>
+  </div>
+</section>
 
   <!-- TECH STACK SECTION -->
 <section class="section" id="tech">
@@ -107,3 +152,14 @@
 
 </body>
 </html>
+
+<script>
+  function scrollCarousel(id, direction) {
+    const container = document.getElementById(id);
+    const scrollAmount = 320;
+    container.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+</script>
