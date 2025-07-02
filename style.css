@@ -319,3 +319,65 @@ footer .copyright {
 .carousel-btn.next {
   right: -10px;
 }
+
+/* COLOR ACCENTS GLOBALS */
+:root {
+  --accent-yellow: #fada5e;
+  --accent-orange: #f48067;
+  --bg-soft: #1a1a1a;
+}
+
+/* SPAN destacat */
+span, .highlight-orange {
+  color: var(--accent-orange);
+  font-weight: bold;
+}
+
+/* TÍTOLS */
+.section h2,
+.footer-content h2 {
+  color: var(--accent-yellow);
+}
+
+/* HERO BTN */
+.hero .btn {
+  background: var(--accent-yellow);
+  color: #1a1a1a;
+  transition: background 0.3s;
+}
+.hero .btn:hover {
+  background: #e7c64c;
+}
+
+/* ENLLAÇOS */
+a {
+  color: var(--accent-yellow);
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* BADGES */
+.tech-badges span {
+  border: 1px solid var(--accent-orange);
+  color: var(--accent-orange);
+  background: transparent;
+  transition: background 0.3s, color 0.3s;
+}
+.tech-badges span:hover {
+  background: var(--accent-orange);
+  color: #1a1a1a;
+}
+
+/* CAROUSEL BTNS */
+.carousel-btn {
+  color: var(--accent-yellow);
+}
+
+/* TEXTOS destacats */
+strong {
+  color: var(--accent-orange);
+}
+em {
+  color: var(--accent-yellow);
+}
