@@ -211,7 +211,7 @@ footer .copyright {
 }
 
 .hero-bg {
-  background: url('assets/images/hero-background.png') center/cover no-repeat;
+  background: url('assets/images/hero-background.gif') center/cover no-repeat;
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   opacity: 0.2;
