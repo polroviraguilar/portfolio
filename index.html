@@ -43,7 +43,7 @@
     <button class="carousel-btn prev" onclick="scrollCarousel('carousel-projects', -1)">‹</button>
 
     <div class="carousel" id="carousel-projects">
-      <div class="carousel-item project-card">
+      <div class="carousel-item project-card" onclick="openProjectDetail('monkey')">
         <img src="assets/images/monkeyisland.gif" alt="Monkey Island gameplay" class="project-gif" />
         <div class="project-meta">
           <span>👥 1</span>
@@ -332,28 +332,25 @@
   }
 
   function openProjectDetail(slug) {
-    // Simulate loading content (you can use fetch() if using external files)
-    const content = getProjectContent(slug);
-    if (content) {
-      document.getElementById('detail-content').innerHTML = content;
-      const detail = document.getElementById('project-detail');
-      detail.classList.remove('hidden');
+    const detail = document.getElementById(`project-detail-${slug}`);
+    detail.classList.remove('hidden');
+    setTimeout(() => {
+      detail.classList.add('visible');
+    }, 10);
+    location.hash = `/portfolio/${slug}`;
+  }
+  
+  function closeProjectDetail() {
+    const openDetail = document.querySelector('.project-detail.visible');
+    if (openDetail) {
+      openDetail.classList.remove('visible');
       setTimeout(() => {
-        detail.classList.add('visible');
-      }, 10);
-      location.hash = `/portfolio/${slug}`;
+        openDetail.classList.add('hidden');
+      }, 500);
+      location.hash = '';
     }
   }
-
-  function closeProjectDetail() {
-    const detail = document.getElementById('project-detail');
-    detail.classList.remove('visible');
-    setTimeout(() => {
-      detail.classList.add('hidden');
-    }, 500);
-    location.hash = '';
-  }
-
+  
   function getProjectContent(slug) {
     // Replace this with a JSON fetch or dynamic data later
     const contentMap = {
