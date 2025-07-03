@@ -606,3 +606,38 @@ em {
   margin: 0 auto;
   padding: 0 10px;
 }
+/* EDUCATION SECTION */
+.education-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: left;
+}
+
+.education-entry {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.edu-year {
+  min-width: 120px;
+  font-weight: bold;
+  color: #fada5e;
+  font-size: 1.1rem;
+}
+
+.edu-details h3 {
+  margin: 0;
+  color: #f8de7e;
+  font-size: 1.3rem;
+}
+
+.edu-details p {
+  margin: 6px 0;
+  color: #ccc;
+  line-height: 1.5;
+}
