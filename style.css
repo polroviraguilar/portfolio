@@ -561,12 +561,13 @@ em {
   left: 0;
   width: 90%;
   background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-  color: #aef1f8;
+  color: #fada5e;
   padding: 20px 30px;
   font-size: 2rem;
   font-weight: bold;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  text-align: left;
 }
 
 .detail-section {
