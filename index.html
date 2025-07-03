@@ -102,6 +102,12 @@
 
     <button class="carousel-btn next" onclick="scrollCarousel('carousel-projects', 1)">›</button>
   </div>
+  <div id="project-detail" class="project-detail hidden">
+    <button class="close-btn" onclick="closeProjectDetail()">×</button>
+    <div class="detail-content" id="detail-content">
+      <!-- Loaded dynamically -->
+    </div>
+  </div> 
 </section>
 
   <!-- PIXEL ART SECTION -->
@@ -182,7 +188,7 @@
   <div class="carousel-container">
     <button class="carousel-btn prev" onclick="scrollCarousel('carousel-3dmodels', -1)">‹</button>
 
-    <div class="carousel" id="carousel-3dmodels">
+    <div class="carousel" id="carousel-3dmodels" onclick="openProjectDetail('pokeitems')">
       <div class="carousel-item project-card">
         <img src="assets/images/pokeitems.gif" alt="Pokémon" class="project-gif" />
         <div class="project-meta">
@@ -197,7 +203,7 @@
         </p>
       </div>
 
-      <div class="carousel-item project-card">
+      <div class="carousel-item project-card" onclick="openProjectDetail('malenia-helmet')">
         <img src="assets/images/maleniahelmet.gif" alt="Malenia Helmet" class="project-gif" />
         <div class="project-meta">
           <span>🪖 Helmet</span>
@@ -267,4 +273,64 @@
       behavior: 'smooth'
     });
   }
+
+  function openProjectDetail(slug) {
+    // Simulate loading content (you can use fetch() if using external files)
+    const content = getProjectContent(slug);
+    if (content) {
+      document.getElementById('detail-content').innerHTML = content;
+      const detail = document.getElementById('project-detail');
+      detail.classList.remove('hidden');
+      setTimeout(() => {
+        detail.classList.add('visible');
+      }, 10);
+      location.hash = `/portfolio/${slug}`;
+    }
+  }
+
+  function closeProjectDetail() {
+    const detail = document.getElementById('project-detail');
+    detail.classList.remove('visible');
+    setTimeout(() => {
+      detail.classList.add('hidden');
+    }, 500);
+    location.hash = '';
+  }
+
+  function getProjectContent(slug) {
+    // Replace this with a JSON fetch or dynamic data later
+    const contentMap = {
+      'malenia-helmet': `
+        <h2>Malenia's Helmet</h2>
+        <img src="assets/images/maleniahelmet.gif" alt="Malenia Helmet" style="width:100%; border-radius: 8px; margin: 20px 0;">
+        <p><strong>Software:</strong> Blockbench</p>
+        <p><strong>Duration:</strong> 2 Days</p>
+        <p>Low poly recreation of Malenia’s iconic winged helm from Elden Ring, designed for real-time rendering and stylized projects.</p>
+      `,
+      'pokeitems': `
+        <h2>Pokéitems</h2>
+        <img src="assets/images/pokeitems.gif" alt="Pokéitems" style="width:100%; border-radius: 8px; margin: 20px 0;">
+        <p><strong>Software:</strong> Blockbench</p>
+        <p><strong>Duration:</strong> 1 Day</p>
+        <p>Digital Pokémon items such as the Pokédex, potion and rare candy, modeled in low poly with clean shapes and playful proportions.</p>
+      `
+    };
+    return contentMap[slug] || `<p>Project not found.</p>`;
+  }
+
+  // Optional: load based on hash on page load
+  window.addEventListener('load', () => {
+    const hash = location.hash;
+    if (hash.startsWith('#/portfolio/')) {
+      const slug = hash.replace('#/portfolio/', '');
+      openProjectDetail(slug);
+    }
+  });
+
+  // Optional: Listen to back/forward navigation
+  window.addEventListener('hashchange', () => {
+    if (!location.hash.includes('/portfolio/')) {
+      closeProjectDetail();
+    }
+  });
 </script>
