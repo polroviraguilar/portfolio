@@ -103,20 +103,20 @@
     <button class="carousel-btn next" onclick="scrollCarousel('carousel-projects', 1)">›</button>
   </div>
   <div id="project-detail-monkey" class="project-detail hidden">
-  <button class="close-btn" onclick="closeProjectDetail()">×</button>
+  <div class="go-back" onclick="closeProjectDetail()">&lt; Go Back</div>
 
-  <div class="detail-header">
+  <!-- Hero GIF with overlay title -->
+  <div class="hero-frame">
     <img src="assets/images/monkeyisland.gif" alt="Monkey Island Fight Gameplay" class="detail-hero-img" />
-    <h2>Monkey Island Fight</h2>
+    <div class="hero-title-overlay">Monkey Island Fight</div>
   </div>
 
+  <!-- About and Project Info -->
   <div class="detail-grid">
     <div class="detail-box">
       <h3>About</h3>
       <p>
-        "Monkey Island Fight" was a solo game project built during my Master's degree. It reimagines the classic insult-sword-fighting mechanic from the Monkey Island series using Unity and C#.
-        <br><br>
-        You duel opponents not with weapons, but with wit — selecting the right comeback is key to victory.
+        Monkey Island Fight is a solo project that reimagines the classic insult-sword-fighting mechanic from the legendary Monkey Island series. Developed during my Master’s program, this project is both a tribute and a technical exercise in narrative design.
       </p>
     </div>
     <div class="detail-box">
@@ -128,42 +128,52 @@
     </div>
   </div>
 
+  <!-- Introduction -->
   <section class="detail-section">
     <h3>Introduction</h3>
     <p>
-      The goal was to faithfully recreate the spirit of Monkey Island’s legendary duels, where timing and insults replace traditional combat. I wanted to explore branching dialogue systems and inject humor into gameplay mechanics.
+      My goal was to faithfully recreate the charm and rhythm of the original insult fights. The game had to feel reactive, funny, and sharp — like a dance of words. I wanted the player to feel clever, not just win.
     </p>
   </section>
 
+  <!-- Dialogue System -->
   <section class="detail-section">
     <h3>Dialogue System</h3>
     <p>
-      The core challenge was building a flexible dialogue tree that tracks player choices, comeback logic, and opponent responses. This was built entirely in Unity with a custom C# backend and state machine.
+      I designed a custom branching dialogue system that allows each insult and response to carry consequences, creating layered insult chains that escalate dynamically. The structure was built using C# scriptable objects and a simple state manager.
     </p>
-    <img src="assets/images/504bc05b-9209-4894-b36f-15f4395979bd.png" alt="Dialogue System Example" class="detail-img" />
+    <img src="assets/images/504bc05b-9209-4894-b36f-15f4395979bd.png" class="detail-img" alt="Dialogue System Flowchart" />
+    <p class="image-caption">The logic structure behind the insult-response dialogue system.</p>
   </section>
 
+  <!-- UI & Feedback -->
   <section class="detail-section">
-    <h3>UI & Animation</h3>
+    <h3>User Interface & Feedback</h3>
     <p>
-      I created custom UI panels to display insult and response options. Character animations were timed to match dialogue beats for comedic effect, enhancing the parody.
+      The UI was kept clean and retro-styled to reflect the original’s aesthetic. I added subtle animations and sound cues to reinforce the rhythm of exchange. Each insult and comeback has synced visual feedback to enhance punchlines.
     </p>
-    <img src="assets/images/85b188c9-329d-47dd-adb9-a26dd46ea4cc.png" alt="UI Mockup" class="detail-img" />
+    <img src="assets/images/85b188c9-329d-47dd-adb9-a26dd46ea4cc.png" class="detail-img" alt="UI Concept" />
+    <p class="image-caption">Custom UI mockup showing dialogue options and timing feedback.</p>
   </section>
 
+  <!-- Timing System -->
+  <section class="detail-section">
+    <h3>Timing & Delivery System</h3>
+    <p>
+      Timing matters in comedy. I built a delay-and-pause system to control delivery pacing — allowing jokes to land properly. Pauses between lines are dynamically calculated based on the player’s reading speed and choice timing.
+    </p>
+    <img src="assets/images/817f84b8-0880-4c5c-a52c-3632f8977aba.png" class="detail-img" alt="Timing System Demo" />
+    <p class="image-caption">Prototype showing dynamic timing between insults and comebacks.</p>
+  </section>
+
+  <!-- Lessons Learned -->
   <section class="detail-section">
     <h3>What I Learned</h3>
     <p>
-      This project sharpened my skills in game logic, UI/UX design, and humor-driven narrative systems. I gained a deep appreciation for how simple mechanics like branching dialogue can feel compelling when wrapped in strong writing.
+      This project helped me understand how humor is not just written — it’s engineered. Timing, UI pacing, player agency and visual feedback all matter in delivering something that feels funny and interactive. It also deepened my skills with state machines, dialogue trees, and Unity UI tooling.
     </p>
-    <img src="assets/images/817f84b8-0880-4c5c-a52c-3632f8977aba.png" alt="Insult Combat" class="detail-img" />
   </section>
 </div>
-  <div id="project-detail" class="project-detail hidden">
-    <button class="close-btn" onclick="closeProjectDetail()">×</button>
-    <div class="detail-content" id="detail-content">
-      <!-- Loaded dynamically -->
-    </div>
   </div> 
 </section>
 
