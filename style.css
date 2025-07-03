@@ -513,7 +513,7 @@ em {
 }
 
 .detail-section {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -570,7 +570,7 @@ em {
 }
 
 .detail-section {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto 60px;
   text-align: left;
   padding: 0 10px;
@@ -601,7 +601,7 @@ em {
 }
 
 .detail-container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
 }
