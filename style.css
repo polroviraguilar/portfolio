@@ -271,10 +271,21 @@ footer .copyright {
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 20px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #fada5e transparent;
 }
 
 .carousel::-webkit-scrollbar {
-  display: none;
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #fada5e; 
+  border-radius: 4px;
 }
 
 .carousel-item {
