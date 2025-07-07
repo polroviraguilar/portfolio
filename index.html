@@ -62,7 +62,7 @@
         </p>
       </div>
 
-      <div class="carousel-item project-card">
+      <div class="carousel-item project-card" onclick="openProjectDetail('mario')">
         <img src="assets/images/mario.gif" alt="Mario" class="project-gif" />
         <div class="project-meta">
           <span>👥 1</span>
@@ -479,27 +479,6 @@
   function toggleMenu() {
     const menu = document.querySelector('#mobile-menu ul');
     menu.classList.toggle('show');
-  }
-  
-  function getProjectContent(slug) {
-    // Replace this with a JSON fetch or dynamic data later
-    const contentMap = {
-      'malenia-helmet': `
-        <h2>Malenia's Helmet</h2>
-        <img src="assets/images/maleniahelmet.gif" alt="Malenia Helmet" style="width:100%; border-radius: 8px; margin: 20px 0;">
-        <p><strong>Software:</strong> Blockbench</p>
-        <p><strong>Duration:</strong> 2 Days</p>
-        <p>Low poly recreation of Malenia’s iconic winged helm from Elden Ring, designed for real-time rendering and stylized projects.</p>
-      `,
-      'pokeitems': `
-        <h2>Pokéitems</h2>
-        <img src="assets/images/pokeitems.gif" alt="Pokéitems" style="width:100%; border-radius: 8px; margin: 20px 0;">
-        <p><strong>Software:</strong> Blockbench</p>
-        <p><strong>Duration:</strong> 1 Day</p>
-        <p>Digital Pokémon items such as the Pokédex, potion and rare candy, modeled in low poly with clean shapes and playful proportions.</p>
-      `
-    };
-    return contentMap[slug] || `<p>Project not found.</p>`;
   }
 
   // Optional: load based on hash on page load
