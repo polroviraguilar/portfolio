@@ -696,3 +696,43 @@ em {
   }
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: #fada5e;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    padding: 10px 0;
+    background: #111;
+    transition: all 0.3s ease;
+  }
+
+  .menu ul.show {
+    display: flex;
+  }
+
+  nav ul {
+    gap: 12px;
+    margin-top: 0;
+  }
+}
+
+
