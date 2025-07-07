@@ -185,6 +185,84 @@
   </section>
 </div>
 
+<!-- MARIO PROJECT DETAIL -->
+<div id="project-detail-mario" class="project-detail hidden">
+  <div class="detail-container">
+
+    <!-- Go Back Link -->
+    <div class="close-btn go-back" onclick="closeProjectDetail()">&lt; Go Back</div>
+
+    <!-- Hero GIF with overlay title -->
+    <div class="hero-frame">
+      <video src="assets/images/mario.mp4" class="detail-hero-img" autoplay muted loop playsinline></video>
+      <div class="hero-title-overlay">Super Mario Bros</div>
+    </div>
+
+    <!-- About and Project Info -->
+    <div class="detail-grid">
+      <div class="detail-box">
+        <h3>About</h3>
+        <p>
+          This project is a tribute to one of the most iconic games in history. Recreated using Unity and C#, it replicates the first level of Super Mario Bros with a modern engine while preserving its original mechanics, aesthetic, and tight gameplay.
+        </p>
+      </div>
+      <div class="detail-box">
+        <h3>Project Info</h3>
+        <p>👤 <strong>Role:</strong> Solo Developer</p>
+        <p>👥 <strong>Team Size:</strong> 1</p>
+        <p>⏱️ <strong>Time Frame:</strong> 2 Months</p>
+        <p>⚙️ <strong>Engine:</strong> Unity (C#)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Introduction -->
+  <section class="detail-section">
+    <h3>Introduction</h3>
+    <p>
+      My goal was to reproduce the gameplay feel and structure of Super Mario Bros’ first level as closely as possible. I focused on physics, collision, jumping timing, and enemy behavior to recreate the challenge and joy of platforming.
+    </p>
+  </section>
+
+  <!-- Physics & Player Control -->
+  <section class="detail-section">
+    <h3>Physics & Player Control</h3>
+    <p>
+      One of the biggest challenges was matching the exact jump arc and momentum of Mario. I used Unity’s physics engine but heavily customized it to recreate the “snappy yet floaty” feel. Movement is frame-perfect, and acceleration varies depending on ground, air, and sprinting states.
+    </p>
+    <img src="assets/images/mario-physics.png" class="detail-img" alt="Mario Physics" />
+    <p class="image-caption">Custom movement controller replicating classic Mario physics.</p>
+  </section>
+
+  <!-- Level Design -->
+  <section class="detail-section">
+    <h3>Level Design</h3>
+    <p>
+      I recreated the first level tile-by-tile based on references and gameplay videos. Every block, pipe, and gap is positioned to reflect the original game’s learning curve and rhythm. Invisible blocks, enemy placement, and power-ups were meticulously adjusted.
+    </p>
+    <img src="assets/images/mario-level.gif" class="detail-img" alt="Level Design GIF" />
+    <p class="image-caption">Tilemap-based level structure faithfully reproducing the NES level.</p>
+  </section>
+
+  <!-- UI & Retro Style -->
+  <section class="detail-section">
+    <h3>User Interface & Retro Style</h3>
+    <p>
+      The UI was built to resemble the original HUD: score, coin counter, and time limit. Fonts and visuals were pixel-perfect recreations. I also added a CRT filter option to emulate the original NES visual experience.
+    </p>
+    <img src="assets/images/mario-ui.png" class="detail-img" alt="Mario UI" />
+    <p class="image-caption">UI elements styled to match the original NES interface.</p>
+  </section>
+
+  <!-- Lessons Learned -->
+  <section class="detail-section">
+    <h3>What I Learned</h3>
+    <p>
+      Rebuilding a classic game taught me a lot about design intent and technical precision. I improved my skills in custom character controllers, tile-based systems, pixel art alignment, and replicating retro mechanics in a modern engine. It also deepened my appreciation for timeless game design.
+    </p>
+  </section>
+</div>
+
   </div> 
 </section>
 
