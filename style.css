@@ -139,7 +139,7 @@ nav li a.active {
   transform: scale(1);
 }
 
-.card:hover {
+  .project-card:hover {
   transform: scale(1.03); /* lleugerament més gran */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* ombra suau */
   filter: brightness(1.05); /* lleu il·luminació */
