@@ -12,14 +12,17 @@
   <!-- NAVBAR -->
   <nav>
     <div class="logo">Pol Rovira</div>
-    <ul>
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#pixelart">Pixel Art</a></li>
-      <li><a href="#models3d">3D Models</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="mobile-menu">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#pixelart">Pixel Art</a></li>
+        <li><a href="#models3d">3D Models</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- HERO SECTION -->
@@ -393,6 +396,11 @@
       }, 500);
       location.hash = '';
     }
+  }
+
+  function toggleMenu() {
+    const menu = document.querySelector('#mobile-menu ul');
+    menu.classList.toggle('show');
   }
   
   function getProjectContent(slug) {
