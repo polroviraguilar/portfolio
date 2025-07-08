@@ -497,8 +497,8 @@ em {
 
 .detail-hero-img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  height: auto;
+  display: block;
 }
 
 .detail-grid {
@@ -555,7 +555,9 @@ em {
 
 .hero-frame {
   position: relative;
-  margin-bottom: 40px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .hero-frame .detail-hero-img {
@@ -568,7 +570,7 @@ em {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 90%;
+  width: 100%;
   background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
   color: #fada5e;
   padding: 20px 45px;
