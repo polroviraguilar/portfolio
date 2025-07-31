@@ -661,15 +661,16 @@
 </section>
 
   <!-- 3D MODELS SECTION -->
-  <section class="section" id="models3d">
+<section class="section" id="models3d">
   <h2>3D Models</h2>
   <p class="section-description">Game-ready 3D assets modeled in Blockbench, optimized for real-time rendering.</p>
 
   <div class="carousel-container">
     <button class="carousel-btn prev" onclick="scrollCarousel('carousel-3dmodels', -1)">‹</button>
 
-    <div class="carousel" id="carousel-3dmodels" onclick="openProjectDetail('pokeitems')">
-      <div class="carousel-item project-card">
+    <div class="carousel" id="carousel-3dmodels">
+      
+      <div class="carousel-item project-card" onclick="openProjectDetail('pokeitems')">
         <img src="assets/images/pokeitems.gif" alt="Pokémon" class="project-gif" />
         <div class="project-meta">
           <span>📦 Prop</span>
@@ -697,8 +698,7 @@
         </p>
       </div>
 
-      <div class="carousel" id="carousel-3dmodels" onclick="openProjectDetail('hoverbikes')">
-      <div class="carousel-item project-card">
+      <div class="carousel-item project-card" onclick="openProjectDetail('hoverbikes')">
         <img src="assets/images/hoverbikes.gif" alt="Hoverbikes" class="project-gif" />
         <div class="project-meta">
           <span>🏍️ Vehicles</span>
@@ -708,9 +708,11 @@
         <h3 class="project-title">Hoverbikes</h3>
         <p class="project-role">Low Poly Model</p>
         <p class="project-description">
-          Diferent hoverbikes vehicles, simplified for a sleek low poly aesthetic.
+          Different hoverbike vehicles, simplified for a sleek low poly aesthetic.
         </p>
       </div>
+
+    </div> <!-- FI DEL CAROUSEL -->
 
     <button class="carousel-btn next" onclick="scrollCarousel('carousel-3dmodels', 1)">›</button>
   </div>
