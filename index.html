@@ -1,851 +1,609 @@
+index.html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pol Rovira - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pol Rovira is a game developer, pixel artist and 3D generalist working with Unity, C#, Aseprite and Blockbench." />
+  <meta name="theme-color" content="#11100f" />
+
+  <title>Pol Rovira — Game Developer Portfolio</title>
+
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/images/favicon.ico" type="image/png">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">Pol Rovira</div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="menu" id="mobile-menu">
-      <ul>
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#pixelart">Pixel Art</a></li>
-        <li><a href="#models3d">3D Models</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#home" aria-label="Pol Rovira, home">
+        <span class="brand__mark" aria-hidden="true">PR</span>
+        <span class="brand__text">
+          <strong>Pol Rovira</strong>
+          <small>Game developer</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+        <a href="#home" class="is-active">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#pixelart">Pixel art</a>
+        <a href="#models3d">3D models</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- HERO SECTION -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <img src="assets/images/profile.png" alt="Profile Picture" class="profile-pic" />
-    <h1>Hi, I'm <span class="highlight-yellow">Pol Rovira</span></h1>
-    <p>
-      I’m a passionate <span class="highlight-orange">game developer</span> who loves building 
-      <span class="highlight-orange">interactive experiences</span> using code, pixels and imagination. 
-      I work with <span class="highlight-orange">Unity</span>, <span class="highlight-orange">Aseprite</span>, and <span class="highlight-orange">Blockbench</span>, 
-      and I bring both <span class="highlight-orange">technical skill</span> and <span class="highlight-orange">artistic flair</span> to every project.
-    </p>
-    <a href="#projects" class="btn">View My Work</a>
-  </div>
-</section>
-  
-  <!-- PROJECTS SECTION -->
-  <section class="section" id="projects">
-  <h2>Projects</h2>
-  <div class="carousel-container">
-    <button class="carousel-btn prev" onclick="scrollCarousel('carousel-projects', -1)">‹</button>
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__background" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--one" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--two" aria-hidden="true"></div>
 
-    <div class="carousel" id="carousel-projects">
-      <div class="carousel-item project-card" onclick="openProjectDetail('monkey')">
-        <img src="assets/images/monkeyisland.gif" alt="Monkey Island gameplay" class="project-gif" />
-        <div class="project-meta">
-          <span>👥 1</span>
-          <span>🕒 2 Months</span>
-          <span>⚙️ Unity (C#)</span>
+      <div class="hero__content reveal">
+        <div class="hero__portrait-wrap">
+          <img
+            class="hero__portrait"
+            src="assets/images/profile.png"
+            alt="Portrait of Pol Rovira"
+            width="160"
+            height="160"
+            fetchpriority="high"
+          />
+          <span class="hero__status">Open to creative opportunities</span>
         </div>
-        <h3 class="project-title">Monkey Island Fight <span class="year">(2024)</span></h3>
-        <p class="project-role">Solo Developer</p>
-        <p class="project-description">
-          Monkey Fight insult fight recreated with Unity and C#. Developed during my Master's degree in Video Game Design and Programming.
-        </p>
-      </div>
 
-      <div class="carousel-item project-card" onclick="openProjectDetail('mario')">
-        <img src="assets/images/mario.gif" alt="Mario" class="project-gif" />
-        <div class="project-meta">
-          <span>👥 1</span>
-          <span>🕒 2 Months</span>
-          <span>⚙️ Unity (C#)</span>
+        <p class="eyebrow">Game development · Pixel art · 3D</p>
+        <h1 id="hero-title">I build games with <span>personality</span>, clarity and feel.</h1>
+        <p class="hero__lead">
+          I’m Pol Rovira, a game developer who combines programming and visual design to create
+          interactive experiences in Unity, Aseprite and Blockbench.
+        </p>
+
+        <div class="hero__actions">
+          <a class="button button--primary" href="#projects">Explore selected work</a>
+          <a class="button button--secondary" href="#contact">Contact me</a>
         </div>
-        <h3 class="project-title">Super Mario Bros <span class="year">(2024)</span></h3>
-        <p class="project-role">Solo Developer</p>
-        <p class="project-description">
-          Super Mario Bros' first level recreated with Unity and C#. Developed during my Master's degree in Video Game Design and Programming.
-        </p>
+
+        <dl class="hero__facts" aria-label="Professional focus">
+          <div>
+            <dt>Engine</dt>
+            <dd>Unity / C#</dd>
+          </div>
+          <div>
+            <dt>Visual craft</dt>
+            <dd>Pixel art</dd>
+          </div>
+          <div>
+            <dt>3D workflow</dt>
+            <dd>Blockbench</dd>
+          </div>
+        </dl>
       </div>
-      
-      <div class="carousel-item project-card" onclick="openProjectDetail('mecha')">
-        <img src="assets/images/mechas.gif" alt="Robot Fight" class="project-gif" />
-        <div class="project-meta">
-          <span>👥 Solo</span>
-          <span>🕒 2 Months</span>
-          <span>⚙️ Unity (C#)</span>
+
+      <a class="hero__scroll" href="#projects" aria-label="Scroll to projects">
+        <span>Selected work</span>
+        <i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <section class="section section--projects" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2 id="projects-title">Game projects</h2>
         </div>
-        <h3 class="project-title">Mecha Fight<span class="year"> (2025)</span></h3>
-        <p class="project-role">Solo Developer</p>
-        <p class="project-description">
-          Turn based tactical-artillery game built with Unity and C#. Developed during my Master's degree in Video Game Design and Programming.
-        </p>
-      </div>
-
-    <div class="carousel-item project-card"  onclick="openProjectDetail('soma')">
-        <img src="assets/images/soma.gif" alt="SOMA" class="project-gif" />
-        <div class="project-meta">
-          <span>👥 Solo</span>
-          <span>🕒 2 Months</span>
-          <span>⚙️ Unity (C#)</span>
-        </div>
-        <h3 class="project-title">SOMA<span class="year"> (2025)</span></h3>
-        <p class="project-role">Solo Developer</p>
-        <p class="project-description">
-          Intense narrative-driven metroidvanialike with Unity and C#. Developed during my Master's degree in Video Game Design and Programming.
-        </p>
-      </div>
-      </div>
-
-    <button class="carousel-btn next" onclick="scrollCarousel('carousel-projects', 1)">›</button>
-  </div>
-
-  <!-- Monkey Island Detail -->
-  <div id="project-detail-monkey" class="project-detail hidden">
-  <div class="detail-container">
-    
-    <!-- Go Back Link -->
-    <div class="close-btn go-back" onclick="closeProjectDetail()">&lt; Go Back</div>
-
-    <!-- Hero GIF with overlay title -->
-    <div class="hero-frame">
-      <video src="assets/images/monkeyisland.mp4" class="detail-hero-img" autoplay muted loop playsinline></video>
-      <div class="hero-title-overlay">Monkey Island Fight</div>
-    </div>
-
-    <!-- About and Project Info -->
-    <div class="detail-grid">
-      <div class="detail-box">
-        <h3>About</h3>
         <p>
-          Monkey Island Fight is a solo project that reimagines the classic insult-sword-fighting mechanic from the legendary Monkey Island series. Developed during my Master’s program, this project is both a tribute and a technical exercise in narrative design.
+          Playable studies and original projects focused on systems, game feel, narrative and visual feedback.
         </p>
       </div>
-      <div class="detail-box">
-        <h3>Project Info</h3>
-        <p>👤 <strong>Role:</strong> Solo Developer</p>
-        <p>👥 <strong>Team Size:</strong> 1</p>
-        <p>⏱️ <strong>Time Frame:</strong> 2 Months</p>
-        <p>⚙️ <strong>Engine:</strong> Unity (C#)</p>
+
+      <div class="showcase reveal" data-carousel>
+        <button class="carousel-control carousel-control--previous" type="button" data-carousel-previous aria-label="Previous game projects">
+          <span aria-hidden="true">←</span>
+        </button>
+
+        <div class="carousel" id="carousel-projects" tabindex="0" aria-label="Game projects carousel">
+          <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog" data-project="monkey">
+            <div class="project-card__media">
+              <img src="assets/images/monkeyisland.gif" alt="Monkey Island Fight gameplay" loading="lazy" decoding="async" />
+              <span class="project-card__index">01</span>
+              <span class="project-card__action">View case study</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span>Solo</span><span>2 months</span><span>Unity / C#</span>
+              </div>
+              <h3>Monkey Island Fight <small>2024</small></h3>
+              <p class="project-card__role">Solo developer</p>
+              <p>A recreation of the classic insult-fighting mechanic, built around branching dialogue, timing and player feedback.</p>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog" data-project="mario">
+            <div class="project-card__media">
+              <img src="assets/images/mario.gif" alt="Super Mario Bros recreation gameplay" loading="lazy" decoding="async" />
+              <span class="project-card__index">02</span>
+              <span class="project-card__action">View case study</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span>Solo</span><span>2 months</span><span>Unity / C#</span>
+              </div>
+              <h3>Super Mario Bros <small>2024</small></h3>
+              <p class="project-card__role">Solo developer</p>
+              <p>A close recreation of the first level, with custom movement, collisions, enemy behaviour and retro UI.</p>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog" data-project="mecha">
+            <div class="project-card__media">
+              <img src="assets/images/mechas.gif" alt="Mecha Fight gameplay" loading="lazy" decoding="async" />
+              <span class="project-card__index">03</span>
+              <span class="project-card__action">View case study</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span>Solo</span><span>2 months</span><span>Unity / C#</span>
+              </div>
+              <h3>Mecha Fight <small>2025</small></h3>
+              <p class="project-card__role">Game designer & programmer</p>
+              <p>A turn-based tactical artillery game with destructible terrain, projectile physics and modular abilities.</p>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog" data-project="soma">
+            <div class="project-card__media">
+              <img src="assets/images/soma.gif" alt="SOMA gameplay" loading="lazy" decoding="async" />
+              <span class="project-card__index">04</span>
+              <span class="project-card__action">View case study</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span>Solo</span><span>2 months</span><span>Unity / C#</span>
+              </div>
+              <h3>SOMA <small>2025</small></h3>
+              <p class="project-card__role">Designer, writer & programmer</p>
+              <p>A narrative-driven 2D action platformer combining combat, branching dialogue and cinematic scene flow.</p>
+            </div>
+          </article>
+        </div>
+
+        <button class="carousel-control carousel-control--next" type="button" data-carousel-next aria-label="Next game projects">
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <div class="carousel-status" aria-hidden="true">
+          <span data-carousel-current>01</span>
+          <i></i>
+          <span data-carousel-total>04</span>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Introduction -->
-  <section class="detail-section">
-    <h3>Introduction</h3>
-    <p>
-      My goal was to faithfully recreate the charm and rhythm of the original insult fights. The game had to feel reactive, funny, and sharp — like a dance of words. I wanted the player to feel clever, not just win.
-    </p>
-  </section>
+    <section class="section section--alternate" id="pixelart" aria-labelledby="pixelart-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Visual development</p>
+          <h2 id="pixelart-title">Pixel art</h2>
+        </div>
+        <p>Character design and animation studies made with Aseprite and Photoshop.</p>
+      </div>
 
-  <!-- Dialogue System -->
-  <section class="detail-section">
-    <h3>Dialogue System</h3>
-    <p>
-      I designed a custom branching dialogue system that allows each insult and response to carry consequences, creating layered insult chains that escalate dynamically. The structure was built using C# scriptable objects and a simple state manager.
-    </p>
-    <img src="assets/images/monkey-image-1.png" class="detail-img" alt="Dialogue System Flowchart" />
-    <p class="image-caption">The logic structure behind the insult-response dialogue system.</p>
-  </section>
+      <div class="showcase reveal" data-carousel>
+        <button class="carousel-control carousel-control--previous" type="button" data-carousel-previous aria-label="Previous pixel art projects">
+          <span aria-hidden="true">←</span>
+        </button>
 
-  <!-- UI & Feedback -->
-  <section class="detail-section">
-    <h3>User Interface & Feedback</h3>
-    <p>
-      The UI was kept clean and retro-styled to reflect the original’s aesthetic. I added subtle animations and sound cues to reinforce the rhythm of exchange. Each insult and comeback has synced visual feedback to enhance punchlines.
-    </p>
-    <img src="assets/images/monkey-image-3.png" class="detail-img" alt="UI Concept" />
-    <p class="image-caption">Custom UI mockup showing dialogue options and timing feedback.</p>
-  </section>
+        <div class="carousel" id="carousel-pixelart" tabindex="0" aria-label="Pixel art projects carousel">
+          <article class="project-card project-card--pixel" tabindex="0" role="button" aria-haspopup="dialog" data-project="sentient">
+            <div class="project-card__media">
+              <img src="assets/images/sentient-cover.gif" alt="Sentient pixel art characters" loading="lazy" decoding="async" data-pixel-art />
+              <span class="project-card__index">01</span>
+              <span class="project-card__action">Open gallery</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>Sprites</span><span>Ongoing</span><span>Aseprite</span></div>
+              <h3>Sentient Characters</h3>
+              <p class="project-card__role">Character design & animation</p>
+              <p>Retro-futuristic player, enemy, NPC and boss sprites designed for clear in-game readability.</p>
+            </div>
+          </article>
 
-  <!-- Timing System -->
-  <section class="detail-section">
-    <h3>Timing & Delivery System</h3>
-    <p>
-      Timing matters in comedy. I built a delay-and-pause system to control delivery pacing — allowing jokes to land properly. Pauses between lines are dynamically calculated based on the player’s reading speed and choice timing.
-    </p>
-    <img src="assets/images/monkeyisland.gif" class="detail-img" alt="Timing System Demo" />
-    <p class="image-caption">Prototype showing dynamic timing between insults and comebacks.</p>
-  </section>
+          <article class="project-card project-card--pixel" tabindex="0" role="button" aria-haspopup="dialog" data-project="bookcharacters">
+            <div class="project-card__media">
+              <img src="assets/images/bookcharacters.gif" alt="Fantasy literature pixel art characters" loading="lazy" decoding="async" data-pixel-art />
+              <span class="project-card__index">02</span>
+              <span class="project-card__action">Open gallery</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>Sprites</span><span>7 days</span><span>Aseprite</span></div>
+              <h3>Fantasy Characters</h3>
+              <p class="project-card__role">Character design</p>
+              <p>A collection inspired by fantasy literature, exploring silhouette, pose and limited-palette expression.</p>
+            </div>
+          </article>
 
-  <!-- Lessons Learned -->
-  <section class="detail-section">
-    <h3>What I Learned</h3>
-    <p>
-      This project helped me understand how humor is not just written — it’s engineered. Timing, UI pacing, player agency and visual feedback all matter in delivering something that feels funny and interactive. It also deepened my skills with state machines, dialogue trees, and Unity UI tooling.
-    </p>
-  </section>
-</div>
+          <article class="project-card project-card--pixel" tabindex="0" role="button" aria-haspopup="dialog" data-project="thrillercharacters">
+            <div class="project-card__media">
+              <img src="assets/images/crime.gif" alt="Mystery and thriller pixel art characters" loading="lazy" decoding="async" data-pixel-art />
+              <span class="project-card__index">03</span>
+              <span class="project-card__action">Open gallery</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>Sprites</span><span>7 days</span><span>Aseprite</span></div>
+              <h3>Thriller Characters</h3>
+              <p class="project-card__role">Character design</p>
+              <p>A cast of mystery archetypes built around distinctive posture, costume and personality.</p>
+            </div>
+          </article>
+        </div>
 
-<!-- MARIO PROJECT DETAIL -->
-<div id="project-detail-mario" class="project-detail hidden">
-  <div class="detail-container">
+        <button class="carousel-control carousel-control--next" type="button" data-carousel-next aria-label="Next pixel art projects">
+          <span aria-hidden="true">→</span>
+        </button>
 
-    <!-- Go Back Link -->
-    <div class="close-btn go-back" onclick="closeProjectDetail()">&lt; Go Back</div>
+        <div class="carousel-status" aria-hidden="true">
+          <span data-carousel-current>01</span>
+          <i></i>
+          <span data-carousel-total>03</span>
+        </div>
+      </div>
+    </section>
 
-    <!-- Hero GIF with overlay title -->
-    <div class="hero-frame">
-      <video src="assets/images/mario.mp4" class="detail-hero-img" autoplay muted loop playsinline></video>
-      <div class="hero-title-overlay">Super Mario Bros</div>
-    </div>
+    <section class="section" id="models3d" aria-labelledby="models3d-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Shape and silhouette</p>
+          <h2 id="models3d-title">3D models</h2>
+        </div>
+        <p>Game-ready low-poly assets modelled in Blockbench and designed for real-time readability.</p>
+      </div>
 
-    <!-- About and Project Info -->
-    <div class="detail-grid">
-      <div class="detail-box">
-        <h3>About</h3>
+      <div class="showcase reveal" data-carousel>
+        <button class="carousel-control carousel-control--previous" type="button" data-carousel-previous aria-label="Previous 3D projects">
+          <span aria-hidden="true">←</span>
+        </button>
+
+        <div class="carousel" id="carousel-3dmodels" tabindex="0" aria-label="3D model projects carousel">
+          <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog" data-project="pokeitems">
+            <div class="project-card__media">
+              <img src="assets/images/pokeitems.gif" alt="Low-poly Pokéitems" loading="lazy" decoding="async" />
+              <span class="project-card__index">01</span>
+              <span class="project-card__action">View model study</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>Props</span><span>1 day</span><span>Blockbench</span></div>
+              <h3>Pokéitems</h3>
+              <p class="project-card__role">Low-poly model</p>
+              <p>A simplified digital encyclopaedia and item set designed around clean, recognisable silhouettes.</p>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog" data-project="malenia-helmet">
+            <div class="project-card__media">
+              <img src="assets/images/maleniahelmet.gif" alt="Low-poly Malenia helmet" loading="lazy" decoding="async" />
+              <span class="project-card__index">02</span>
+              <span class="project-card__action">View model study</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>Helmet</span><span>2 days</span><span>Blockbench</span></div>
+              <h3>Malenia’s Helmet</h3>
+              <p class="project-card__role">Low-poly model</p>
+              <p>A stylised recreation focused on the recognisable winged profile and layered metal forms.</p>
+            </div>
+          </article>
+
+          <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog" data-project="hoverbikes">
+            <div class="project-card__media">
+              <img src="assets/images/hoverbikes.gif" alt="Low-poly hoverbike collection" loading="lazy" decoding="async" />
+              <span class="project-card__index">03</span>
+              <span class="project-card__action">View model study</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>Vehicles</span><span>5 days</span><span>Blockbench</span></div>
+              <h3>Hoverbikes</h3>
+              <p class="project-card__role">Low-poly models</p>
+              <p>A small vehicle collection exploring distinct silhouettes within one coherent visual language.</p>
+            </div>
+          </article>
+        </div>
+
+        <button class="carousel-control carousel-control--next" type="button" data-carousel-next aria-label="Next 3D projects">
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <div class="carousel-status" aria-hidden="true">
+          <span data-carousel-current>01</span>
+          <i></i>
+          <span data-carousel-total>03</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alternate" id="education" aria-labelledby="education-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Background</p>
+          <h2 id="education-title">Education</h2>
+        </div>
+        <p>A multidisciplinary foundation combining development, interaction design, animation and game production.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline__entry reveal">
+          <div class="timeline__year">2017 — 2021</div>
+          <div class="timeline__content">
+            <p class="timeline__institution">University of Vic — Central University of Catalonia</p>
+            <h3>Bachelor’s Degree in Multimedia, Applications and Video Games</h3>
+            <p>
+              Covered the full digital product lifecycle, including concept, design, development, validation and post-production.
+              The programme included 2D and 3D modelling, animation, immersive systems, mobile applications and interactive web experiences.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline__entry reveal">
+          <div class="timeline__year">2024 — Present</div>
+          <div class="timeline__content">
+            <p class="timeline__institution">Universitat Oberta de Catalunya</p>
+            <h3>Master’s Degree in Video Game Design and Programming</h3>
+            <p>
+              A project-based programme focused on game design and development with Unity and C#, including 2D and 3D programming,
+              artificial intelligence, multiplayer development and user experience design.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="tech" aria-labelledby="tech-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Toolkit</p>
+          <h2 id="tech-title">Technical experience</h2>
+        </div>
+        <p>Tools I use across programming, game development, asset creation and collaborative production.</p>
+      </div>
+
+      <div class="skills-grid reveal">
+        <article class="skill-group">
+          <span class="skill-group__number">01</span>
+          <h3>Development</h3>
+          <div class="skill-list"><span>C#</span><span>Python</span><span>JavaScript</span><span>Unity</span></div>
+        </article>
+        <article class="skill-group">
+          <span class="skill-group__number">02</span>
+          <h3>Visual creation</h3>
+          <div class="skill-list"><span>Aseprite</span><span>Blender</span><span>Blockbench</span><span>Photoshop</span><span>Illustrator</span></div>
+        </article>
+        <article class="skill-group">
+          <span class="skill-group__number">03</span>
+          <h3>Workflow</h3>
+          <div class="skill-list"><span>Visual Studio</span><span>Git</span><span>GitHub</span><span>GitLab</span></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="site-footer__inner reveal">
+      <div class="site-footer__intro">
+        <p class="eyebrow">Let’s build something memorable</p>
+        <h2>Need a developer who thinks visually?</h2>
         <p>
-          This project is a tribute to one of the most iconic games in history. Recreated during my Master’s program, using Unity and C#, it replicates the first level of Super Mario Bros with a modern engine while preserving its original mechanics, aesthetic, and tight gameplay.
+          I enjoy difficult technical challenges, expressive game systems and clean, readable code.
+          I’m currently working at UManresa in Catalonia, Spain.
         </p>
-      </div>
-      <div class="detail-box">
-        <h3>Project Info</h3>
-        <p>👤 <strong>Role:</strong> Solo Developer</p>
-        <p>👥 <strong>Team Size:</strong> 1</p>
-        <p>⏱️ <strong>Time Frame:</strong> 2 Months</p>
-        <p>⚙️ <strong>Engine:</strong> Unity (C#)</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Introduction -->
-  <section class="detail-section">
-    <h3>Introduction</h3>
-    <p>
-      My goal was to reproduce the gameplay feel and structure of Super Mario Bros’ first level as closely as possible. I focused on physics, collision, jumping timing, and enemy behavior to recreate the challenge and joy of platforming.
-    </p>
-  </section>
-
-  <!-- Physics & Player Control -->
-  <section class="detail-section">
-    <h3>Physics & Player Control</h3>
-    <p>
-      One of the biggest challenges was matching the exact jump arc and momentum of Mario. I used Unity’s physics engine but heavily customized it to recreate the “snappy yet floaty” feel. Movement is frame-perfect, and acceleration varies depending on ground, air, and sprinting states.
-    </p>
-    <img src="assets/images/mario-jump.gif" class="detail-img" alt="Mario Physics" />
-    <p class="image-caption">Custom movement controller replicating classic Mario physics.</p>
-  </section>
-
-  <!-- Level Design -->
-  <section class="detail-section">
-    <h3>Level Design</h3>
-    <p>
-      Even though there are subtle alterations, I recreated the first level tile-by-tile based on references and gameplay videos. Every block, pipe, and gap is positioned to reflect the original game’s learning curve and rhythm. Invisible blocks, enemy placement, and power-ups were meticulously adjusted.
-    </p>
-    <img src="assets/images/mario-tileset.png" class="detail-img" alt="Level Design GIF" />
-    <p class="image-caption">Tilemap-based level structure faithfully reproducing the NES level.</p>
-  </section>
-
-  <!-- UI & Retro Style -->
-  <section class="detail-section">
-    <h3>User Interface & Retro Style</h3>
-    <p>
-      The UI was built to resemble the original HUD: score, coin counter, and time limit. Fonts and visuals were pixel-perfect recreations.
-    </p>
-    <img src="assets/images/mario-ui.png" class="detail-img" alt="Mario UI" />
-    <p class="image-caption">UI elements styled to match the original NES interface.</p>
-  </section>
-
-  <!-- Lessons Learned -->
-  <section class="detail-section">
-    <h3>What I Learned</h3>
-    <p>
-      Rebuilding a classic game taught me a lot about design intent and technical precision. I improved my skills in custom character controllers, tile-based systems, pixel art alignment, and replicating retro mechanics in a modern engine. It also deepened my appreciation for timeless game design.
-    </p>
-  </section>
-</div>
-
-    <!-- MECHA PROJECT DETAIL -->
-<div id="project-detail-mecha" class="project-detail hidden">
-  <div class="detail-container">
-
-    <!-- Go Back Link -->
-    <div class="close-btn go-back" onclick="closeProjectDetail()">&lt; Go Back</div>
-
-    <!-- Hero GIF with overlay title -->
-    <div class="hero-frame">
-      <video src="assets/images/mecha.mp4" class="detail-hero-img" autoplay muted loop playsinline></video>
-      <div class="hero-title-overlay">Mecha Fight</div>
-    </div>
-
-    <!-- About and Project Info -->
-    <div class="detail-grid">
-      <div class="detail-box">
-        <h3>About</h3>
-        <p>
-          Mecha Fight is a turn-based combat game inspired by the classic Worms series, but featuring customizable mechs. Developed during my Master's program, the game blends tactical action, terrain destruction, and realistic physics within a futuristic battlefield.
-        </p>
-      </div>
-      <div class="detail-box">
-        <h3>Project Info</h3>
-        <p>👤 <strong>Role:</strong> Game Designer & Programmer</p>
-        <p>👥 <strong>Team Size:</strong> Solo</p>
-        <p>⏱️ <strong>Time Frame:</strong> 2 Months</p>
-        <p>⚙️ <strong>Engine:</strong> Unity (C#)</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Introduction -->
-  <section class="detail-section">
-    <h3>Introduction</h3>
-    <p>
-      The idea behind Mecha Tactics was to create a tactical experience that’s both accessible and deep. I aimed to capture the strategic essence of Worms while introducing modern features like advanced destructibility, unique mech abilities, and a clean UI that enables fast-paced, decision-heavy gameplay.
-    </p>
-  </section>
-
-  <!-- Physics & Player Control -->
-  <section class="detail-section">
-    <h3>Physics & Player Control</h3>
-    <p>
-      One of the biggest challenges was implementing realistic 2D physics for movement, projectile impacts, and terrain destruction. Each mech has custom weight and friction values, affecting how they move and react to explosions. I also implemented an “aim assist” system to help players when firing weapons.
-    </p>
-    <img src="assets/images/mecha-combat.png" class="detail-img" alt="Mecha Combat" />
-    <p class="image-caption">Custom aiming system to help players hit the target.</p>
-  </section>
-
-  <!-- Level Design -->
-  <section class="detail-section">
-    <h3>Level Design</h3>
-    <p>
-      In this project, I enhanced my knowledge and implementation of tilesets by making them directly interactive for players. I developed a collision detection system that allows bullets to destroy tiles within the impact area.
-    </p>
-    <img src="assets/images/mecha-tileset.png" class="detail-img" alt="Level Design GIF" />
-    <p class="image-caption">Dynamic tileset system with real-time terrain destruction triggered by bullet collisions.</p>
-  </section>
-  
-  <!-- UI & Retro Style -->
-  <section class="detail-section">
-    <h3>User Interface & Retro Style</h3>
-    <p>
-      The interface displays key information like health, available abilities, and turn order in a clean and stylized layout. I designed a futuristic-industrial look with vibrant highlights to ensure important elements stand out without overwhelming the screen.
-    </p>
-    <img src="assets/images/mecha-ui.png" class="detail-img" alt="Mecha UI" />
-    <p class="image-caption">Custom HUD inspired by classic anime mecha interfaces with modern polish.</p>
-  </section>
-
-  <!-- Lessons Learned -->
-  <section class="detail-section">
-    <h3>What I Learned</h3>
-    <p>
-      This project helped me master 2D physics integration within turn-based systems, procedural generation, and modular ability design. I also deepened my understanding of user feedback through visual and audio cues to enhance tactical engagement.
-    </p>
-  </section>
-</div>
-
-<div id="project-detail-soma" class="project-detail hidden">
-  <div class="detail-container">
-
-    <!-- Go Back Link -->
-    <div class="close-btn go-back" onclick="closeProjectDetail()">&lt; Go Back</div>
-
-    <!-- Hero GIF with overlay title -->
-    <div class="hero-frame">
-      <video src="assets/images/soma.mp4" class="detail-hero-img" autoplay muted loop playsinline></video>
-      <div class="hero-title-overlay">SOMA</div>
-    </div>
-
-    <!-- About and Project Info -->
-    <div class="detail-grid">
-      <div class="detail-box">
-        <h3>About</h3>
-        <p>
-          SOMA is a narrative 2D action-platformer set in a cyberpunk world filled with moral choices and memory manipulation. You play as Nova, a rogue detective confronting a mysterious group known as Project SOMA—led by her sister Astra. Explore, fight, and decide your fate across branching storylines.
-        </p>
-      </div>
-      <div class="detail-box">
-        <h3>Project Info</h3>
-        <p>👤 <strong>Role:</strong> Game Designer, Writer & Programmer</p>
-        <p>👥 <strong>Team Size:</strong> Solo</p>
-        <p>⏱️ <strong>Time Frame:</strong> 2 Months</p>
-        <p>⚙️ <strong>Engine:</strong> Unity (C#)</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Introduction -->
-  <section class="detail-section">
-    <h3>Introduction</h3>
-    <p>
-      SOMA began as a storytelling experiment around the idea of identity. What makes us who we are? As Nova explores a dystopian future, the player makes impactful decisions that lead to different outcomes and personal revelations.
-    </p>
-    <img src="assets/images/soma-vanta.png" class="detail-img" alt="Nova in Neon City" />
-    <p class="image-caption">Nova begins her journey in the shadows of Neon Vanta.</p>
-  </section>
-
-  <!-- Combat System -->
-  <section class="detail-section">
-    <h3>Combat System</h3>
-    <p>
-      Combat in SOMA is fast-paced and action-filled. Nova uses projectile-based attacks while evading aggressive AI enemies. Boss fights such as Cors and Astra feature unique phases and require adaptive strategies.
-    </p>
-    <img src="assets/images/soma-astra.png" class="detail-img" alt="Boss Fight with Astra" />
-    <p class="image-caption">Facing Astra, Nova's sister and the mastermind behind Project SOMA.</p>
-  </section>
-
-  <!-- Interactive Dialogue -->
-  <section class="detail-section">
-    <h3>Interactive Dialogue</h3>
-    <p>
-      A key feature of SOMA is its branching dialogue system. Players engage in meaningful conversations, choose how Nova responds, and influence her relationships and moral alignment. Dialogue scenes include decisions, visual fades, and internal monologues.
-    </p>
-    <img src="assets/images/soma-dialogue.png" class="detail-img" alt="Dialogue System Screenshot" />
-    <p class="image-caption">Interactive dialogue with branching choices and typing effects.</p>
-  </section>
-
-  <!-- Cutscenes & Story Flow -->
-  <section class="detail-section">
-    <h3>Cutscenes & Story Flow</h3>
-    <p>
-      The game includes cinematic transitions, fades, and scripted scenes that control pacing. These scenes enhance storytelling and immerse the player without losing gameplay rhythm.
-    </p>
-    <img src="assets/images/soma-cors.png" class="detail-img" alt="Cutscene Example" />
-    <p class="image-caption">A cutscene fades into a sequence revealing Cors's motivations.</p>
-  </section>
-
-  <!-- Visual & Audio Design -->
-  <section class="detail-section">
-    <h3>Visual & Audio Design</h3>
-    <p>
-      Visuals are based on pixel art assets with cyberpunk aesthetics, including fog particle effects, animated water using URP, and reflective surfaces. Sounds and music are managed by a custom SFXManager and include ambient tracks, enemy effects, and typing sounds.
-    </p>
-    <img src="assets/images/soma-water.gif" class="detail-img" alt="Visual and FX Detail" />
-    <p class="image-caption">Green sewer water reflects Nova’s silhouette in real time.</p>
-  </section>
-
-  <!-- Lessons Learned -->
-  <section class="detail-section">
-    <h3>What I Learned</h3>
-    <p>
-      SOMA helped me grow in modular Unity development, interactive storytelling, and designing impactful player choices. It was a comprehensive challenge in animation, scripting, audio management, and scene transitions. Most importantly, it taught me to design for both emotion and mechanics.
-    </p>
-  </section>
-</div>    
-
-  </div> 
-</section>
-
-<!-- PIXEL ART SECTION -->
-<section class="section" id="pixelart">
-  <h2>Pixel Art</h2>
-  <p class="section-description">Sprites and character animations made with Aseprite and Photoshop.</p>
-
-  <div class="carousel-container">
-    <button class="carousel-btn prev" onclick="scrollCarousel('carousel-pixelart', -1)">‹</button>
-
-    <div class="carousel" id="carousel-pixelart">
-      <!-- Sentient Card -->
-      <div class="carousel-item project-card" onclick="openProjectDetail('sentient')">
-        <img src="assets/images/sentient-cover.gif" alt="Sentient" class="project-gif" />
-        <div class="project-meta">
-          <span>🎩 Sprites</span>
-          <span>🎨 Aseprite</span>
-          <span>🕒 Ongoing</span>
-        </div>
-        <h3 class="project-title">Sentient Characters</h3>
-        <p class="project-role">Character Design & Animation</p>
-        <p class="project-description">
-          Sentient: game's pixel art and animations.
-        </p>
+        <a class="button button--primary" href="mailto:proviraguilar@gmail.com">proviraguilar@gmail.com</a>
       </div>
 
-      <!-- Book Characters Card -->
-      <div class="carousel-item project-card" onclick="openProjectDetail('bookcharacters')">
-        <img src="assets/images/bookcharacters.gif" alt="Book Characters" class="project-gif" />
-        <div class="project-meta">
-          <span>🎩 Sprites</span>
-          <span>🎨 Aseprite</span>
-          <span>🕒 7 Days</span>
-        </div>
-        <h3 class="project-title">Fantasy Characters</h3>
-        <p class="project-role">Character Design</p>
-        <p class="project-description">
-          Fantasy character design collection based off of fantasy books.
-        </p>
-      </div>
-
-      <!-- Thriller Characters Card -->
-      <div class="carousel-item project-card" onclick="openProjectDetail('thrillercharacters')">
-        <img src="assets/images/crime.gif" alt="Crime" class="project-gif" />
-        <div class="project-meta">
-          <span>🎩 Sprites</span>
-          <span>🎨 Aseprite</span>
-          <span>🕒 7 Days</span>
-        </div>
-        <h3 class="project-title">Thriller Characters</h3>
-        <p class="project-role">Character Design</p>
-        <p class="project-description">
-          Thriller character design collection based off of a mystery and thriller atmosphere.
-        </p>
+      <div class="site-footer__links">
+        <p>Elsewhere</p>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/polroviraguilar" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="https://www.instagram.com/sentienthegame/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/pol-rovira-aguilar-4257961b1/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
       </div>
     </div>
 
-    <button class="carousel-btn next" onclick="scrollCarousel('carousel-pixelart', 1)">›</button>
-  </div>
-</section>
-
-<!-- DETAIL: BOOK CHARACTERS -->
-<div id="project-detail-bookcharacters" class="project-detail hidden">
-  <div class="detail-container">
-    <div class="close-btn go-back" onclick="closeProjectDetail()">&lt; Go Back</div>
-    <div class="hero-frame">
-      <img src="assets/images/bookcharacters.gif" class="detail-hero-img" alt="Fantasy Characters Animation" />
-      <div class="hero-title-overlay">Fantasy Characters</div>
-    </div>
-
-    <section class="detail-section">
-      <h3>Concept</h3>
-      <p>
-        Pixel art character collection inspired by fantasy literature. Each sprite is designed to reflect iconic book series. The project explores expression through minimal pixel constraints.
-      </p>
-    </section>
-
-    <section class="detail-section">
-      <h3>Gallery</h3>
-      <div class="character-gallery">
-        <div class="character-card">
-          <img src="assets/images/Bayaz.png" alt="Bayaz" />
-          <h4>Bayaz</h4>
-          <p>The First of the Magi. Manipulative, brilliant, and feared. His power hides behind a mask of wisdom.</p>
-        </div>
-        <div class="character-card">
-          <img src="assets/images/Ferro Maljinn.png" alt="Ferro Maljinn" />
-          <h4>Ferro Maljinn</h4>
-          <p>A deadly and relentless warrior with vengeance in her heart. Rage fuels her every move.</p>
-        </div>
-        <div class="character-card">
-          <img src="assets/images/Jezal Dan Luthar.png" alt="Jezal dan Luthar" />
-          <h4>Jezal dan Luthar</h4>
-          <p>Arrogant noble turned reluctant hero. His journey reveals both weakness and unexpected strength.</p>
-        </div>
-        <div class="character-card">
-          <img src="assets/images/Kvothe.png" alt="Kvothe" />
-          <h4>Kvothe</h4>
-          <p>A gifted musician, magician and swordsman. Charismatic and tragic, haunted by his legend.</p>
-        </div>
-        <div class="character-card">
-          <img src="assets/images/Logen Ninefingers.png" alt="Logen Ninefingers" />
-          <h4>Logen Ninefingers</h4>
-          <p>Also known as The Bloody-Nine. A brutal warrior trying to outrun his violent past.</p>
-        </div>
-        <div class="character-card">
-          <img src="assets/images/Sand Dan Glokta.png" alt="Sand dan Glokta" />
-          <h4>Sand dan Glokta</h4>
-          <p>Crippled inquisitor with a razor-sharp mind and biting sarcasm. Tortured yet terrifying.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="detail-section">
-      <h3>Tools Used</h3>
-      <p>🎨 <strong>Aseprite</strong> — Pixel art & Animation</p>
-      <p>📚 <strong>References:</strong> The First Law, The Kingkiller Chronicle</p>
-    </section>
-
-    <section class="detail-section">
-      <h3>Notes</h3>
-      <p>
-        The focus was on clean silhouettes, unique color palettes per character, and expressiveness through poses. Designed as concepts.
-      </p>
-    </section>
-  </div>
-</div>
-
-<!-- DETAIL: THRILLER CHARACTERS -->
-<div id="project-detail-thrillercharacters" class="project-detail hidden">
-  <div class="detail-container">
-    <div class="close-btn go-back" onclick="closeProjectDetail()">&lt; Go Back</div>
-    <div class="hero-frame">
-      <img src="assets/images/crime.gif" class="detail-hero-img" alt="Fantasy Characters Animation" />
-      <div class="hero-title-overlay">Thriller Characters</div>
-    </div>
-
-    <section class="detail-section">
-      <h3>Concept</h3>
-      <p>
-        Pixel art character collection inspired by thriller literature. Each sprite is designed to reflect iconic character archetypes. The project explores expression through minimal pixel constraints.
-      </p>
-    </section>
-
-    <section class="detail-section">
-      <h3>NPCs & Characters</h3>
-      <div class="character-gallery">
-        <div class="character-card"><img src="assets/images/Artist.png" alt="Artist" /><h4>Artist</h4><p>Bohemian painter with a sharp eye for color and gossip.</p></div>
-        <div class="character-card"><img src="assets/images/Chef.png" alt="Chef" /><h4>Chef</h4><p>Perfectionist master of sauces; temper as hot as his pans.</p></div>
-        <div class="character-card"><img src="assets/images/Enterpreneur.png" alt="Entrepreneur" /><h4>Entrepreneur</h4><p>Deal-maker with grand visions and a pocket full of IOUs.</p></div>
-        <div class="character-card"><img src="assets/images/Owner.png" alt="Owner" /><h4>Owner</h4><p>Influential landlord who always gets what he wants.</p></div>
-        <div class="character-card"><img src="assets/images/Heiress.png" alt="Heiress" /><h4>Heiress</h4><p>Pampered, clever, and dangerously curious.</p></div>
-        <div class="character-card"><img src="assets/images/Twins.png" alt="Twins" /><h4>Twins</h4><p>Inseparable duo with a talent for mischief.</p></div>
-        <div class="character-card"><img src="assets/images/Old%20Lady.png" alt="Old Lady" /><h4>Old Lady</h4><p>Eccentric matriarch with a walking cane and sharper wit than she lets on.</p></div>
-        <div class="character-card"><img src="assets/images/Detective.png" alt="Detective" /><h4>Detective</h4><p>Street-smart investigator, all instincts and cigarette ash.</p></div>
-        <div class="character-card"><img src="assets/images/Butler.png" alt="Butler" /><h4>Butler</h4><p>Impeccable manners, impeccable alibis—always two steps ahead.</p></div>
-      </div>
-    </section>
-
-    <section class="detail-section">
-      <h3>Tools Used</h3>
-      <p>🎨 <strong>Aseprite</strong> — Pixel art & Animation</p>
-    </section>
-
-    <section class="detail-section">
-      <h3>Notes</h3>
-      <p>
-        The focus was on clean silhouettes, unique color palettes per character, and expressiveness through poses. Designed as concepts.
-      </p>
-    </section>
-  </div>
-</div>
-
-<!-- DETAIL: SENTIENT CHARACTERS -->
-<div id="project-detail-sentient" class="project-detail hidden">
-  <div class="detail-container">
-    <div class="close-btn go-back" onclick="closeProjectDetail()">&lt; Go Back</div>
-    <div class="hero-frame">
-      <img src="assets/images/sentient-cover.gif" class="detail-hero-img" alt="Fantasy Characters Animation" />
-      <div class="hero-title-overlay">Sentient Characters</div>
-    </div>
-
-    <section class="detail-section">
-      <h3>Concept</h3>
-      <p>
-        A set of pixel art characters for the game *Sentient*. The visual style focuses on clean silhouettes and vibrant color contrast to differentiate each entity’s role—player, boss, enemy, or NPC.
-      </p>
-    </section>
-
-    <section class="detail-section">
-      <h3>Characters</h3>
-      <div class="character-gallery">
-        <div class="character-card">
-          <img src="assets/images/sentient_player.png" alt="Player" />
-          <h4>Player Unit</h4>
-          <p>The protagonist. Agile, advanced, and equipped for fast-paced encounters.</p>
-        </div>
-
-        <div class="character-card">
-          <img src="assets/images/sentient_boss.png" alt="Boss" />
-          <h4>Boss</h4>
-          <p>A towering projection of a sentient AI with powerful area-based attacks.</p>
-        </div>
-
-        <div class="character-card">
-          <img src="assets/images/sentient_npc.png" alt="NPC" />
-          <h4>NPC</h4>
-          <p>Mysterious figure that guides the player through cryptic messages.</p>
-        </div>
-
-        <div class="character-card">
-          <img src="assets/images/sentient_enemy1.png" alt="Enemy Drone" />
-          <h4>Bipedal Enemy Unit</h4>
-          <p>Basic ground unit possessing a flamethrower.</p>
-        </div>
-
-        <div class="character-card">
-          <img src="assets/images/sentient_enemy3.png" alt="Elite Enemy" />
-          <h4>Crawler Enemy Unit</h4>
-          <p>Basic ground scouter unit that can attack with ground spikes.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="detail-section">
-      <h3>Tools Used</h3>
-      <p>🎨 <strong>Aseprite</strong> — Pixel art & Animation</p>
-    </section>
-
-    <section class="detail-section">
-      <h3>Notes</h3>
-      <p>
-        The project aims to evoke a retro-futuristic aesthetic, balancing readability with style. Characters were created to be visually distinct even at small sizes.
-      </p>
-    </section>
-  </div>
-</div>
-
-
-  <!-- 3D MODELS SECTION -->
-<section class="section" id="models3d">
-  <h2>3D Models</h2>
-  <p class="section-description">Game-ready 3D assets modeled in Blockbench, optimized for real-time rendering.</p>
-
-  <div class="carousel-container">
-    <button class="carousel-btn prev" onclick="scrollCarousel('carousel-3dmodels', -1)">‹</button>
-
-    <div class="carousel" id="carousel-3dmodels">
-      
-      <div class="carousel-item project-card" onclick="openProjectDetail('pokeitems')">
-        <img src="assets/images/pokeitems.gif" alt="Pokémon" class="project-gif" />
-        <div class="project-meta">
-          <span>📦 Prop</span>
-          <span>🛠️ Blockbench</span>
-          <span>🕒 1 Day</span>
-        </div>
-        <h3 class="project-title">Pokéitems</h3>
-        <p class="project-role">Low Poly Model</p>
-        <p class="project-description">
-          Digital Pokémon encyclopedia and more items, simplified for a sleek low poly aesthetic.
-        </p>
-      </div>
-
-      <div class="carousel-item project-card" onclick="openProjectDetail('malenia-helmet')">
-        <img src="assets/images/maleniahelmet.gif" alt="Malenia Helmet" class="project-gif" />
-        <div class="project-meta">
-          <span>🪖 Helmet</span>
-          <span>🛠️ Blockbench</span>
-          <span>🕒 2 Days</span>
-        </div>
-        <h3 class="project-title">Malenia's Helmet</h3>
-        <p class="project-role">Low Poly Model</p>
-        <p class="project-description">
-          Low poly recreation of Malenia’s iconic winged helm from Elden Ring.
-        </p>
-      </div>
-
-      <div class="carousel-item project-card" onclick="openProjectDetail('hoverbikes')">
-        <img src="assets/images/hoverbikes.gif" alt="Hoverbikes" class="project-gif" />
-        <div class="project-meta">
-          <span>🏍️ Vehicles</span>
-          <span>🛠️ Blockbench</span>
-          <span>🕒 5 Days</span>
-        </div>
-        <h3 class="project-title">Hoverbikes</h3>
-        <p class="project-role">Low Poly Model</p>
-        <p class="project-description">
-          Different hoverbike vehicles, simplified for a sleek low poly aesthetic.
-        </p>
-      </div>
-
-    </div> <!-- FI DEL CAROUSEL -->
-
-    <button class="carousel-btn next" onclick="scrollCarousel('carousel-3dmodels', 1)">›</button>
-  </div>
-</section>
-
-  <!-- EDUCATION SECTION -->
-<section class="section" id="education">
-  <h2>Education</h2>
-  <div class="education-timeline">
-
-    <div class="education-entry">
-      <div class="edu-year">2017 – 2021</div>
-      <div class="edu-details">
-        <h3>Bachelor's Degree in Multimedia, Applications and Video Games</h3>
-        <p>University of Vic – Central University of Catalonia (UVic-UCC)</p>
-        <p>Focusing on the full digital product lifecycle: from concept and design to development, validation, and postproduction. Gained hands-on experience in areas such as 2D/3D modeling and animation, immersive systems (AR/VR), and interactive experiences. Participated in integrated projects and developed applications for mobile devices and web environments, enhancing both technical and creative skills.</p>
-      </div>
-    </div>
-
-    <div class="education-entry">
-      <div class="edu-year">2024 – Present</div>
-      <div class="edu-details">
-        <h3>Master's Degree in Video Game Design and Programming</h3>
-        <p>Universitat Oberta de Catalunya (UOC)</p>
-        <p>Recently enroled on a 100% online official master's program focused on the design and development of video games, emphasizing both creative and technical aspects. Acquired practical experience in 2D and 3D game programming using Unity with C#, and explored areas such as multiplayer game development, artificial intelligence, and user experience design. The curriculum was project-based, guided by industry professionals, and offered flexibility to specialize in areas like advanced programming or game experience creation.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-  <!-- TECH STACK SECTION -->
-<section class="section" id="tech">
-  <h2>Technical Experience</h2>
-  <div class="tech-badges">
-    <span>C#</span>
-    <span>Python</span>
-    <span>JavaScript</span>
-    <span>Unity</span>
-    <span>Blender</span>
-    <span>Blockbench</span>
-    <span>Aseprite</span>
-    <span>Illustrator</span>
-    <span>Photoshop</span>
-    <span>Visual Studio</span>
-    <span>Git</span>
-    <span>GitHub</span>
-    <span>GitLab</span>
-  </div>
-</section>
-
-  <!-- CONTACT / FOOTER -->
-  <footer id="contact">
-    <div class="footer-content">
-      <h2>Hi, I'm Pol</h2>
-      <p>I’m a 27-year-old game developer currently working at <strong>UManresa</strong> in Barcelona, Spain.</p>
-      <p>I describe myself as a <strong>problem solver</strong> who seeks every opportunity to learn and improve. I enjoy building games that <em>feel great to play</em> and writing <strong>clean, readable code</strong>. I thrive on difficult challenges—maybe a bit too much, as I often struggle to let go when I’m deep into debugging something tricky!</p>
-      <p>If you're curious to know more, feel free to get in touch or check out my work below.</p>
-  
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:proviraguilar@gmail.com">proviraguilar@gmail.com</a></p>
-      <div class="socials">
-        <a href="resume.pdf" target="_blank">Resume</a>
-        <a href="https://github.com/polroviraguilar" target="_blank">GitHub</a>
-        <a href="https://www.instagram.com/sentienthegame/" target="_blank">Instagram</a>
-        <a href="https://www.linkedin.com/in/pol-rovira-aguilar-4257961b1/" target="_blank">LinkedIn</a>
-      </div>
-      <p class="copyright">© 2025 Pol Rovira</p>
+    <div class="site-footer__bottom">
+      <span>© <span id="current-year">2026</span> Pol Rovira</span>
+      <a href="#home">Back to top ↑</a>
     </div>
   </footer>
 
+  <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+  <!-- PROJECT DETAILS -->
+  <section class="project-detail" id="project-detail-monkey" role="dialog" aria-modal="true" aria-labelledby="project-title-monkey" hidden>
+    <div class="project-detail__panel">
+      <div class="project-detail__toolbar">
+        <button class="detail-back" type="button" data-close-project>← Back to portfolio</button>
+        <span>Game case study</span>
+        <button class="detail-close" type="button" data-close-project aria-label="Close Monkey Island Fight case study">×</button>
+      </div>
+      <div class="detail-container">
+        <header class="detail-hero">
+          <video src="assets/images/monkeyisland.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="detail-hero__overlay">
+            <p>Unity / C# · Solo project · 2 months</p>
+            <h2 id="project-title-monkey">Monkey Island Fight</h2>
+          </div>
+        </header>
+        <div class="detail-summary">
+          <div><p class="eyebrow">About</p><p>A solo project that reimagines the classic insult-sword-fighting mechanic from the Monkey Island series. Built during my Master’s programme as both a tribute and a technical exercise in narrative design.</p></div>
+          <dl><div><dt>Role</dt><dd>Solo developer</dd></div><div><dt>Team</dt><dd>1</dd></div><div><dt>Time frame</dt><dd>2 months</dd></div><div><dt>Engine</dt><dd>Unity / C#</dd></div></dl>
+        </div>
+        <article class="detail-story">
+          <section><div class="detail-story__number">01</div><div><h3>Introduction</h3><p>My goal was to recreate the charm and rhythm of the original insult fights. The exchange needed to feel reactive, funny and sharp, with the player winning through understanding rather than simple selection.</p></div></section>
+          <section><div class="detail-story__number">02</div><div><h3>Dialogue system</h3><p>I designed a branching dialogue structure where insults and responses carry consequences, creating layered chains that escalate dynamically. The system uses C# ScriptableObjects and a focused state manager.</p><figure><img src="assets/images/monkey-image-1.png" alt="Dialogue system flowchart" loading="lazy" /><figcaption>The logic behind the insult-response dialogue system.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">03</div><div><h3>Interface and feedback</h3><p>The interface keeps a clean retro feel while using subtle motion and sound cues to reinforce the rhythm of the exchange. Each line and comeback receives synchronised visual feedback.</p><figure><img src="assets/images/monkey-image-3.png" alt="Monkey Island Fight interface concept" loading="lazy" /><figcaption>Dialogue options and timing feedback.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">04</div><div><h3>Timing and delivery</h3><p>Comedy depends on rhythm, so I built a delay-and-pause system to control delivery. Pauses adapt to line length and player choice timing, helping each exchange land more naturally.</p><figure><img src="assets/images/monkeyisland.gif" alt="Timing system demonstration" loading="lazy" /><figcaption>Dynamic timing between insults and comebacks.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">05</div><div><h3>What I learned</h3><p>This project showed me that humour in games is engineered through writing, pacing, agency and feedback. It also strengthened my work with state machines, dialogue trees and Unity UI systems.</p></div></section>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail" id="project-detail-mario" role="dialog" aria-modal="true" aria-labelledby="project-title-mario" hidden>
+    <div class="project-detail__panel">
+      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>Game case study</span><button class="detail-close" type="button" data-close-project aria-label="Close Super Mario Bros case study">×</button></div>
+      <div class="detail-container">
+        <header class="detail-hero"><video src="assets/images/mario.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="detail-hero__overlay"><p>Unity / C# · Solo project · 2 months</p><h2 id="project-title-mario">Super Mario Bros</h2></div></header>
+        <div class="detail-summary"><div><p class="eyebrow">About</p><p>A recreation of the first level of Super Mario Bros using Unity and C#, preserving the original structure, visual rhythm and tightly tuned gameplay.</p></div><dl><div><dt>Role</dt><dd>Solo developer</dd></div><div><dt>Team</dt><dd>1</dd></div><div><dt>Time frame</dt><dd>2 months</dd></div><div><dt>Engine</dt><dd>Unity / C#</dd></div></dl></div>
+        <article class="detail-story">
+          <section><div class="detail-story__number">01</div><div><h3>Introduction</h3><p>I focused on reproducing the feel and learning rhythm of the original first level, with particular attention to physics, collision, jump timing and enemy behaviour.</p></div></section>
+          <section><div class="detail-story__number">02</div><div><h3>Physics and player control</h3><p>The biggest challenge was matching Mario’s jump arc and momentum. Unity’s physics were heavily customised to produce a controller that feels both snappy and slightly floaty across grounded, airborne and sprinting states.</p><figure><img src="assets/images/mario-jump.gif" alt="Custom Mario movement controller" loading="lazy" /><figcaption>Custom movement tuned to classic Mario physics.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">03</div><div><h3>Level design</h3><p>The level was recreated tile by tile from gameplay references. Blocks, pipes, gaps, enemies and power-ups were placed to retain the original pacing and teaching sequence.</p><figure><img src="assets/images/mario-tileset.png" alt="Mario tilemap level structure" loading="lazy" /><figcaption>Tilemap-based recreation of the first NES level.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">04</div><div><h3>Interface and retro style</h3><p>The HUD mirrors the original score, coin and timer structure. Typography and pixel alignment were treated as part of the gameplay feel rather than decoration.</p><figure><img src="assets/images/mario-ui.png" alt="Super Mario Bros interface recreation" loading="lazy" /><figcaption>HUD elements styled after the original NES interface.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">05</div><div><h3>What I learned</h3><p>Rebuilding a classic improved my understanding of design intent, custom character controllers, tile-based systems and the precision required to reproduce retro mechanics in a modern engine.</p></div></section>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail" id="project-detail-mecha" role="dialog" aria-modal="true" aria-labelledby="project-title-mecha" hidden>
+    <div class="project-detail__panel">
+      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>Game case study</span><button class="detail-close" type="button" data-close-project aria-label="Close Mecha Fight case study">×</button></div>
+      <div class="detail-container">
+        <header class="detail-hero"><video src="assets/images/mecha.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="detail-hero__overlay"><p>Unity / C# · Solo project · 2 months</p><h2 id="project-title-mecha">Mecha Fight</h2></div></header>
+        <div class="detail-summary"><div><p class="eyebrow">About</p><p>A turn-based combat game inspired by classic artillery titles, featuring customisable mechs, tactical decisions, destructible terrain and physics-driven projectiles.</p></div><dl><div><dt>Role</dt><dd>Designer & programmer</dd></div><div><dt>Team</dt><dd>Solo</dd></div><div><dt>Time frame</dt><dd>2 months</dd></div><div><dt>Engine</dt><dd>Unity / C#</dd></div></dl></div>
+        <article class="detail-story">
+          <section><div class="detail-story__number">01</div><div><h3>Introduction</h3><p>The project explores an accessible tactical loop with enough depth to reward positioning, weapon choice and terrain awareness.</p></div></section>
+          <section><div class="detail-story__number">02</div><div><h3>Physics and aiming</h3><p>I implemented 2D movement and projectile behaviour with custom mech weight and friction values. An aim-assist system communicates the likely firing path without removing player judgement.</p><figure><img src="assets/images/mecha-combat.png" alt="Mecha Fight aiming system" loading="lazy" /><figcaption>Custom aiming support for projectile combat.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">03</div><div><h3>Destructible terrain</h3><p>The tile system reacts directly to projectile impacts. Bullets detect and remove tiles within a configurable impact radius, changing routes and cover during a match.</p><figure><img src="assets/images/mecha-tileset.png" alt="Destructible terrain tile system" loading="lazy" /><figcaption>Real-time terrain destruction triggered by collisions.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">04</div><div><h3>Interface and feedback</h3><p>The HUD prioritises health, abilities and turn information. Its industrial-futuristic language uses strong highlights to keep tactical information readable.</p><figure><img src="assets/images/mecha-ui.png" alt="Mecha Fight interface" loading="lazy" /><figcaption>A tactical HUD with a mecha-inspired visual language.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">05</div><div><h3>What I learned</h3><p>The project strengthened my understanding of turn-based architecture, physics integration, destructible environments and modular ability design.</p></div></section>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail" id="project-detail-soma" role="dialog" aria-modal="true" aria-labelledby="project-title-soma" hidden>
+    <div class="project-detail__panel">
+      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>Game case study</span><button class="detail-close" type="button" data-close-project aria-label="Close SOMA case study">×</button></div>
+      <div class="detail-container">
+        <header class="detail-hero"><video src="assets/images/soma.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="detail-hero__overlay"><p>Unity / C# · Solo project · 2 months</p><h2 id="project-title-soma">SOMA</h2></div></header>
+        <div class="detail-summary"><div><p class="eyebrow">About</p><p>A narrative 2D action platformer set in a cyberpunk world of moral choices and memory manipulation. The player controls Nova, a rogue detective confronting Project SOMA and her sister Astra.</p></div><dl><div><dt>Role</dt><dd>Designer, writer & programmer</dd></div><div><dt>Team</dt><dd>Solo</dd></div><div><dt>Time frame</dt><dd>2 months</dd></div><div><dt>Engine</dt><dd>Unity / C#</dd></div></dl></div>
+        <article class="detail-story">
+          <section><div class="detail-story__number">01</div><div><h3>Identity as a system</h3><p>SOMA began as a storytelling experiment about identity. Player decisions shape Nova’s relationships, moral position and the revelations she encounters.</p><figure><img src="assets/images/soma-vanta.png" alt="Nova in Neon Vanta" loading="lazy" /><figcaption>Nova begins her journey in Neon Vanta.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">02</div><div><h3>Combat</h3><p>Combat combines projectile attacks and evasive movement against aggressive AI. Bosses such as Cors and Astra introduce phase-based encounters that ask the player to adapt.</p><figure><img src="assets/images/soma-astra.png" alt="Boss fight with Astra" loading="lazy" /><figcaption>Facing Astra, the leader behind Project SOMA.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">03</div><div><h3>Interactive dialogue</h3><p>Branching conversations allow the player to define Nova’s responses and influence her relationships. Typing effects, fades and internal monologues support the tone of each scene.</p><figure><img src="assets/images/soma-dialogue.png" alt="SOMA branching dialogue" loading="lazy" /><figcaption>Branching dialogue with timed presentation.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">04</div><div><h3>Cinematic flow</h3><p>Scripted transitions, fades and controlled scenes shape pacing without separating narrative from play.</p><figure><img src="assets/images/soma-cors.png" alt="SOMA cutscene" loading="lazy" /><figcaption>A scripted sequence revealing Cors’s motivations.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">05</div><div><h3>Visual and audio design</h3><p>Pixel art, fog particles, animated water and reflective surfaces establish the cyberpunk atmosphere. A custom audio manager handles ambience, enemies, interface sounds and dialogue typing.</p><figure><img src="assets/images/soma-water.gif" alt="Animated water reflection in SOMA" loading="lazy" /><figcaption>Animated sewer water reflecting Nova’s silhouette.</figcaption></figure></div></section>
+          <section><div class="detail-story__number">06</div><div><h3>What I learned</h3><p>SOMA brought together modular development, combat, interactive storytelling, animation, audio management and scene transitions in one coherent project.</p></div></section>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail" id="project-detail-bookcharacters" role="dialog" aria-modal="true" aria-labelledby="project-title-bookcharacters" hidden>
+    <div class="project-detail__panel">
+      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>Pixel art gallery</span><button class="detail-close" type="button" data-close-project aria-label="Close Fantasy Characters gallery">×</button></div>
+      <div class="detail-container">
+        <header class="detail-hero detail-hero--pixel"><img src="assets/images/bookcharacters.gif" alt="Fantasy Characters animation" data-pixel-art /><div class="detail-hero__overlay"><p>Aseprite · Character design · 7 days</p><h2 id="project-title-bookcharacters">Fantasy Characters</h2></div></header>
+        <div class="detail-summary detail-summary--single"><div><p class="eyebrow">Concept</p><p>A pixel-art collection inspired by fantasy literature. Each sprite translates a recognisable character into a limited visual language built around silhouette, posture, palette and a few defining details.</p></div></div>
+        <section class="character-section"><div class="character-section__heading"><span>01</span><div><p class="eyebrow">Character set</p><h3>Gallery</h3></div></div><div class="character-gallery">
+          <article class="character-card"><img src="assets/images/Bayaz.png" alt="Pixel art interpretation of Bayaz" loading="lazy" data-pixel-art /><div><h4>Bayaz</h4><p>The First of the Magi: brilliant, manipulative and intimidating beneath a composed exterior.</p></div></article>
+          <article class="character-card"><img src="assets/images/Ferro%20Maljinn.png" alt="Pixel art interpretation of Ferro Maljinn" loading="lazy" data-pixel-art /><div><h4>Ferro Maljinn</h4><p>A relentless warrior driven by vengeance, communicated through stance and restrained colour.</p></div></article>
+          <article class="character-card"><img src="assets/images/Jezal%20Dan%20Luthar.png" alt="Pixel art interpretation of Jezal dan Luthar" loading="lazy" data-pixel-art /><div><h4>Jezal dan Luthar</h4><p>An arrogant noble whose polished appearance contrasts with the uncertainty beneath it.</p></div></article>
+          <article class="character-card"><img src="assets/images/Kvothe.png" alt="Pixel art interpretation of Kvothe" loading="lazy" data-pixel-art /><div><h4>Kvothe</h4><p>A gifted musician, magician and swordsman represented through a confident, theatrical silhouette.</p></div></article>
+          <article class="character-card"><img src="assets/images/Logen%20Ninefingers.png" alt="Pixel art interpretation of Logen Ninefingers" loading="lazy" data-pixel-art /><div><h4>Logen Ninefingers</h4><p>The Bloody-Nine: a hardened warrior whose heavy silhouette carries a violent history.</p></div></article>
+          <article class="character-card"><img src="assets/images/Sand%20Dan%20Glokta.png" alt="Pixel art interpretation of Sand dan Glokta" loading="lazy" data-pixel-art /><div><h4>Sand dan Glokta</h4><p>An inquisitor defined by physical damage, sharp intelligence and an unmistakable crooked posture.</p></div></article>
+        </div></section>
+        <div class="detail-notes"><div><p class="eyebrow">Tools</p><p>Aseprite · Pixel art and pose exploration</p></div><div><p class="eyebrow">References</p><p>The First Law · The Kingkiller Chronicle</p></div><div><p class="eyebrow">Focus</p><p>Clean silhouettes, unique palettes and expressive poses.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail" id="project-detail-thrillercharacters" role="dialog" aria-modal="true" aria-labelledby="project-title-thrillercharacters" hidden>
+    <div class="project-detail__panel">
+      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>Pixel art gallery</span><button class="detail-close" type="button" data-close-project aria-label="Close Thriller Characters gallery">×</button></div>
+      <div class="detail-container">
+        <header class="detail-hero detail-hero--pixel"><img src="assets/images/crime.gif" alt="Thriller Characters animation" data-pixel-art /><div class="detail-hero__overlay"><p>Aseprite · Character design · 7 days</p><h2 id="project-title-thrillercharacters">Thriller Characters</h2></div></header>
+        <div class="detail-summary detail-summary--single"><div><p class="eyebrow">Concept</p><p>A mystery cast designed as readable archetypes. Costume, posture and silhouette do most of the storytelling, giving each figure an immediate role while leaving room for suspicion.</p></div></div>
+        <section class="character-section"><div class="character-section__heading"><span>01</span><div><p class="eyebrow">Cast</p><h3>NPCs and characters</h3></div></div><div class="character-gallery">
+          <article class="character-card"><img src="assets/images/Artist.png" alt="Pixel art artist character" loading="lazy" data-pixel-art /><div><h4>Artist</h4><p>A bohemian painter with a sharp eye for colour and gossip.</p></div></article>
+          <article class="character-card"><img src="assets/images/Chef.png" alt="Pixel art chef character" loading="lazy" data-pixel-art /><div><h4>Chef</h4><p>A perfectionist whose temper is as hot as the kitchen.</p></div></article>
+          <article class="character-card"><img src="assets/images/Enterpreneur.png" alt="Pixel art entrepreneur character" loading="lazy" data-pixel-art /><div><h4>Entrepreneur</h4><p>A deal-maker with grand plans and more confidence than certainty.</p></div></article>
+          <article class="character-card"><img src="assets/images/Owner.png" alt="Pixel art owner character" loading="lazy" data-pixel-art /><div><h4>Owner</h4><p>An influential landlord accustomed to controlling the room.</p></div></article>
+          <article class="character-card"><img src="assets/images/Heiress.png" alt="Pixel art heiress character" loading="lazy" data-pixel-art /><div><h4>Heiress</h4><p>Pampered, clever and more observant than people expect.</p></div></article>
+          <article class="character-card"><img src="assets/images/Twins.png" alt="Pixel art twin characters" loading="lazy" data-pixel-art /><div><h4>Twins</h4><p>An inseparable pair with a talent for coordinated mischief.</p></div></article>
+          <article class="character-card"><img src="assets/images/Old%20Lady.png" alt="Pixel art old lady character" loading="lazy" data-pixel-art /><div><h4>Old Lady</h4><p>An eccentric matriarch with a cane and a sharper wit than she reveals.</p></div></article>
+          <article class="character-card"><img src="assets/images/Detective.png" alt="Pixel art detective character" loading="lazy" data-pixel-art /><div><h4>Detective</h4><p>A street-smart investigator guided by instinct and accumulated evidence.</p></div></article>
+          <article class="character-card"><img src="assets/images/Butler.png" alt="Pixel art butler character" loading="lazy" data-pixel-art /><div><h4>Butler</h4><p>Impeccable manners, impeccable alibis and an unreadable expression.</p></div></article>
+        </div></section>
+        <div class="detail-notes"><div><p class="eyebrow">Tools</p><p>Aseprite · Pixel art and character exploration</p></div><div><p class="eyebrow">Focus</p><p>Silhouette, costume, personality and visual contrast.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail" id="project-detail-sentient" role="dialog" aria-modal="true" aria-labelledby="project-title-sentient" hidden>
+    <div class="project-detail__panel">
+      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>Pixel art gallery</span><button class="detail-close" type="button" data-close-project aria-label="Close Sentient Characters gallery">×</button></div>
+      <div class="detail-container">
+        <header class="detail-hero detail-hero--pixel"><img src="assets/images/sentient-cover.gif" alt="Sentient character animation" data-pixel-art /><div class="detail-hero__overlay"><p>Aseprite · Character design · Ongoing</p><h2 id="project-title-sentient">Sentient Characters</h2></div></header>
+        <div class="detail-summary detail-summary--single"><div><p class="eyebrow">Concept</p><p>A set of pixel-art characters for Sentient. The visual language combines a retro-futuristic mood with strong silhouettes and controlled colour contrast so players can distinguish roles instantly during play.</p></div></div>
+        <section class="character-section"><div class="character-section__heading"><span>01</span><div><p class="eyebrow">Game cast</p><h3>Characters and units</h3></div></div><div class="character-gallery">
+          <article class="character-card"><img src="assets/images/sentient_player.png" alt="Sentient player unit" loading="lazy" data-pixel-art /><div><h4>Player Unit</h4><p>An agile protagonist designed for clear motion and fast-paced encounters.</p></div></article>
+          <article class="character-card"><img src="assets/images/sentient_boss.png" alt="Sentient boss projection" loading="lazy" data-pixel-art /><div><h4>Boss Projection</h4><p>A towering sentient AI presence built around scale, symmetry and area attacks.</p></div></article>
+          <article class="character-card"><img src="assets/images/sentient_npc.png" alt="Sentient mysterious NPC" loading="lazy" data-pixel-art /><div><h4>Mysterious NPC</h4><p>A compact, enigmatic figure who guides the player through cryptic messages.</p></div></article>
+          <article class="character-card"><img src="assets/images/sentient_enemy1.png" alt="Sentient bipedal enemy unit" loading="lazy" data-pixel-art /><div><h4>Bipedal Enemy</h4><p>A grounded combat unit equipped with a flamethrower and a heavy industrial silhouette.</p></div></article>
+          <article class="character-card"><img src="assets/images/sentient_enemy3.png" alt="Sentient crawler enemy unit" loading="lazy" data-pixel-art /><div><h4>Crawler Enemy</h4><p>A scouting unit that attacks through ground spikes and low, compact movement.</p></div></article>
+        </div></section>
+        <div class="detail-notes"><div><p class="eyebrow">Tools</p><p>Aseprite · Pixel art and animation</p></div><div><p class="eyebrow">Art direction</p><p>Retro-futurism, readability and role distinction.</p></div><div><p class="eyebrow">Production goal</p><p>Sprites that remain legible at small in-game sizes.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail" id="project-detail-pokeitems" role="dialog" aria-modal="true" aria-labelledby="project-title-pokeitems" hidden>
+    <div class="project-detail__panel">
+      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>3D model study</span><button class="detail-close" type="button" data-close-project aria-label="Close Pokéitems model study">×</button></div>
+      <div class="detail-container">
+        <header class="detail-hero"><img src="assets/images/pokeitems.gif" alt="Rotating low-poly Pokéitems collection" /><div class="detail-hero__overlay"><p>Blockbench · Props · 1 day</p><h2 id="project-title-pokeitems">Pokéitems</h2></div></header>
+        <div class="detail-summary"><div><p class="eyebrow">Overview</p><p>A compact low-poly prop study translating familiar item shapes into a simplified real-time style. The focus is immediate recognition with minimal geometry.</p></div><dl><div><dt>Role</dt><dd>3D artist</dd></div><div><dt>Type</dt><dd>Prop set</dd></div><div><dt>Time frame</dt><dd>1 day</dd></div><div><dt>Tool</dt><dd>Blockbench</dd></div></dl></div>
+        <div class="detail-notes"><div><p class="eyebrow">Focus</p><p>Readable silhouettes and compact geometry.</p></div><div><p class="eyebrow">Approach</p><p>Simple forms, restrained detail and strong colour blocking.</p></div><div><p class="eyebrow">Use case</p><p>Real-time games and stylised scenes.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail" id="project-detail-malenia-helmet" role="dialog" aria-modal="true" aria-labelledby="project-title-malenia" hidden>
+    <div class="project-detail__panel">
+      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>3D model study</span><button class="detail-close" type="button" data-close-project aria-label="Close Malenia's Helmet model study">×</button></div>
+      <div class="detail-container">
+        <header class="detail-hero"><img src="assets/images/maleniahelmet.gif" alt="Rotating low-poly recreation of Malenia's helmet" /><div class="detail-hero__overlay"><p>Blockbench · Helmet · 2 days</p><h2 id="project-title-malenia">Malenia’s Helmet</h2></div></header>
+        <div class="detail-summary"><div><p class="eyebrow">Overview</p><p>A low-poly recreation of Malenia’s winged helmet, prioritising the recognisable profile, layered metal forms and ornamental rhythm while keeping the model economical.</p></div><dl><div><dt>Role</dt><dd>3D artist</dd></div><div><dt>Type</dt><dd>Wearable prop</dd></div><div><dt>Time frame</dt><dd>2 days</dd></div><div><dt>Tool</dt><dd>Blockbench</dd></div></dl></div>
+        <div class="detail-notes"><div><p class="eyebrow">Focus</p><p>Iconic silhouette and layered construction.</p></div><div><p class="eyebrow">Challenge</p><p>Simplifying ornamental forms without losing identity.</p></div><div><p class="eyebrow">Style</p><p>Stylised low-poly interpretation.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-detail" id="project-detail-hoverbikes" role="dialog" aria-modal="true" aria-labelledby="project-title-hoverbikes" hidden>
+    <div class="project-detail__panel">
+      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>3D model study</span><button class="detail-close" type="button" data-close-project aria-label="Close Hoverbikes model study">×</button></div>
+      <div class="detail-container">
+        <header class="detail-hero"><img src="assets/images/hoverbikes.gif" alt="Rotating low-poly hoverbike collection" /><div class="detail-hero__overlay"><p>Blockbench · Vehicles · 5 days</p><h2 id="project-title-hoverbikes">Hoverbikes</h2></div></header>
+        <div class="detail-summary"><div><p class="eyebrow">Overview</p><p>A small collection of futuristic vehicles exploring how proportion, mass and profile can create distinct identities while maintaining a shared visual language.</p></div><dl><div><dt>Role</dt><dd>3D artist</dd></div><div><dt>Type</dt><dd>Vehicle set</dd></div><div><dt>Time frame</dt><dd>5 days</dd></div><div><dt>Tool</dt><dd>Blockbench</dd></div></dl></div>
+        <div class="detail-notes"><div><p class="eyebrow">Focus</p><p>Variant design within one coherent family.</p></div><div><p class="eyebrow">Approach</p><p>Strong silhouettes, simple planes and purposeful colour accents.</p></div><div><p class="eyebrow">Use case</p><p>Stylised real-time vehicle assets.</p></div></div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
-
-<script>
-  function scrollCarousel(id, direction) {
-    const container = document.getElementById(id);
-    const scrollAmount = 320;
-    container.scrollBy({
-      left: direction * scrollAmount,
-      behavior: 'smooth'
-    });
-  }
-
-  function openProjectDetail(slug) {
-    const detail = document.getElementById(`project-detail-${slug}`);
-    detail.classList.remove('hidden');
-    setTimeout(() => {
-      detail.classList.add('visible');
-    }, 10);
-    location.hash = `/portfolio/${slug}`;
-  }
-  
-  function closeProjectDetail() {
-    const openDetail = document.querySelector('.project-detail.visible');
-    if (openDetail) {
-      openDetail.classList.remove('visible');
-      setTimeout(() => {
-        openDetail.classList.add('hidden');
-      }, 500);
-      location.hash = '';
-    }
-  }
-
-  function toggleMenu() {
-    const menu = document.querySelector('#mobile-menu ul');
-    menu.classList.toggle('show');
-  }
-
-  // Optional: load based on hash on page load
-  window.addEventListener('load', () => {
-    const hash = location.hash;
-    if (hash.startsWith('#/portfolio/')) {
-      const slug = hash.replace('#/portfolio/', '');
-      openProjectDetail(slug);
-    }
-  });
-
-  // Optional: Listen to back/forward navigation
-  window.addEventListener('hashchange', () => {
-    if (!location.hash.includes('/portfolio/')) {
-      closeProjectDetail();
-    }
-  });
-</script>
