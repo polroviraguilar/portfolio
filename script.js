@@ -315,6 +315,62 @@
     if (event.matches) pauseAllDetailVideos();
   });
 
+    /* =========================================================
+     DETAIL MEDIA SWITCHERS
+     ========================================================= */
+
+  document.querySelectorAll("[data-media-switcher]").forEach((switcher) => {
+    const image = switcher.querySelector("[data-media-image]");
+    const buttons = [
+      ...switcher.querySelectorAll("[data-media-src]")
+    ];
+
+    if (!image || !buttons.length) {
+      return;
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const newSource = button.dataset.mediaSrc;
+        const newAlt = button.dataset.mediaAlt;
+
+        if (!newSource || image.src.endsWith(newSource)) {
+          return;
+        }
+
+        buttons.forEach((item) => {
+          const isSelected = item === button;
+
+          item.classList.toggle("is-active", isSelected);
+          item.setAttribute("aria-pressed", String(isSelected));
+        });
+
+        image.classList.add("is-changing");
+
+        const temporaryImage = new Image();
+
+        temporaryImage.addEventListener("load", () => {
+          image.src = newSource;
+          image.alt = newAlt || "Selected 3D model";
+
+          requestAnimationFrame(() => {
+            image.classList.remove("is-changing");
+          });
+        });
+
+        temporaryImage.addEventListener("error", () => {
+          image.classList.remove("is-changing");
+
+          console.error(
+            `The image could not be loaded: ${newSource}`
+          );
+        });
+
+        temporaryImage.src = newSource;
+      });
+    });
+  });
+
   const year = document.getElementById("current-year");
   if (year) year.textContent = String(new Date().getFullYear());
 
