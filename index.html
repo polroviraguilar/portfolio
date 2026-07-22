@@ -296,7 +296,12 @@
 
           <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog" data-project="malenia-helmet">
             <div class="project-card__media">
-              <img src="assets/images/maleniahelmet.gif" alt="Low-poly Malenia helmet" loading="lazy" decoding="async" />
+              <img
+                src="assets/images/malenia.gif"
+                alt="Rotating low-poly recreation of Malenia's helmet"
+                loading="lazy"
+                decoding="async"
+              />
               <span class="project-card__index">02</span>
               <span class="project-card__action">View model study</span>
             </div>
@@ -310,7 +315,12 @@
 
           <article class="project-card" tabindex="0" role="button" aria-haspopup="dialog" data-project="hoverbikes">
             <div class="project-card__media">
-              <img src="assets/images/hoverbikes.gif" alt="Low-poly hoverbike collection" loading="lazy" decoding="async" />
+              <img
+                src="assets/images/hover-bike-1.gif"
+                alt="Rotating low-poly Hover Bike 1"
+                loading="lazy"
+                decoding="async"
+              />
               <span class="project-card__index">03</span>
               <span class="project-card__action">View model study</span>
             </div>
@@ -575,7 +585,18 @@
     <div class="project-detail__panel">
       <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>3D model study</span><button class="detail-close" type="button" data-close-project aria-label="Close Pokéitems model study">×</button></div>
       <div class="detail-container">
-        <header class="detail-hero"><img src="assets/images/pokeitems.gif" alt="Rotating low-poly Pokéitems collection" /><div class="detail-hero__overlay"><p>Blockbench · Props · 1 day</p><h2 id="project-title-pokeitems">Pokéitems</h2></div></header>
+        <header class="detail-hero">
+          <img
+            src="assets/images/malenia.gif"
+            alt="Rotating low-poly recreation of Malenia's helmet"
+            decoding="async"
+          />
+        
+          <div class="detail-hero__overlay">
+            <p>Blockbench · Helmet · 2 days</p>
+            <h2 id="project-title-malenia">Malenia’s Helmet</h2>
+          </div>
+        </header>
         <div class="detail-summary"><div><p class="eyebrow">Overview</p><p>A compact low-poly prop study translating familiar item shapes into a simplified real-time style. The focus is immediate recognition with minimal geometry.</p></div><dl><div><dt>Role</dt><dd>3D artist</dd></div><div><dt>Type</dt><dd>Prop set</dd></div><div><dt>Time frame</dt><dd>1 day</dd></div><div><dt>Tool</dt><dd>Blockbench</dd></div></dl></div>
         <div class="detail-notes"><div><p class="eyebrow">Focus</p><p>Readable silhouettes and compact geometry.</p></div><div><p class="eyebrow">Approach</p><p>Simple forms, restrained detail and strong colour blocking.</p></div><div><p class="eyebrow">Use case</p><p>Real-time games and stylised scenes.</p></div></div>
       </div>
@@ -597,7 +618,68 @@
     <div class="project-detail__panel">
       <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>3D model study</span><button class="detail-close" type="button" data-close-project aria-label="Close Hoverbikes model study">×</button></div>
       <div class="detail-container">
-        <header class="detail-hero"><img src="assets/images/hoverbikes.gif" alt="Rotating low-poly hoverbike collection" /><div class="detail-hero__overlay"><p>Blockbench · Vehicles · 5 days</p><h2 id="project-title-hoverbikes">Hoverbikes</h2></div></header>
+        <header
+          class="detail-hero detail-hero--switcher"
+          data-media-switcher
+        >
+          <div
+            class="detail-media-tabs"
+            aria-label="Select a hoverbike model"
+          >
+            <button
+              class="detail-media-tab is-active"
+              type="button"
+              data-media-src="assets/images/hover-bike-1.gif"
+              data-media-alt="Rotating low-poly Hover Bike 1"
+              aria-pressed="true"
+            >
+              Hover Bike 1
+            </button>
+        
+            <button
+              class="detail-media-tab"
+              type="button"
+              data-media-src="assets/images/hover-bike-2.gif"
+              data-media-alt="Rotating low-poly Hover Bike 2"
+              aria-pressed="false"
+            >
+              Hover Bike 2
+            </button>
+        
+            <button
+              class="detail-media-tab"
+              type="button"
+              data-media-src="assets/images/hover-bike-3.gif"
+              data-media-alt="Rotating low-poly Hover Bike 3"
+              aria-pressed="false"
+            >
+              Hover Bike 3
+            </button>
+        
+            <button
+              class="detail-media-tab"
+              type="button"
+              data-media-src="assets/images/hover-bike-4.gif"
+              data-media-alt="Rotating low-poly Hover Bike 4"
+              aria-pressed="false"
+            >
+              Hover Bike 4
+            </button>
+          </div>
+        
+          <img
+            class="detail-media-image"
+            src="assets/images/hover-bike-1.gif"
+            alt="Rotating low-poly Hover Bike 1"
+            data-media-image
+            decoding="async"
+          />
+        
+          <div class="detail-hero__overlay">
+            <p>Blockbench · Vehicles · 4 models · 5 days</p>
+            <h2 id="project-title-hoverbikes">Hoverbikes</h2>
+          </div>
+        </header>
         <div class="detail-summary"><div><p class="eyebrow">Overview</p><p>A small collection of futuristic vehicles exploring how proportion, mass and profile can create distinct identities while maintaining a shared visual language.</p></div><dl><div><dt>Role</dt><dd>3D artist</dd></div><div><dt>Type</dt><dd>Vehicle set</dd></div><div><dt>Time frame</dt><dd>5 days</dd></div><div><dt>Tool</dt><dd>Blockbench</dd></div></dl></div>
         <div class="detail-notes"><div><p class="eyebrow">Focus</p><p>Variant design within one coherent family.</p></div><div><p class="eyebrow">Approach</p><p>Strong silhouettes, simple planes and purposeful colour accents.</p></div><div><p class="eyebrow">Use case</p><p>Stylised real-time vehicle assets.</p></div></div>
       </div>
