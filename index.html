@@ -40,6 +40,7 @@
       <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
         <a href="#home" class="is-active">Home</a>
         <a href="#projects">Projects</a>
+        <a href="#webapps">Web apps</a>
         <a href="#pixelart">Pixel art</a>
         <a href="#models3d">3D models</a>
         <a href="#education">Education</a>
@@ -194,6 +195,77 @@
         </div>
       </div>
     </section>
+
+    <!-- WEB APPLICATIONS SECTION -->
+<section class="section section--webapps" id="webapps" aria-labelledby="webapps-title">
+  <div class="section-heading reveal">
+    <div>
+      <p class="eyebrow">Product development</p>
+      <h2 id="webapps-title">Web applications</h2>
+    </div>
+    <p>
+      Focused digital products built around real workflows, responsive interfaces and clear interaction design.
+    </p>
+  </div>
+
+  <article
+    class="web-project-card reveal"
+    tabindex="0"
+    role="button"
+    aria-haspopup="dialog"
+    aria-label="Open the Power App case study"
+    data-project="power-app"
+  >
+    <div class="web-project-card__visual">
+      <div class="web-project-card__glow" aria-hidden="true"></div>
+
+      <div class="web-project-card__window">
+        <div class="web-project-card__window-bar" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <small>power-app</small>
+        </div>
+
+        <div class="web-project-card__screen">
+          <img
+            src="assets/images/power-app/power-app-daily.webp"
+            alt="Power App daily training view on a mobile screen"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+
+      <span class="web-project-card__status">Live PWA</span>
+    </div>
+
+    <div class="web-project-card__content">
+      <div class="project-card__meta">
+        <span>Vanilla JavaScript</span>
+        <span>Mobile first</span>
+        <span>2026</span>
+      </div>
+
+      <p class="web-project-card__kicker">Powerlifting training PWA</p>
+      <h3>Power App</h3>
+      <p class="web-project-card__role">Frontend developer & UX/UI designer</p>
+
+      <p class="web-project-card__description">
+        A progressive web application for planning, editing and tracking structured powerlifting programmes from a focused mobile interface.
+      </p>
+
+      <ul class="web-project-card__features" aria-label="Power App highlights">
+        <li>Daily workout tracking</li>
+        <li>Editable multi-week programme</li>
+        <li>Offline-ready local persistence</li>
+        <li>Light and dark themes</li>
+      </ul>
+
+      <span class="web-project-card__open">View product case study <span aria-hidden="true">→</span></span>
+    </div>
+  </article>
+</section>
 
     <section class="section section--alternate" id="pixelart" aria-labelledby="pixelart-title">
       <div class="section-heading reveal">
@@ -613,6 +685,232 @@
       </div>
     </div>
   </section>
+
+  <!-- DETAIL: POWER APP -->
+<section
+  class="project-detail"
+  id="project-detail-power-app"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="project-title-power-app"
+  hidden
+>
+  <div class="project-detail__panel">
+    <div class="project-detail__toolbar">
+      <button class="detail-back" type="button" data-close-project>← Back to portfolio</button>
+      <span>Web application case study</span>
+      <button class="detail-close" type="button" data-close-project aria-label="Close Power App case study">×</button>
+    </div>
+
+    <div class="detail-container">
+      <header class="detail-hero detail-hero--webapp">
+        <div class="webapp-hero__canvas" aria-hidden="true">
+          <div class="webapp-hero__glow"></div>
+          <img
+            class="webapp-hero__screen webapp-hero__screen--primary"
+            src="assets/images/power-app/power-app-daily.webp"
+            alt=""
+          />
+          <img
+            class="webapp-hero__screen webapp-hero__screen--secondary"
+            src="assets/images/power-app/power-app-dark.webp"
+            alt=""
+          />
+        </div>
+
+        <div class="detail-hero__overlay">
+          <p>Vanilla JavaScript · PWA · Product design</p>
+          <h2 id="project-title-power-app">Power App</h2>
+        </div>
+      </header>
+
+      <div class="detail-summary">
+        <div>
+          <p class="eyebrow">Overview</p>
+          <p>
+            Power App turns a detailed powerlifting spreadsheet into a focused mobile product. It organises each training day, tracks completed work, records actual performance and keeps the full programme editable without requiring an account or backend.
+          </p>
+
+          <div class="detail-actions" aria-label="Power App project links">
+            <a
+              class="button button--primary"
+              href="https://polroviraguilar.github.io/power-app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open live app <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="button button--secondary"
+              href="https://github.com/polroviraguilar/power-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View source code <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <dl>
+          <div><dt>Role</dt><dd>Frontend developer & UX/UI designer</dd></div>
+          <div><dt>Type</dt><dd>Progressive web application</dd></div>
+          <div><dt>Platform</dt><dd>Mobile-first web</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Stack</dt><dd>HTML, CSS, JavaScript</dd></div>
+          <div><dt>Deployment</dt><dd>GitHub Pages</dd></div>
+        </dl>
+      </div>
+
+      <div class="detail-story">
+        <section>
+          <span class="detail-story__number">01</span>
+          <div>
+            <p class="eyebrow">Problem</p>
+            <h3>Spreadsheets work for planning, but not during training.</h3>
+            <p>
+              The original programme contained several weeks, five training days, warm-ups, mobility work, prescribed loads and real performance data. The challenge was to preserve that depth while making each workout quick to read and operate from a phone.
+            </p>
+
+            <figure class="webapp-figure webapp-figure--single">
+              <img
+                src="assets/images/power-app/power-app-daily.webp"
+                alt="Power App daily view with the selected training day expanded"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Daily view prioritising the current session, progress and actual performance.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <span class="detail-story__number">02</span>
+          <div>
+            <p class="eyebrow">Product solution</p>
+            <h3>One shared programme, presented through purpose-built views.</h3>
+            <p>
+              Daily, Plan, Program, Warm-up and Mobility views read from the same underlying training data. Users can move between immediate workout execution and the complete programme without duplicating information or losing context.
+            </p>
+
+            <div class="webapp-feature-grid">
+              <article>
+                <span>01</span>
+                <h4>Daily tracking</h4>
+                <p>Complete exercises, review prescriptions and record real results.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <h4>Editable plan</h4>
+                <p>Modify phases, exercises, loads and notes directly in the interface.</p>
+              </article>
+              <article>
+                <span>03</span>
+                <h4>Local persistence</h4>
+                <p>Keep edits, completion states and actual results in the browser.</p>
+              </article>
+              <article>
+                <span>04</span>
+                <h4>Installable PWA</h4>
+                <p>Use the product as a standalone mobile application.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="detail-story__number">03</span>
+          <div>
+            <p class="eyebrow">Interface system</p>
+            <h3>A mobile-first hierarchy designed for use between sets.</h3>
+            <p>
+              Large day labels, compact controls, clear completion states and generous touch targets reduce friction in a gym environment. Light and dark themes preserve the same information hierarchy while adapting to different lighting conditions.
+            </p>
+
+            <div class="webapp-gallery">
+              <figure>
+                <img
+                  src="assets/images/power-app/power-app-plan.webp"
+                  alt="Power App general plan view"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>General programme view and week controls.</figcaption>
+              </figure>
+
+              <figure>
+                <img
+                  src="assets/images/power-app/power-app-editor.webp"
+                  alt="Power App programme editor"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Editable exercises, phases, notes and programme data.</figcaption>
+              </figure>
+
+              <figure>
+                <img
+                  src="assets/images/power-app/power-app-dark.webp"
+                  alt="Power App daily view using the dark theme"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Dark theme using the same interaction and layout system.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="detail-story__number">04</span>
+          <div>
+            <p class="eyebrow">Technical approach</p>
+            <h3>A framework-free application with explicit state and browser-native storage.</h3>
+            <p>
+              The interface is rendered from JavaScript state and a separate programme data source. LocalStorage persists the editable plan, exercise completion and actual results. A web app manifest and service worker provide installable, app-like behaviour.
+            </p>
+
+            <div class="webapp-tech-list" aria-label="Power App technologies">
+              <span>Semantic HTML</span>
+              <span>CSS custom properties</span>
+              <span>Vanilla JavaScript</span>
+              <span>LocalStorage</span>
+              <span>Service Worker</span>
+              <span>Web App Manifest</span>
+              <span>GitHub Pages</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <span class="detail-story__number">05</span>
+          <div>
+            <p class="eyebrow">Result</p>
+            <h3>A personal training tool that behaves like a focused product.</h3>
+            <p>
+              The finished application replaces the friction of consulting a large spreadsheet during training with a dedicated, editable and installable workflow. It also demonstrates product thinking beyond visual implementation: data structure, persistence, progressive enhancement and task-focused UX.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="detail-notes">
+        <div>
+          <p class="eyebrow">Product focus</p>
+          <p>Fast workout execution and low-friction editing.</p>
+        </div>
+        <div>
+          <p class="eyebrow">Technical focus</p>
+          <p>Shared state, local persistence and progressive web app behaviour.</p>
+        </div>
+        <div>
+          <p class="eyebrow">Design focus</p>
+          <p>Mobile hierarchy, touch interaction and clear completion feedback.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <section class="project-detail" id="project-detail-hoverbikes" role="dialog" aria-modal="true" aria-labelledby="project-title-hoverbikes" hidden>
     <div class="project-detail__panel">
