@@ -1591,3 +1591,113 @@ p {
     transform: none;
   }
 }
+
+/* =========================================================
+   HOVERBIKES MEDIA SWITCHER
+   ========================================================= */
+
+.detail-hero--switcher {
+  isolation: isolate;
+}
+
+.detail-media-tabs {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  z-index: 5;
+
+  display: flex;
+  max-width: calc(100% - 40px);
+  padding: 4px;
+  gap: 4px;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+
+  background: rgba(10, 10, 9, 0.82);
+  backdrop-filter: blur(16px);
+
+  transform: translateX(-50%);
+}
+
+.detail-media-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.detail-media-tab {
+  flex: 0 0 auto;
+
+  padding: 10px 16px;
+
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  background: transparent;
+  color: var(--text-muted);
+
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.detail-media-tab:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.detail-media-tab.is-active {
+  border-color: rgba(250, 218, 94, 0.5);
+  background: rgba(250, 218, 94, 0.1);
+  color: var(--yellow);
+}
+
+.detail-media-tab:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+.detail-media-image {
+  transition:
+    opacity 160ms ease,
+    transform 240ms var(--ease);
+}
+
+.detail-media-image.is-changing {
+  opacity: 0.35;
+  transform: scale(0.995);
+}
+
+@media (max-width: 700px) {
+  .detail-media-tabs {
+    top: 14px;
+    left: 14px;
+
+    width: calc(100% - 28px);
+    max-width: none;
+
+    border-radius: 12px;
+
+    transform: none;
+  }
+
+  .detail-media-tab {
+    padding: 9px 13px;
+    font-size: 0.68rem;
+  }
+
+  .detail-hero--switcher .detail-hero__overlay {
+    padding-top: 100px;
+  }
+}
