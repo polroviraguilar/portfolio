@@ -203,125 +203,168 @@
           <h2 id="webapps-title">Web applications</h2>
         </div>
         <p>
-          Focused digital products built around real workflows, responsive interfaces and clear interaction design.
+          Personal products built around real workflows, deliberate interaction design and maintainable front-end architecture.
         </p>
       </div>
 
-      <div class="web-projects-list">
+      <div class="web-portfolio-grid">
         <article
-          class="web-project-card reveal"
+          class="web-project-tile web-project-tile--featured web-project-tile--bookverse reveal"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-label="Open the Bookverse case study"
+          data-project="bookverse"
+        >
+          <div class="web-project-tile__media">
+            <div class="web-project-tile__orb" aria-hidden="true"></div>
+
+            <div class="web-project-tile__browser web-project-tile__browser--bookverse">
+              <div class="web-project-tile__browser-bar" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <small>bookverse</small>
+              </div>
+              <div class="web-project-tile__browser-screen">
+                <img
+                  src="assets/images/bookverse/bookverse-cover.webp"
+                  alt="Bookverse interactive literary universe map"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+
+            <span class="web-project-tile__status">Live desktop app</span>
+          </div>
+
+          <div class="web-project-tile__content">
+            <div class="web-project-tile__meta">
+              <span>React</span>
+              <span>Konva</span>
+              <span>LocalStorage</span>
+              <span>2026</span>
+            </div>
+
+            <p class="web-project-tile__kicker">Interactive literary universe mapper</p>
+            <h3>Bookverse</h3>
+            <p class="web-project-tile__role">Solo developer & UX/UI designer</p>
+
+            <p class="web-project-tile__description">
+              A desktop workspace for organising books, sagas and shared literary universes through a zoomable hierarchical canvas, contextual editing and a date-based reading timeline.
+            </p>
+
+            <ul class="web-project-tile__features" aria-label="Bookverse highlights">
+              <li>Zoomable node canvas</li>
+              <li>Universe and saga hierarchy</li>
+              <li>Reading timeline and filters</li>
+              <li>Autosave and JSON backups</li>
+            </ul>
+
+            <span class="web-project-tile__open">View featured case study <span aria-hidden="true">→</span></span>
+          </div>
+        </article>
+
+        <article
+          class="web-project-tile web-project-tile--power reveal"
           tabindex="0"
           role="button"
           aria-haspopup="dialog"
           aria-label="Open the Power App case study"
           data-project="power-app"
         >
-          <div class="web-project-card__visual">
-            <div class="web-project-card__glow" aria-hidden="true"></div>
+          <div class="web-project-tile__media">
+            <div class="web-project-tile__orb" aria-hidden="true"></div>
 
-            <div class="web-project-card__window">
-              <div class="web-project-card__window-bar" aria-hidden="true">
-                <span></span>
-                <span></span>
-                <span></span>
-                <small>power-app</small>
-              </div>
-
-              <div class="web-project-card__screen">
-                <img
-                  src="assets/images/power-app/power-app-daily.webp"
-                  alt="Power App daily training view on a mobile screen"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+            <div class="web-project-tile__phone" aria-hidden="true">
+              <span class="web-project-tile__phone-speaker"></span>
+              <img
+                src="assets/images/power-app/power-app-daily.webp"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
-            <span class="web-project-card__status">Live PWA</span>
+            <span class="web-project-tile__status">Live PWA</span>
           </div>
 
-          <div class="web-project-card__content">
-            <div class="project-card__meta">
+          <div class="web-project-tile__content">
+            <div class="web-project-tile__meta">
               <span>Vanilla JavaScript</span>
-              <span>Mobile first</span>
+              <span>PWA</span>
               <span>2026</span>
             </div>
 
-            <p class="web-project-card__kicker">Powerlifting training PWA</p>
+            <p class="web-project-tile__kicker">Powerlifting training product</p>
             <h3>Power App</h3>
-            <p class="web-project-card__role">Frontend developer & UX/UI designer</p>
+            <p class="web-project-tile__role">Solo developer & UX/UI designer</p>
 
-            <p class="web-project-card__description">
-              A progressive web application for planning, editing and tracking structured powerlifting programmes from a focused mobile interface.
+            <p class="web-project-tile__description">
+              A mobile-first application for following, editing and tracking a structured multi-week powerlifting programme.
             </p>
 
-            <ul class="web-project-card__features" aria-label="Power App highlights">
+            <ul class="web-project-tile__features" aria-label="Power App highlights">
               <li>Daily workout tracking</li>
-              <li>Editable multi-week programme</li>
-              <li>Offline-ready local persistence</li>
-              <li>Light and dark themes</li>
+              <li>Editable programme data</li>
+              <li>Local persistence</li>
             </ul>
 
-            <span class="web-project-card__open">View product case study <span aria-hidden="true">→</span></span>
+            <span class="web-project-tile__open">View case study <span aria-hidden="true">→</span></span>
           </div>
         </article>
 
         <article
-          class="web-project-card web-project-card--meal reveal"
+          class="web-project-tile web-project-tile--meal reveal"
           tabindex="0"
           role="button"
           aria-haspopup="dialog"
           aria-label="Open the Weekly Meal Planner case study"
           data-project="weekly-meal-planner"
         >
-          <div class="web-project-card__visual">
-            <div class="web-project-card__glow" aria-hidden="true"></div>
+          <div class="web-project-tile__media">
+            <div class="web-project-tile__orb" aria-hidden="true"></div>
 
-            <div class="web-project-card__window">
-              <div class="web-project-card__window-bar" aria-hidden="true">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="web-project-tile__browser web-project-tile__browser--meal">
+              <div class="web-project-tile__browser-bar" aria-hidden="true">
+                <span></span><span></span><span></span>
                 <small>weekly-meal-planner</small>
               </div>
-
-              <div class="web-project-card__screen">
+              <div class="web-project-tile__browser-screen">
                 <img
                   src="assets/images/weekly-meal-planner/weekly-meal-planner-cover.webp"
-                  alt="Weekly Meal Planner showing the weekly plan and shared shopping list"
+                  alt="Weekly Meal Planner with the weekly plan and shared shopping list"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
             </div>
 
-            <span class="web-project-card__status">Private-use PWA</span>
+            <span class="web-project-tile__status">Private-use PWA</span>
           </div>
 
-          <div class="web-project-card__content">
-            <div class="project-card__meta">
+          <div class="web-project-tile__content">
+            <div class="web-project-tile__meta">
               <span>React</span>
               <span>TypeScript</span>
               <span>Firebase</span>
               <span>2026</span>
             </div>
 
-            <p class="web-project-card__kicker">Shared household planning PWA</p>
+            <p class="web-project-tile__kicker">Shared household planning</p>
             <h3>Weekly Meal Planner</h3>
-            <p class="web-project-card__role">Solo developer & UX/UI designer</p>
+            <p class="web-project-tile__role">Solo developer & UX/UI designer</p>
 
-            <p class="web-project-card__description">
-              A responsive household application for planning weekly meals, maintaining a reusable menu library and synchronising a shared shopping list in real time.
+            <p class="web-project-tile__description">
+              A responsive planning tool for reusable weekly meals, shared household assignments and a real-time shopping list.
             </p>
 
-            <ul class="web-project-card__features" aria-label="Weekly Meal Planner highlights">
-              <li>Fourteen reusable meal slots</li>
-              <li>Real-time Firestore sync</li>
+            <ul class="web-project-tile__features" aria-label="Weekly Meal Planner highlights">
               <li>Reusable menu library</li>
-              <li>Responsive shopping workflow</li>
+              <li>Real-time Firestore sync</li>
+              <li>Responsive planning workflow</li>
             </ul>
 
-            <span class="web-project-card__open">View product case study <span aria-hidden="true">→</span></span>
+            <span class="web-project-tile__open">View case study <span aria-hidden="true">→</span></span>
           </div>
         </article>
       </div>
@@ -533,6 +576,7 @@
             <span>JavaScript</span>
             <span>TypeScript</span>
             <span>React</span>
+            <span>Konva</span>
             <span>HTML</span>
             <span>CSS</span>
             <span>Firebase</span>
@@ -1226,6 +1270,294 @@
           <div>
             <p class="eyebrow">Design focus</p>
             <p>Responsive planning, quick actions and clear visual ownership.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- DETAIL: BOOKVERSE -->
+  <section
+    class="project-detail"
+    id="project-detail-bookverse"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="project-title-bookverse"
+    hidden
+  >
+    <div class="project-detail__panel">
+      <div class="project-detail__toolbar">
+        <button class="detail-back" type="button" data-close-project>← Back to portfolio</button>
+        <span>Web application case study</span>
+        <button class="detail-close" type="button" data-close-project aria-label="Close Bookverse case study">×</button>
+      </div>
+
+      <div class="detail-container">
+        <header class="detail-hero detail-hero--webapp detail-hero--bookverse">
+          <div class="bookverse-hero__canvas" aria-hidden="true">
+            <div class="bookverse-hero__glow"></div>
+            <img
+              class="bookverse-hero__screen bookverse-hero__screen--primary"
+              src="assets/images/bookverse/bookverse-cover.webp"
+              alt=""
+            />
+            <img
+              class="bookverse-hero__screen bookverse-hero__screen--secondary"
+              src="assets/images/bookverse/bookverse-universe.webp"
+              alt=""
+            />
+          </div>
+
+          <div class="detail-hero__overlay">
+            <p>React · Konva · Canvas interaction · Local persistence</p>
+            <h2 id="project-title-bookverse">Bookverse</h2>
+          </div>
+        </header>
+
+        <div class="detail-summary">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <p>
+              Bookverse is an interactive desktop workspace for organising literary universes, sagas and books as a visual hierarchy rather than a flat catalogue. It combines canvas navigation, contextual editing, reading history and portable browser-based persistence.
+            </p>
+
+            <div class="detail-actions" aria-label="Bookverse project links">
+              <a
+                class="button button--primary"
+                href="https://polroviraguilar.github.io/bookverse/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open live app <span aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                class="button button--secondary"
+                href="https://github.com/polroviraguilar/bookverse"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View source code <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <dl>
+            <div><dt>Role</dt><dd>Solo developer & UX/UI designer</dd></div>
+            <div><dt>Team</dt><dd>1</dd></div>
+            <div><dt>Type</dt><dd>Personal project</dd></div>
+            <div><dt>Status</dt><dd>Completed</dd></div>
+            <div><dt>Year</dt><dd>2026</dd></div>
+            <div><dt>Platform</dt><dd>Desktop web application</dd></div>
+          </dl>
+        </div>
+
+        <div class="detail-story">
+          <section>
+            <span class="detail-story__number">01</span>
+            <div>
+              <p class="eyebrow">Problem</p>
+              <h3>Flat reading lists hide the relationships that make fictional worlds interesting.</h3>
+              <p>
+                A conventional library view can store titles, but it does not communicate how universes, sagas and individual books connect. The goal was to create a workspace where those relationships become the primary navigation model.
+              </p>
+
+              <figure class="webapp-figure webapp-figure--wide bookverse-figure">
+                <img
+                  src="assets/images/bookverse/bookverse-canvas.webp"
+                  alt="Bookverse global canvas with universes, sagas, books and animated relationships"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>The global canvas turns a collection into a navigable map of literary relationships.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section>
+            <span class="detail-story__number">02</span>
+            <div>
+              <p class="eyebrow">Information model</p>
+              <h3>A flexible hierarchy built from universes, sagas and books.</h3>
+              <p>
+                Every entity lives in one flat node collection and stores its relationships through identifiers. This supports books inside sagas, books attached directly to a universe and completely standalone titles without duplicating nested data.
+              </p>
+
+              <div class="webapp-feature-grid">
+                <article>
+                  <span>01</span>
+                  <h4>Universe level</h4>
+                  <p>Groups connected settings, sagas and standalone books.</p>
+                </article>
+                <article>
+                  <span>02</span>
+                  <h4>Saga level</h4>
+                  <p>Orders related books and derives progress and rating statistics.</p>
+                </article>
+                <article>
+                  <span>03</span>
+                  <h4>Book level</h4>
+                  <p>Stores reading dates, status, rating, tags, notes and cover art.</p>
+                </article>
+                <article>
+                  <span>04</span>
+                  <h4>Flexible relationships</h4>
+                  <p>Supports nested and standalone content through ID-based links.</p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <span class="detail-story__number">03</span>
+            <div>
+              <p class="eyebrow">Interactive canvas</p>
+              <h3>Zoom, pan and focused navigation turn the hierarchy into an explorable space.</h3>
+              <p>
+                Konva powers a pointer-centred zoom system, canvas panning, draggable nodes, animated connections, hover states and focused universe or saga views. A circular minimap keeps large collections understandable while preserving spatial freedom.
+              </p>
+
+              <div class="webapp-gallery bookverse-gallery">
+                <figure>
+                  <img
+                    src="assets/images/bookverse/bookverse-universe.webp"
+                    alt="Bookverse focused universe view with connected sagas and books"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption>A focused universe view reveals its internal sagas and books.</figcaption>
+                </figure>
+
+                <figure>
+                  <img
+                    src="assets/images/bookverse/bookverse-editor.webp"
+                    alt="Bookverse contextual editor for a selected book"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption>The contextual sidebar edits metadata without leaving the map.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <span class="detail-story__number">04</span>
+            <div>
+              <p class="eyebrow">Reading history</p>
+              <h3>The same collection can be understood spatially or chronologically.</h3>
+              <p>
+                Books with reading dates appear on a dedicated horizontal timeline. Zoom and range controls reveal reading periods, genre colours and overlapping activity while the main canvas remains focused on relationships.
+              </p>
+
+              <figure class="webapp-figure webapp-figure--wide bookverse-figure">
+                <img
+                  src="assets/images/bookverse/bookverse-timeline.webp"
+                  alt="Bookverse reading timeline with dated book intervals and genre colours"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>The timeline provides a second view of the collection based on reading dates.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section>
+            <span class="detail-story__number">05</span>
+            <div>
+              <p class="eyebrow">Persistence and portability</p>
+              <h3>Browser-native storage keeps the tool private while JSON keeps it portable.</h3>
+              <p>
+                The application autosaves nodes, view state, camera position and selection to LocalStorage. Versioned JSON export and import provide a manual backup path without requiring accounts, a server API or a shared database.
+              </p>
+
+              <div class="webapp-feature-grid">
+                <article>
+                  <span>01</span>
+                  <h4>Debounced autosave</h4>
+                  <p>Preserves collection and workspace state after relevant changes.</p>
+                </article>
+                <article>
+                  <span>02</span>
+                  <h4>Versioned export</h4>
+                  <p>Downloads a portable JSON snapshot of the current collection.</p>
+                </article>
+                <article>
+                  <span>03</span>
+                  <h4>Private by default</h4>
+                  <p>Collection data remains inside the visitor's own browser profile.</p>
+                </article>
+                <article>
+                  <span>04</span>
+                  <h4>Safe hierarchy deletion</h4>
+                  <p>Confirmed cascading removal respects universe and saga relationships.</p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <span class="detail-story__number">06</span>
+            <div>
+              <p class="eyebrow">Technical architecture</p>
+              <h3>React coordinates product state while Konva handles high-frequency visual interaction.</h3>
+              <p>
+                Application state, filtering, navigation and persistence remain in React. Canvas rendering, node movement and animation are delegated to Konva components. Performance work includes memoised relationships, requestAnimationFrame interpolation, cached starfield layers and direct node-reference updates for live effects.
+              </p>
+
+              <div class="webapp-tech-list" aria-label="Bookverse technologies">
+                <span>React 19</span>
+                <span>JavaScript / JSX</span>
+                <span>Vite</span>
+                <span>Konva 10</span>
+                <span>react-konva</span>
+                <span>Lucide React</span>
+                <span>LocalStorage</span>
+                <span>FileReader</span>
+                <span>Canvas animation</span>
+                <span>GitHub Pages</span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <span class="detail-story__number">07</span>
+            <div>
+              <p class="eyebrow">Platform boundary</p>
+              <h3>A deliberately desktop-first interaction model.</h3>
+              <p>
+                Bookverse is designed around mouse and trackpad input: precision dragging, wheel zoom, canvas panning, minimap navigation and a persistent editor. The portfolio remains responsive, but the product itself is presented honestly as a desktop web application rather than a mobile-ready experience.
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <span class="detail-story__number">08</span>
+            <div>
+              <p class="eyebrow">Result</p>
+              <h3>A specialised organisational tool with a distinct interaction language.</h3>
+              <p>
+                Bookverse demonstrates product design beyond conventional dashboards: spatial information architecture, animated canvas interaction, derived collection statistics, browser persistence and a visual system tailored to literary world-building.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <div class="detail-notes">
+          <div>
+            <p class="eyebrow">Product focus</p>
+            <p>Visual organisation of interconnected literary collections.</p>
+          </div>
+          <div>
+            <p class="eyebrow">Technical focus</p>
+            <p>Canvas interaction, hierarchical state and browser persistence.</p>
+          </div>
+          <div>
+            <p class="eyebrow">Design focus</p>
+            <p>Spatial navigation, contextual editing and cosmic visual feedback.</p>
           </div>
         </div>
       </div>
