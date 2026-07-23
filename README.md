@@ -1,366 +1,220 @@
-# Pol Rovira — Portfolio
+# Pol Rovira Portfolio
 
-A responsive, accessible, single-page portfolio website showcasing Pol Rovira's work across game development, web application development, pixel art, and low-poly 3D modelling.
+A responsive, single-page portfolio website for Pol Rovira, a multidisciplinary game developer focused on gameplay systems, interactive storytelling, visual development, and practical web products.
 
-The website is built with semantic HTML, modern CSS, and framework-free JavaScript. It presents selected projects through interactive carousels and detailed case-study dialogs while keeping the site lightweight, deployable as static files, and usable across desktop and mobile devices.
+The website presents selected games, academic projects, personal applications, pixel-art work, and low-poly 3D studies. Each portfolio item can open an in-page case study with its own visual theme, media, project summary, process breakdown, and supporting details.
+
+The project is built with semantic HTML, modern CSS, and vanilla JavaScript. It does not require a framework, package manager, bundler, database, or backend service.
 
 ## Table of Contents
 
-- [Overview](#overview)
+- [Project Overview](#project-overview)
 - [Main Features](#main-features)
-- [Portfolio Content](#portfolio-content)
 - [Technology Stack](#technology-stack)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
-- [How the Interface Works](#how-the-interface-works)
-- [JavaScript Architecture](#javascript-architecture)
-- [Styling Architecture](#styling-architecture)
+- [How the Website Works](#how-the-website-works)
+- [Portfolio Sections](#portfolio-sections)
+- [Case Study System](#case-study-system)
+- [JavaScript Behaviour](#javascript-behaviour)
+- [Styling System](#styling-system)
 - [Accessibility](#accessibility)
-- [Responsive Design](#responsive-design)
 - [Performance Considerations](#performance-considerations)
-- [Adding a New Portfolio Project](#adding-a-new-portfolio-project)
+- [Content and Asset Management](#content-and-asset-management)
 - [Customisation Guide](#customisation-guide)
 - [Deployment](#deployment)
 - [Browser Support](#browser-support)
-- [Current Limitations](#current-limitations)
-- [Author](#author)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
 
-## Overview
+## Project Overview
 
-This project is the source code for a personal portfolio focused on both technical and visual work. Its purpose is to communicate a multidisciplinary profile through a polished editorial interface rather than a conventional list of links.
+This repository contains a complete portfolio experience designed around the relationship between technical systems and visual presentation.
 
-The portfolio introduces Pol Rovira as a game developer with experience in Unity and C#, while also presenting front-end product work, pixel-art character design, and low-poly 3D studies. Each major project can be opened as an in-page case study containing project context, responsibilities, design decisions, technical implementation details, screenshots, videos, galleries, and lessons learned.
+The homepage introduces the developer and organises the work into several categories:
 
-The site does not require a framework, package manager, bundler, database, or server-side runtime. It can be hosted directly as a static website.
+- Selected original projects
+- Master’s degree projects
+- Personal web products
+- Visual experiments and playground work
+- Professional profile, capabilities, and education
+- Contact and external profile links
+
+Instead of navigating to separate HTML pages, project details are stored directly in the main document and displayed as accessible modal-style overlays. This approach keeps navigation immediate while still allowing every case study to have a shareable hash-based URL.
+
+Examples of supported project URLs include:
+
+```text
+#/portfolio/shotgun
+#/portfolio/soma
+#/portfolio/bookverse
+#/portfolio/power-app
+#/portfolio/weekly-meal-planner
+```
 
 ## Main Features
 
-### Single-page portfolio navigation
+### Responsive single-page layout
 
-The fixed header links to the main sections of the page:
+The page adapts across desktop, tablet, and mobile breakpoints. Large editorial grids progressively collapse into simpler one-column layouts while preserving the visual hierarchy and reading order.
 
-- Home
-- Game projects
-- Web applications
-- Pixel art
-- 3D models
-- Education
-- Contact
+### Interactive project case studies
 
-The active navigation item updates automatically as the visitor scrolls through the page.
+Portfolio cards open detailed overlays containing project information such as:
 
-### Responsive mobile navigation
+- Project overview
+- Role and team size
+- Tools and technology
+- Development time frame
+- Design goals
+- Technical challenges
+- Process sections
+- Screenshots, videos, GIFs, or model views
+- Outcome and possible next steps
 
-On smaller screens, the desktop navigation becomes a compact menu controlled by an accessible toggle button. The menu:
+### Hash-based deep linking
 
-- Updates `aria-expanded` correctly.
-- Changes its accessible label between opening and closing states.
-- Closes after selecting a navigation link.
-- Closes when clicking outside the menu.
-- Closes when the viewport is resized.
-- Can be dismissed with the `Escape` key.
-
-### Interactive project carousels
-
-Game projects, pixel-art work, and 3D models are displayed in horizontally scrollable carousels. Each carousel supports:
-
-- Previous and next controls on larger screens.
-- Touch and trackpad scrolling.
-- CSS scroll snapping.
-- Left and right arrow-key navigation.
-- Automatic current-item and total-item indicators.
-- Disabled navigation buttons at the beginning and end.
-- Responsive card widths for desktop, tablet, and mobile layouts.
-
-### Detailed project case studies
-
-Project cards open full-screen case-study dialogs without navigating away from the portfolio. These dialogs include:
-
-- Project hero media.
-- Role, team size, duration, year, platform, or technology metadata.
-- Design and development explanations.
-- Screenshots, videos, GIFs, and image galleries.
-- Technology lists.
-- External links to live products or source repositories where available.
-- Project-specific conclusions and learning outcomes.
-
-### URL-addressable project dialogs
-
-Case studies use hash-based URLs in the following format:
+Project overlays use URL hashes in the following format:
 
 ```text
 #/portfolio/project-slug
 ```
 
-This makes an individual project directly addressable and allows the browser back and forward buttons to open or close project details naturally.
+This makes individual case studies directly addressable without creating separate pages or introducing a routing library.
 
-### Accessible modal behaviour
+### Dynamic navigation state
 
-When a project case study is open:
+The primary navigation automatically highlights the section currently visible in the viewport.
 
-- The background page is marked as inert.
-- Background regions are hidden from assistive technology.
-- Page scrolling is locked.
-- Focus moves to the close control.
-- Keyboard focus is trapped inside the active dialog.
-- The `Escape` key closes the dialog.
-- Focus returns to the project card that opened the dialog.
-- Project videos outside the active dialog are paused.
+### Scroll-based visual effects
 
-### Scroll-based interface feedback
+The interface includes:
 
-The page includes several small interaction details:
+- Reveal-on-scroll transitions
+- A header state that changes after scrolling
+- A back-to-top button that appears after sufficient page progress
+- Dynamic background atmospheres in the selected-work section
+- A progress bar inside longer case studies
 
-- A reading-progress bar at the top of the viewport.
-- A translucent, blurred header after scrolling.
-- A back-to-top button that appears after the visitor moves down the page.
-- Section reveal animations powered by `IntersectionObserver`.
-- Automatic copyright-year updates.
+### Viewport-aware media
 
-### Reduced-motion support
+Videos play only when appropriate and are paused when they leave the viewport, when a case study closes, or when the browser tab becomes hidden.
 
-The project respects the visitor's `prefers-reduced-motion` setting. When reduced motion is requested:
+Animated images are also loaded only near the viewport. When reduced motion is enabled, the website keeps their static fallback images instead.
 
-- Smooth scrolling is replaced with immediate scrolling.
-- CSS animations and transitions are effectively disabled.
-- Reveal elements are shown without movement.
-- Case-study videos are not automatically played.
-- Open project videos are paused if the preference changes while the page is active.
+### Media fallbacks
 
-### Media switcher for 3D models
+Images can define a `data-fallback` path. If an image fails to load, JavaScript replaces it with the configured placeholder asset.
 
-The Hoverbikes case study contains a tab-like image selector for switching between multiple model variants. It includes:
+### 3D media switcher
 
-- Active-state styling.
-- `aria-pressed` state updates.
-- Image preloading before replacing the visible asset.
-- A short transition while the new image loads.
-- Basic error handling when an image cannot be loaded.
-
-## Portfolio Content
-
-### Game projects
-
-The game-development section presents Unity and C# projects through interactive cards and extended case studies.
-
-#### Monkey Island Fight
-
-A recreation and reinterpretation of the insult-sword-fighting mechanic from the Monkey Island series. The case study discusses branching dialogue, ScriptableObject-based data, state management, interface feedback, and timing as part of comedic delivery.
-
-#### Super Mario Bros
-
-A recreation of the first level of the original game, with emphasis on custom character physics, momentum, collision behaviour, tile-based level construction, enemy behaviour, and retro interface design.
-
-#### Mecha Fight
-
-A turn-based tactical artillery game featuring destructible terrain, physics-driven projectiles, modular abilities, mech movement, tactical positioning, and an industrial-futuristic HUD.
-
-#### SOMA
-
-A narrative-driven 2D action platformer combining combat, branching conversations, scripted scenes, boss encounters, pixel art, environmental effects, and audio management.
-
-### Web applications
-
-The web-application section uses a responsive editorial grid rather than the horizontal carousel used by the visual and game projects.
-
-#### Bookverse
-
-A desktop-first React and Konva application for visually organising books, sagas, and shared literary universes. The case study covers:
-
-- A zoomable and pannable canvas.
-- Universe, saga, and book hierarchies.
-- Draggable nodes and animated relationships.
-- Focused collection views.
-- A reading timeline.
-- Contextual editing.
-- LocalStorage autosave.
-- Versioned JSON import and export.
-- Performance considerations for canvas animation.
-
-#### Power App
-
-A mobile-first progressive web application that transforms a structured powerlifting spreadsheet into an installable training tool. It includes:
-
-- Daily training views.
-- Programme editing.
-- Exercise completion tracking.
-- Actual-performance recording.
-- Local browser persistence.
-- Light and dark themes.
-- Service-worker and web-app-manifest support.
-
-#### Weekly Meal Planner
-
-A responsive React, TypeScript, and Firebase application for shared household meal planning. It includes:
-
-- Fourteen weekly meal slots.
-- A reusable menu library.
-- Household-member assignments.
-- A shared shopping list.
-- Real-time Firestore synchronisation.
-- Responsive desktop and mobile workflows.
-- PWA delivery through Vite and Workbox.
-
-The live deployment is intentionally private because the current product is designed for one household and does not include user authentication.
-
-### Pixel art
-
-The pixel-art section presents character collections created with Aseprite and related visual tools.
-
-- **Sentient Characters** — retro-futuristic player, NPC, enemy, and boss sprites designed for in-game readability.
-- **Fantasy Characters** — literary character interpretations focused on silhouette, pose, palette, and defining visual details.
-- **Thriller Characters** — mystery archetypes communicated through costume, posture, and personality.
-
-### 3D models
-
-The 3D section presents low-poly studies produced in Blockbench.
-
-- **Pokéitems** — simplified real-time props built around recognisable shapes and compact geometry.
-- **Malenia's Helmet** — a stylised low-poly recreation focused on silhouette and layered ornamental forms.
-- **Hoverbikes** — four futuristic vehicle variants that share a visual language while exploring different proportions and profiles.
-
-### Education and technical experience
-
-The site also documents formal education and a multidisciplinary toolkit covering:
-
-- Unity and C# game development.
-- JavaScript and TypeScript front-end development.
-- React and Konva.
-- Python.
-- HTML and CSS.
-- Firebase and progressive web applications.
-- Aseprite, Blender, Blockbench, Photoshop, and Illustrator.
-- Git, GitHub, GitLab, and Visual Studio workflows.
+The hoverbike case study uses a media switcher that preloads and replaces the displayed model image while updating the active control state and alternative text.
 
 ## Technology Stack
 
-### Core website
+The portfolio deliberately uses a lightweight, dependency-free frontend stack.
 
-- **HTML5** for semantic page structure and accessible landmarks.
-- **CSS3** for layout, responsive design, animation, theming, and component styling.
-- **Vanilla JavaScript** for all navigation, carousel, dialog, routing, and interaction behaviour.
+| Layer | Technology |
+| --- | --- |
+| Markup | HTML5 |
+| Styling | CSS3 |
+| Behaviour | Vanilla JavaScript |
+| Typography | Google Fonts |
+| Media | WebP, PNG, SVG, GIF, MP4, ICO |
+| Hosting | Any static hosting provider |
 
-### Browser APIs used
+The loaded typefaces are:
 
-- `IntersectionObserver`
-- `History API`
-- `Window.matchMedia()`
-- `Element.scrollBy()`
-- `Window.scrollTo()`
-- `requestAnimationFrame()`
-- `Local focus management`
-- `inert` attribute
-- `Image` preloading
+- Space Grotesk for primary interface and display text
+- Newsreader for expressive italic accents
+- IBM Plex Mono for metadata, labels, and technical information
 
-### External runtime dependencies
-
-None.
-
-The portfolio itself does not import a JavaScript framework or third-party stylesheet. The technologies listed inside individual case studies describe those showcased products, not dependencies required to run this portfolio.
+No npm installation or production build is required.
 
 ## Project Structure
 
-The supplied project is organised around three primary source files and an asset directory:
+The source files reference the following recommended directory structure:
 
 ```text
-portfolio/
+.
 ├── index.html
-├── style.css
-├── script.js
 ├── README.md
 ├── resume.pdf
-└── assets/
-    └── images/
-        ├── profile.png
-        ├── hero-background.gif
-        ├── favicon.ico
-        ├── project GIFs, videos, and screenshots
-        ├── power-app/
-        ├── weekly-meal-planner/
-        └── bookverse/
+└── assets
+    ├── css
+    │   └── style.css
+    ├── js
+    │   └── main.js
+    └── images
+        ├── common
+        │   ├── favicon.ico
+        │   ├── media-placeholder.svg
+        │   └── profile.png
+        ├── games
+        │   ├── shotgun
+        │   ├── soma
+        │   ├── mecha
+        │   ├── monkey-island
+        │   └── mario
+        ├── webapps
+        │   ├── power-app
+        │   ├── weekly-meal-planner
+        │   └── bookverse
+        ├── pixel-art
+        │   ├── sentient
+        │   ├── fantasy
+        │   └── thriller
+        └── 3d
+            ├── hoverbikes
+            ├── malenia
+            └── pokeitems
 ```
 
-### `index.html`
+The supplied files may be stored at the repository root while being reviewed, but the HTML currently expects the stylesheet and script at these paths:
 
-Contains:
+```text
+assets/css/style.css
+assets/js/main.js
+```
 
-- Site metadata and document title.
-- Fixed header and primary navigation.
-- Hero content.
-- Portfolio sections.
-- Education and technical-skills sections.
-- Contact footer.
-- All project case-study dialogs.
-- Media references and external project links.
-
-### `style.css`
-
-Contains:
-
-- Design tokens through CSS custom properties.
-- Global resets and typography.
-- Header, hero, section, card, carousel, timeline, skill, footer, and dialog styles.
-- Responsive breakpoints.
-- Reduced-motion behaviour.
-- Web-application showcase layouts.
-- Project-specific case-study presentation styles.
-- Hoverbike media-switcher styling.
-
-### `script.js`
-
-Contains:
-
-- Mobile-menu state management.
-- Scroll-progress and header-state updates.
-- Active-section detection.
-- Reveal animations.
-- Carousel controls and status updates.
-- Project-dialog opening and closing.
-- Hash-based project routing.
-- Browser-history integration.
-- Focus trapping and focus restoration.
-- Reduced-motion handling.
-- Video playback management.
-- Hoverbike media switching.
-- Dynamic copyright-year updates.
+Either place the files in those directories or update the corresponding `<link>` and `<script>` elements in `index.html`.
 
 ## Getting Started
 
-Because the site is entirely static, setup is minimal.
-
-### 1. Download or clone the project
+### 1. Clone or download the project
 
 ```bash
 git clone <repository-url>
-cd <repository-folder>
+cd <repository-directory>
 ```
 
-Replace the placeholders with the actual repository URL and local folder name.
+### 2. Check the asset paths
 
-### 2. Confirm the required assets
-
-The HTML expects the images, GIFs, videos, favicon, and project screenshots to be available under:
+Make sure the following files exist in the locations referenced by `index.html`:
 
 ```text
-assets/images/
-```
-
-It also expects a resume file at:
-
-```text
+assets/css/style.css
+assets/js/main.js
+assets/images/...
 resume.pdf
 ```
 
-Preserve the existing relative paths or update the references in `index.html`.
+Missing images will use the configured placeholder where possible, but missing video files, the résumé, or incorrectly organised directories will still produce broken links or incomplete content.
 
-### 3. Run a local server
+### 3. Start a local web server
 
-Opening `index.html` directly may work for basic browsing, but a local HTTP server is recommended so that browser behaviour matches production hosting more closely.
+Although the site does not need compilation, it is better to serve it through HTTP instead of opening `index.html` directly with a `file://` URL.
 
 Using Python:
 
 ```bash
 python3 -m http.server 8000
+```
+
+Using Node.js and `serve`:
+
+```bash
+npx serve .
 ```
 
 Then open:
@@ -369,501 +223,738 @@ Then open:
 http://localhost:8000
 ```
 
-Using Node.js and `npx`:
+### 4. Test the main interactions
 
-```bash
-npx serve .
-```
+Verify that:
 
-No installation or build command is required for the portfolio source itself.
+- The mobile menu opens and closes
+- Navigation links scroll to the correct sections
+- Portfolio cards open their matching case studies
+- The Escape key closes an open case study
+- Browser Back closes a case study opened from the page
+- Direct project hashes open the correct case study
+- Videos and animated images load correctly
+- External links and the résumé open successfully
 
-## How the Interface Works
+## How the Website Works
 
-### Navigation and active-section tracking
+The site follows a progressive-enhancement approach:
 
-The script observes all major page sections and the footer. As sections enter the central portion of the viewport, the corresponding header link receives the `is-active` class.
+1. `index.html` contains all visible page content and every case study.
+2. `style.css` defines the full responsive layout, component system, project themes, and motion preferences.
+3. `main.js` adds navigation state, reveal effects, media control, modal behaviour, history integration, focus management, and error fallbacks.
 
-The observer uses a negative top and bottom root margin so that the active state changes when a section reaches the main reading area rather than only when it first touches the viewport.
+The page remains structurally meaningful without JavaScript, but JavaScript is required for opening the hidden project-detail overlays and for most interactive enhancements.
 
-### Reveal animation
+## Portfolio Sections
 
-Elements with the `.reveal` class begin slightly translated and transparent. A dedicated observer adds `.is-visible` when each element enters the viewport and then stops observing it.
+### Hero
 
-This provides one-time entrance animation without continuously running scroll handlers.
+The introductory section includes:
 
-### Carousel calculation
+- Availability status
+- Professional role
+- Name and positioning statement
+- Short personal introduction
+- Links to selected work and the résumé
+- Featured Shotgun Battle Grid media
 
-Each carousel calculates its scroll step from:
+### Selected Work
 
-1. The rendered width of the first card.
-2. The computed CSS gap between cards.
+The selected-work section highlights three projects:
 
-This allows the same JavaScript logic to work at different responsive card widths. The current item is estimated from the horizontal scroll position divided by the calculated step.
+- Shotgun Battle Grid
+- SOMA
+- Bookverse
 
-### Dialog routing
+As each featured card enters the central viewport area, JavaScript changes the section atmosphere through a `data-active-atmosphere` value. CSS uses that value to display project-specific gradients and background tones.
 
-Every interactive project card includes a `data-project` value, for example:
+### Master’s Projects
+
+This section presents focused academic exercises:
+
+- Mecha Fight
+- Monkey Island Fight
+- Super Mario Bros recreation
+
+Each project is described as a targeted study in areas such as physics, dialogue systems, movement, collision, level rhythm, and technical recreation.
+
+### Personal Products
+
+This section presents complete web applications built around real personal workflows:
+
+- Power App
+- Weekly Meal Planner
+
+The case studies include links to live products or source code where those links are available in the HTML.
+
+### Playground
+
+The playground contains visual-development and production studies:
+
+- Sentient
+- Fantasy Characters
+- Thriller Cast
+- Hoverbikes
+- Malenia’s Helmet
+- Pokéitems
+
+Several cards use static placeholders initially and replace them with animated GIFs only when they approach the viewport.
+
+### About
+
+The about section includes:
+
+- Portrait and location
+- Professional summary
+- Current work and education context
+- Contact email
+- Technical and creative capabilities
+- Education history
+
+### Contact Footer
+
+The footer provides:
+
+- A primary email call to action
+- Résumé link
+- GitHub link
+- LinkedIn link
+- Instagram link
+- Automatically updated copyright year
+
+## Case Study System
+
+### HTML structure
+
+Every case study is a section with an ID that follows this convention:
 
 ```html
-<article data-project="bookverse">...</article>
+<section id="project-detail-example" class="project-detail" hidden>
+  ...
+</section>
 ```
 
-Its matching dialog uses an ID in this format:
+A trigger opens the case study when its `data-project` value matches the suffix of the detail ID:
 
 ```html
-<section id="project-detail-bookverse">...</section>
+<article data-project="example" role="button" tabindex="0">
+  ...
+</article>
 ```
 
-When the card opens, the script updates the URL to:
+The matching detail element must therefore be:
+
+```html
+<section id="project-detail-example">
+  ...
+</section>
+```
+
+### Supported project identifiers
+
+The current document defines the following case-study identifiers:
 
 ```text
-#/portfolio/bookverse
+shotgun
+soma
+bookverse
+mecha
+monkey
+mario
+power-app
+weekly-meal-planner
+sentient
+bookcharacters
+thrillercharacters
+hoverbikes
+malenia-helmet
+pokeitems
 ```
 
-On initial page load and browser-history changes, the script reads the hash and opens the appropriate dialog.
+### Opening a case study
 
-### Direct links and browser history
+When a trigger is activated, JavaScript:
 
-The script distinguishes between:
+1. Finds the matching project detail.
+2. Stores the element that previously had focus.
+3. Makes the detail section visible.
+4. Locks background page scrolling.
+5. Marks the rest of the page as inert and hidden from assistive technology.
+6. Resets the detail panel scroll position.
+7. Starts the relevant video when motion preferences allow it.
+8. Moves focus to the close control.
+9. Pushes a hash-based history entry.
 
-- A project opened from the portfolio interface.
-- A project opened directly from a copied hash URL.
+### Closing a case study
 
-When a project was opened through the interface, closing it can use `history.back()`. When the page was entered directly at a project URL, closing replaces the hash without incorrectly navigating away from the portfolio.
+A project can be closed by:
 
-## JavaScript Architecture
+- Selecting a close or back button
+- Pressing Escape
+- Clicking the overlay background
+- Navigating back in browser history
 
-The JavaScript is wrapped in an immediately invoked function expression and uses strict mode:
+After closing, focus returns to the element that opened the project whenever possible.
 
-```javascript
-(() => {
-  "use strict";
-  // Application behaviour
-})();
+### Direct links
+
+A URL such as the following opens the relevant project automatically:
+
+```text
+https://example.com/#/portfolio/shotgun
 ```
 
-This avoids leaking variables into the global scope.
-
-### Main state values
-
-The script keeps only a small amount of shared state:
-
-- `activeProject` — the currently open project dialog.
-- `lastFocusedElement` — the element that should receive focus after a dialog closes.
-- `prefersReducedMotion` — the current operating-system motion preference.
-
-### Page chrome updates
-
-`updatePageChrome()` controls three scroll-dependent interface states:
-
-- Header appearance.
-- Back-to-top visibility.
-- Scroll-progress width.
-
-The scroll listener is passive to avoid blocking scrolling.
-
-### Dialog lifecycle
-
-`showProject()`:
-
-1. Finds the matching dialog.
-2. Stores the currently focused element.
-3. Reveals the dialog.
-4. Locks body scrolling.
-5. Makes the background inert.
-6. Pauses other project videos.
-7. Starts the active video when motion is allowed.
-8. Moves focus into the dialog.
-9. Updates browser history when required.
-
-`hideProject()` reverses these operations and restores focus after the closing transition.
+Direct-entry history is handled differently from in-page navigation so closing the case study does not incorrectly navigate away from the site.
 
 ### Focus trapping
 
-While a dialog is open, the script intercepts `Tab` and `Shift + Tab` at the first and last focusable elements. This keeps keyboard navigation inside the modal surface until it is closed.
+While a project detail is open, Tab and Shift+Tab remain inside the active overlay. This prevents keyboard focus from moving into visually hidden background content.
 
-### Defensive coding
+### Scroll progress
 
-Most DOM lookups are guarded with optional chaining or explicit existence checks. This allows individual components to be removed without causing the rest of the page script to fail.
+Long case studies can include:
 
-## Styling Architecture
+```html
+<div class="detail-progress" aria-hidden="true">
+  <span></span>
+</div>
+```
+
+JavaScript calculates the detail panel’s current scroll position and updates the bar width from 0 to 100 percent.
+
+## JavaScript Behaviour
+
+All functionality is wrapped in an immediately invoked function expression and uses strict mode to avoid leaking variables into the global scope.
+
+### Header and back-to-top state
+
+A throttled scroll handler uses `requestAnimationFrame` to:
+
+- Add `is-scrolled` to the fixed header after 20 pixels
+- Show the back-to-top control after approximately 75 percent of one viewport height
+
+### Mobile navigation
+
+The menu button:
+
+- Updates `aria-expanded`
+- Changes its accessible label between open and close states
+- Toggles the navigation panel
+- Closes after selecting a navigation link
+- Closes when clicking outside the menu
+- Closes when pressing Escape
+
+### Active section tracking
+
+An `IntersectionObserver` watches main sections and the footer. The most visible region determines which navigation link receives the `is-active` class.
+
+### Reveal transitions
+
+Elements with the `.reveal` class are observed once. When they become visible, the script adds `.is-visible` and stops observing them.
+
+### Selected-project atmosphere
+
+Featured project cards are observed separately. The most visible card updates the selected-work section’s `data-active-atmosphere` attribute.
+
+### Video playback
+
+The helper `setVideoState()` respects the user’s reduced-motion preference.
+
+Viewport videos:
+
+- Play when sufficiently visible
+- Pause when no longer visible
+- Pause when reduced motion is enabled
+- Pause when the document becomes hidden
+- Resume conditionally when visibility returns
+
+### Animated image loading
+
+Images with `data-animated-src` keep their original source as `data-static-src`. An observer swaps between the static and animated files depending on visibility and motion preferences.
+
+Example:
+
+```html
+<img
+  src="assets/images/common/media-placeholder.svg"
+  data-animated-src="assets/images/example/animation.gif"
+  alt="Description"
+>
+```
+
+### Image fallbacks
+
+Every image can provide a fallback source:
+
+```html
+<img
+  src="assets/images/example/image.webp"
+  data-fallback="assets/images/common/media-placeholder.svg"
+  alt="Description"
+>
+```
+
+When the original source fails, JavaScript applies the fallback only once to avoid an error loop.
+
+### Poster validation
+
+Videos with `data-poster-src` validate the desired poster image before assigning it. This avoids replacing an existing working poster with a missing file.
+
+### Media switching
+
+A container with `data-media-switcher` can include:
+
+- One image marked with `data-media-image`
+- Multiple controls marked with `data-media-src`
+
+When a control is selected, the target image is preloaded, the active state is updated, `aria-pressed` is synchronised, and the displayed alternative text is replaced with the button’s `data-media-alt` value.
+
+### Current year
+
+The footer year is generated at runtime:
+
+```javascript
+document.getElementById("current-year").textContent = String(new Date().getFullYear());
+```
+
+## Styling System
 
 ### Design tokens
 
-Global visual values are declared as CSS custom properties under `:root`, including:
+The root selector defines reusable custom properties for:
 
-- Background and surface colours.
-- Primary text and muted text colours.
-- Yellow and orange accent colours.
-- Border colours.
-- Shadows.
-- Border radii.
-- Content width.
-- Header height.
-- Shared easing curve.
+- Background and paper tones
+- Text colours
+- Accent colours
+- Borders
+- Content width
+- Header height
+- Border radii
+- Shadows
+- Timing functions
+- Font families
 
 Example:
 
 ```css
 :root {
-  --bg: #131210;
-  --surface: #1a1816;
-  --text: #f3f0e8;
-  --yellow: #fada5e;
-  --orange: #f48067;
-  --content: 1180px;
+  --paper: #f3eee5;
+  --ink: #1d1d20;
+  --cobalt: #2557d6;
+  --coral: #ef6b5b;
+  --content: 1280px;
+  --header-height: 78px;
 }
 ```
 
-Changing these variables is the fastest way to create a different visual theme.
+Changing these variables is the fastest way to modify the overall visual identity.
 
-### Naming convention
+### Component classes
 
-The stylesheet generally follows a component-oriented, BEM-like naming pattern:
+The stylesheet is organised around reusable classes for:
 
-```text
-component
-component__element
-component--modifier
+- Buttons
+- Section headings
+- Project cards
+- Study cards
+- Product cards
+- Playground cards
+- Project-detail overlays
+- Galleries
+- Notes and metadata
+- Navigation and footer controls
+
+### Project-specific themes
+
+Each case study can define its own theme by overriding custom properties on a modifier class.
+
+For example:
+
+```css
+.project-detail--shotgun {
+  --bg: #06111e;
+  --yellow: #48e5ff;
+  --orange: #ff56b5;
+}
 ```
 
-Examples:
+The shared project-detail components then inherit those colours without requiring separate component rules for every project.
 
-- `.project-card`
-- `.project-card__media`
-- `.project-card--pixel`
-- `.detail-hero__overlay`
-- `.web-project-tile--featured`
+### Responsive breakpoints
 
-### Layout systems
+The stylesheet uses the following principal breakpoints:
 
-The site combines several CSS layout techniques:
+```text
+1120px
+900px
+700px
+480px
+```
 
-- CSS Grid for section headings, education, skills, case-study summaries, galleries, and web-project layouts.
-- Flexbox for navigation, buttons, tags, carousel tracks, and footer links.
-- Fixed positioning for the header, progress bar, modal dialogs, and back-to-top control.
-- Scroll snapping for project carousels.
-- `clamp()` for fluid typography and spacing.
-- `aspect-ratio` for stable media frames.
-- `color-mix()` for project-specific accent variations.
+They control navigation behaviour, grid columns, project-card orientation, modal layouts, galleries, typography, and button sizing.
 
-### Visual language
+### Reduced motion
 
-The design uses:
+The `prefers-reduced-motion: reduce` media query:
 
-- A dark, warm-neutral base.
-- Yellow as the main highlight colour.
-- Coral-orange as a secondary accent.
-- Large editorial typography.
-- Rounded surfaces and subtle borders.
-- Soft radial glows.
-- Layered shadows and blurred translucent panels.
-- Project-specific visual accents for Bookverse, Power App, and Weekly Meal Planner.
+- Disables smooth scrolling
+- Reduces transition and animation durations
+- Makes reveal elements immediately visible
+- Hides the hero video
+
+JavaScript also reads the same preference and prevents automatic media playback.
 
 ## Accessibility
 
-Accessibility is integrated into both the markup and interaction logic.
+The website includes several accessibility-oriented implementation details.
 
-### Semantic structure
+### Semantic landmarks
 
-The document uses:
+The document uses semantic elements such as:
 
-- `<header>`
-- `<nav>`
-- `<main>`
-- `<section>`
-- `<article>`
-- `<footer>`
-- Heading hierarchies
-- Description lists for project metadata
-- Figures and captions for project media
+- `header`
+- `nav`
+- `main`
+- `section`
+- `article`
+- `figure`
+- `footer`
 
-### Keyboard support
+### Skip link
 
-Visitors can:
+A keyboard-accessible skip link allows users to move directly to the main content.
 
-- Skip directly to the main content.
-- Navigate project cards with the keyboard.
-- Open cards using `Enter` or `Space`.
-- Navigate carousels with arrow keys.
-- Close menus and dialogs using `Escape`.
-- Use visible focus indicators.
-- Remain correctly contained inside open dialogs.
+### Keyboard-operable project cards
 
-### ARIA usage
+Interactive cards use `role="button"` and `tabindex="0"`. JavaScript opens them with Enter or Space as well as pointer input.
 
-The project uses ARIA where native HTML alone does not fully describe the interaction:
+### Accessible dialogs
 
-- Navigation labels.
-- Menu expanded state.
-- Dialog roles and modal state.
-- Dialog title relationships through `aria-labelledby`.
-- Project-card popup intent through `aria-haspopup`.
-- Media-tab pressed states.
-- Accessible labels for icon-only controls.
+Project details use:
 
-### Motion and autoplay
+- `role="dialog"`
+- `aria-modal="true"`
+- `aria-labelledby`
+- `aria-hidden`
+- Focus movement on open
+- Focus restoration on close
+- Focus trapping while open
+- Escape-key dismissal
 
-Project videos are muted, looped, and configured for inline playback. JavaScript prevents automatic playback when reduced motion is requested and pauses videos that are not part of the active case study.
+### Background isolation
 
-### Image descriptions
+While a case study is active, the main page regions receive both `inert` and `aria-hidden="true"`, preventing accidental interaction with content behind the overlay.
 
-Content images include descriptive alternative text. Decorative interface images inside hero composites are hidden from assistive technology using empty alternative text and an `aria-hidden` parent where appropriate.
+### Visible focus states
 
-## Responsive Design
+The stylesheet defines strong `:focus-visible` outlines for general controls and project-detail controls.
 
-The layout changes across several major breakpoints.
+### Alternative text
 
-### Large screens
+Content images include descriptive `alt` attributes. Decorative images use empty alternative text where appropriate.
 
-- Full horizontal navigation.
-- Three project cards visible in carousels.
-- Three-column technical-skills layout.
-- Two-column or feature-oriented web-application presentations.
-- Multi-column project galleries.
+### Motion preferences
 
-### Medium screens
+Both CSS and JavaScript respect `prefers-reduced-motion`.
 
-- Two project cards visible in carousels.
-- Two-column skills and character galleries.
-- Web-application tiles become full width.
-- Featured project layouts stack vertically.
+### Important implementation note
 
-### Mobile screens
-
-- Collapsible navigation menu.
-- One card per carousel viewport.
-- Hidden carousel arrow controls in favour of touch scrolling.
-- Single-column section headings, education entries, skills, summaries, and project notes.
-- Full-width call-to-action buttons.
-- Smaller dialog toolbar and content margins.
-- Mobile-specific arrangements for composite application screenshots.
+Cards implemented as non-button elements with `role="button"` are keyboard supported by the script. For future extensions, native `<button>` or `<a>` elements may still be preferable when their semantics fit the interaction, because they provide built-in keyboard and form behaviour.
 
 ## Performance Considerations
 
-The portfolio includes several performance-oriented choices:
+The project includes several measures intended to reduce unnecessary work and network usage:
 
-- Most below-the-fold images use `loading="lazy"`.
-- Images use `decoding="async"` where appropriate.
-- The profile image uses high fetch priority because it appears in the initial viewport.
-- Project videos use `preload="metadata"` instead of immediately downloading complete files.
-- Scroll listeners are passive.
-- Visibility and section-state changes use `IntersectionObserver` rather than continuous geometry calculations.
-- Hidden project videos are paused.
-- The media switcher preloads a replacement image before swapping it into view.
-- CSS defines fixed aspect ratios to reduce layout shifts.
+- Most non-critical images use `loading="lazy"`
+- Images use `decoding="async"`
+- The hero image uses `fetchpriority="high"`
+- Videos use `preload="metadata"` or `preload="none"`
+- Viewport videos pause when not visible
+- Animated GIFs are not loaded until near the viewport
+- Scroll updates are throttled with `requestAnimationFrame`
+- `IntersectionObserver` replaces continuous scroll calculations for most visibility behaviour
+- Media switcher images are preloaded before display
+- Failed images fall back to a shared placeholder
 
-For production deployment, large GIF and video assets should still be compressed carefully because media size is likely to have a greater effect on load time than the source code itself.
+For further optimisation, consider:
 
-## Adding a New Portfolio Project
+- Compressing large PNG and GIF files
+- Replacing GIF animation with MP4 or WebM where suitable
+- Providing multiple image sizes through `srcset`
+- Self-hosting fonts if privacy or offline use is important
+- Adding long-term cache headers in production
+- Running an image audit before deployment
 
-A new project requires both a trigger card and a matching detail dialog.
+## Content and Asset Management
 
-### 1. Add the project card
+### Updating personal information
 
-Use a unique slug in `data-project`:
+Edit the following areas in `index.html`:
+
+- Document title and description
+- Hero introduction
+- Availability message
+- About text
+- Email address
+- Social profile links
+- Education entries
+- Footer call to action
+
+### Updating the résumé
+
+Replace `resume.pdf` in the project root or change every résumé link to the correct path.
+
+### Replacing images
+
+When replacing an image:
+
+1. Keep the same file path, or update the `src` attribute.
+2. Update the `alt` text so it describes the new content.
+3. Set an appropriate width and height where practical.
+4. Keep or update the `data-fallback` path.
+5. Compress the asset before deployment.
+
+### Replacing videos
+
+Update the `<source>` path or video `src`. Keep poster images available so users see meaningful content before playback begins or when reduced motion is enabled.
+
+### Adding a new portfolio card
+
+Create a trigger with a unique `data-project` value:
 
 ```html
-<article
-  class="project-card"
-  tabindex="0"
-  role="button"
-  aria-haspopup="dialog"
-  data-project="new-project"
->
-  <!-- Card media and content -->
+<article data-project="new-project" role="button" tabindex="0">
+  ...
 </article>
 ```
 
-For a web application, use the corresponding `.web-project-tile` structure instead.
-
-### 2. Add the matching dialog
-
-The dialog ID must use the same slug:
+Then create a matching case study:
 
 ```html
 <section
-  class="project-detail"
   id="project-detail-new-project"
+  class="project-detail project-detail--new-project"
   role="dialog"
   aria-modal="true"
+  aria-hidden="true"
   aria-labelledby="project-title-new-project"
   hidden
 >
-  <div class="project-detail__panel">
-    <div class="project-detail__toolbar">
-      <button type="button" data-close-project>Back to portfolio</button>
-      <span>Project case study</span>
-      <button type="button" data-close-project aria-label="Close project">×</button>
-    </div>
-
-    <div class="detail-container">
-      <h2 id="project-title-new-project">New Project</h2>
-      <!-- Case-study content -->
-    </div>
-  </div>
+  ...
 </section>
 ```
 
-No additional JavaScript registration is necessary. The existing script automatically discovers elements containing `data-project` and `data-close-project`.
+The slug must match exactly in both locations.
 
-### 3. Add media files
+### Adding a new case-study theme
 
-Place project media under `assets/images/` or an appropriately named subdirectory. Use:
-
-- Meaningful file names.
-- Correct alternative text.
-- Lazy loading for non-critical images.
-- Compressed WebP, AVIF, MP4, or similarly efficient formats where practical.
-
-### 4. Check the route
-
-The project will be available through:
-
-```text
-#/portfolio/new-project
-```
-
-### 5. Verify keyboard behaviour
-
-Confirm that:
-
-- The card can receive focus.
-- `Enter` and `Space` open the dialog.
-- Focus moves to a close button.
-- `Tab` remains inside the dialog.
-- `Escape` closes the dialog.
-- Focus returns to the original card.
-
-## Customisation Guide
-
-### Change personal information
-
-Update the following areas in `index.html`:
-
-- Page title and meta description.
-- Brand name and role.
-- Hero portrait, status, headline, and introduction.
-- Professional facts.
-- Education timeline.
-- Technical experience.
-- Contact email.
-- Resume path.
-- GitHub, Instagram, and LinkedIn links.
-- Footer location and employment text.
-
-### Change the colour palette
-
-Edit the colour variables at the top of `style.css`:
+Define a modifier class that overrides the shared project variables:
 
 ```css
-:root {
-  --bg: ...;
-  --surface: ...;
-  --text: ...;
-  --yellow: ...;
-  --orange: ...;
+.project-detail--new-project {
+  --bg: #10131a;
+  --bg-deep: #080a0f;
+  --surface: #181d27;
+  --text: #f5f5f2;
+  --text-soft: rgba(245, 245, 242, 0.72);
+  --yellow: #8fcaff;
+  --yellow-soft: #d9ecff;
+  --orange: #ff7d6d;
+  --line: rgba(255, 255, 255, 0.13);
 }
 ```
 
-Review contrast after changing the palette, especially for muted text, borders, focus outlines, and text displayed over media.
+## Customisation Guide
 
-### Change the hero background
+### Change the global colour palette
 
-Replace:
+Edit the colour custom properties in `:root`.
 
-```text
-assets/images/hero-background.gif
-```
+### Change the content width
 
-Or update the URL in `.hero__background` inside `style.css`.
-
-### Change content width and spacing
-
-The primary maximum width is controlled by:
+Update:
 
 ```css
---content: 1180px;
+--content: 1280px;
 ```
 
-Global section spacing is controlled by the `.section` rule and its responsive breakpoints.
+### Change the typography
 
-### Add a new navigation section
+1. Replace or remove the Google Fonts request in `index.html`.
+2. Update the font variables in `:root`:
 
-1. Give the section a unique `id`.
-2. Add a matching anchor link to `.primary-nav`.
-3. Place the section inside `<main>` or use a footer section with an ID.
+```css
+--font-display: ...;
+--font-serif: ...;
+--font-mono: ...;
+```
 
-The active-section observer automatically includes `main section[id]` and `footer[id]`.
+### Change section order
+
+Move entire section blocks within `<main>`. Keep navigation links and section IDs synchronised.
+
+### Change navigation items
+
+Navigation links must target an existing section ID:
+
+```html
+<a href="#about">About</a>
+```
+
+The active-section observer automatically includes sections inside `main` and the footer when they have an ID.
+
+### Change animation intensity
+
+Adjust the transition values on `.reveal`, card hover states, and the shared `--ease` variable. Keep the reduced-motion rules in place.
 
 ## Deployment
 
-The project can be deployed to any static hosting provider.
+Because the project is static, it can be deployed to services such as:
+
+- GitHub Pages
+- Netlify
+- Cloudflare Pages
+- Vercel
+- Any standard web server
 
 ### GitHub Pages
 
-A typical GitHub Pages workflow is:
+A typical deployment requires only the repository contents and correctly committed assets.
 
-1. Push `index.html`, `style.css`, `script.js`, `resume.pdf`, and the complete `assets` directory to the repository.
-2. Open the repository settings.
-3. Enable Pages from the required branch and root directory.
-4. Wait for the static site to publish.
+Ensure that:
 
-The hash-based project routes work well on static hosting because they do not require server-side URL rewriting.
+- File and directory names match their case-sensitive references
+- `index.html` is at the published root
+- Asset paths are relative and valid
+- `resume.pdf` is included
+- Large media files remain within platform limits
 
-### Netlify, Vercel, or Cloudflare Pages
+Hash-based project URLs work well on static hosting because they do not require server-side route rewriting.
 
-Use the repository root as the publish directory. No build command is required unless the project is later migrated into a build system.
+### Deployment checklist
 
-### Traditional web hosting
+Before publishing:
 
-Upload the files while preserving the same directory structure. Ensure the server sends appropriate MIME types for `.css`, `.js`, `.webp`, `.gif`, `.mp4`, `.pdf`, and icon files.
+- Validate the HTML
+- Check the browser console for errors
+- Test all project cards
+- Test direct hash URLs
+- Test keyboard navigation
+- Test reduced-motion mode
+- Test at mobile, tablet, and desktop widths
+- Confirm all external links
+- Confirm the email address
+- Confirm the résumé path
+- Compress heavy assets
+- Run a performance and accessibility audit
 
 ## Browser Support
 
-The project is intended for current evergreen browsers, including recent versions of:
+The implementation relies on modern browser features, including:
 
-- Chrome
-- Edge
-- Firefox
-- Safari
-
-The implementation uses modern platform features such as:
-
+- CSS custom properties
+- CSS Grid and Flexbox
 - `IntersectionObserver`
-- The `inert` attribute
-- CSS `color-mix()`
-- CSS `clamp()`
-- `aspect-ratio`
-- `backdrop-filter`
+- `requestAnimationFrame`
+- `matchMedia`
+- History API
+- `inert`
 - Optional chaining
+- `color-mix()` in project-detail styling
 
-Older browsers may require fallbacks or polyfills. The core content remains semantic HTML, but some visual effects and modal-background behaviour may degrade when newer features are unavailable.
+Current versions of Chrome, Edge, Firefox, and Safari are the intended targets.
 
-## Current Limitations
+Older browsers may need polyfills or fallbacks, especially for `inert`, `color-mix()`, and some newer CSS text-wrapping properties.
 
-Based on the provided source snapshot:
+## Troubleshooting
 
-- There is no automated test suite.
-- There is no linting or formatting configuration.
-- There is no package manifest or build pipeline.
-- Project information is written directly in `index.html`, so adding many more case studies could eventually make the file difficult to maintain.
-- The project dialogs behave like client-side views but are not generated from structured data.
-- Large GIF and video files may require additional optimisation for slower connections.
-- Some showcased applications are desktop-first or private by design, as explained in their case studies.
+### The page has no styling
 
-A future version could move project data into JSON or JavaScript objects, generate cards and dialogs from reusable templates, and add automated accessibility and browser testing.
+Confirm that `style.css` is available at:
 
-## Author
+```text
+assets/css/style.css
+```
 
-**Pol Rovira**  
-Game developer, front-end product developer, pixel artist, and 3D generalist based in Catalonia, Spain.
+If the file remains at the repository root, change the HTML reference to:
 
-- GitHub: [polroviraguilar](https://github.com/polroviraguilar)
-- LinkedIn: [Pol Rovira Aguilar](https://www.linkedin.com/in/pol-rovira-aguilar-4257961b1/)
-- Instagram: [@sentienthegame](https://www.instagram.com/sentienthegame/)
-- Email: [proviraguilar@gmail.com](mailto:proviraguilar@gmail.com)
+```html
+<link rel="stylesheet" href="style.css">
+```
 
----
+### Interactive elements do not work
 
-This README documents the current static portfolio implementation and should be updated whenever the project structure, showcased work, routes, or interaction patterns change.
+Confirm that `main.js` is available at:
+
+```text
+assets/js/main.js
+```
+
+Also check the browser console for JavaScript errors.
+
+### A project card does not open
+
+Check that:
+
+- The trigger has a `data-project` value
+- A detail section exists with `id="project-detail-{value}"`
+- The two slugs match exactly
+- No duplicate IDs exist
+
+### A direct case-study URL does not open
+
+The expected pattern is:
+
+```text
+#/portfolio/project-slug
+```
+
+The project slug must contain only letters, numbers, and hyphens to match the current regular expression.
+
+### Images show placeholders
+
+The original image path is probably missing or incorrect. Check:
+
+- Exact filename
+- File extension
+- Letter casing
+- Relative directory
+- URL-encoded spaces in filenames
+
+### A GIF never animates
+
+Check that:
+
+- `data-animated-src` is present
+- The animated asset exists
+- Reduced motion is not enabled
+- The image is close enough to the viewport
+
+### A video does not autoplay
+
+Autoplay behaviour depends on browser policy. The supplied videos are muted and use `playsinline`, which improves compatibility, but playback may still be blocked in some contexts. The script safely ignores rejected play promises.
+
+Also verify that reduced motion is not enabled, because automatic playback is intentionally disabled in that mode.
+
+### The résumé link is broken
+
+Place `resume.pdf` at the root of the published site or update the résumé links to the actual location.
+
+### Layout problems appear only after deployment
+
+Static hosts are usually case-sensitive. A path that works locally may fail online if the filename casing differs from the HTML reference.
+
+## License
+
+No explicit software or content license is defined in the supplied files.
+
+Before redistributing or reusing this portfolio, add a licence that clearly distinguishes between:
+
+- Source code
+- Personal text and branding
+- Screenshots and videos
+- Original game artwork
+- Fan studies or recreations based on third-party intellectual property
+
+Unless a licence is added, standard copyright restrictions apply.
