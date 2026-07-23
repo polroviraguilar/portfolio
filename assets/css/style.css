@@ -509,3 +509,61 @@ p { text-wrap: pretty; }
   .reveal { opacity: 1; transform: none; }
   .hero-media__video { display: none; }
 }
+
+/* =========================================================
+   CASE STUDY CORRECTIONS
+   ========================================================= */
+.project-detail {
+  --button-primary-text: #07111c;
+}
+
+.project-detail .button--primary {
+  border-color: var(--yellow);
+  background: var(--yellow);
+  color: var(--button-primary-text);
+  box-shadow: 0 14px 34px color-mix(in srgb, var(--yellow) 18%, transparent);
+}
+
+.project-detail .button--primary:hover {
+  border-color: var(--yellow-soft);
+  background: var(--yellow-soft);
+  color: var(--button-primary-text);
+  box-shadow: 0 18px 42px color-mix(in srgb, var(--yellow) 24%, transparent);
+}
+
+.project-detail .button--secondary {
+  border-color: var(--line-strong);
+  color: var(--text);
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+}
+
+.project-detail .button--secondary:hover {
+  border-color: var(--yellow);
+  background: color-mix(in srgb, var(--yellow) 10%, var(--surface));
+  color: var(--yellow-soft);
+}
+
+.project-detail--power,
+.project-detail--meal {
+  --button-primary-text: #ffffff;
+}
+
+.project-detail--brief .project-detail__toolbar {
+  top: 0;
+}
+
+.project-detail--brief .detail-container {
+  padding-top: 34px;
+}
+
+.project-detail video {
+  background: var(--bg-deep);
+}
+
+.project-detail .button:focus-visible,
+.detail-back:focus-visible,
+.detail-close:focus-visible,
+.detail-media-tab:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 3px;
+}
