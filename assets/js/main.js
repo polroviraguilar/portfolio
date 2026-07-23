@@ -91,18 +91,24 @@
   prefersReducedMotion.addEventListener?.("change", () => viewportVideos.forEach((video) => setVideoState(video, false)));
 
   const animatedImages = [...document.querySelectorAll("img[data-animated-src]")];
-  const animatedObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      const image = entry.target;
-      if (image.dataset.animatedLoaded !== "true") {
-        image.src = image.dataset.animatedSrc;
-        image.dataset.animatedLoaded = "true";
-      }
-      observer.unobserve(image);
-    });
-  }, { rootMargin: "250px 0px", threshold: 0.01 });
+  animatedImages.forEach((image) => {
+    image.dataset.staticSrc ||= image.getAttribute("src") || "assets/images/common/media-placeholder.svg";
+  });
+
+  const updateAnimatedImage = (image, shouldAnimate) => {
+    const target = shouldAnimate && !prefersReducedMotion.matches
+      ? image.dataset.animatedSrc
+      : image.dataset.staticSrc;
+    if (target && image.getAttribute("src") !== target) image.setAttribute("src", target);
+  };
+
+  const animatedObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => updateAnimatedImage(entry.target, entry.isIntersecting));
+  }, { rootMargin: "180px 0px", threshold: 0.01 });
   animatedImages.forEach((image) => animatedObserver.observe(image));
+  prefersReducedMotion.addEventListener?.("change", () => {
+    animatedImages.forEach((image) => updateAnimatedImage(image, false));
+  });
 
   document.querySelectorAll("img").forEach((image) => {
     const applyFallback = () => {
@@ -113,6 +119,15 @@
     };
     image.addEventListener("error", applyFallback);
     if (image.complete && image.naturalWidth === 0) applyFallback();
+  });
+
+
+  document.querySelectorAll("video[data-poster-src]").forEach((video) => {
+    const candidate = video.dataset.posterSrc;
+    if (!candidate) return;
+    const testImage = new Image();
+    testImage.onload = () => { video.poster = candidate; };
+    testImage.src = candidate;
   });
 
   function projectSlugFromLocation() {
@@ -182,17 +197,20 @@
   function hideProject({ restoreFocus = true } = {}) {
     if (!activeProject) return;
     const detail = activeProject;
-    detail.querySelector("video")?.pause();
+    const focusTarget = lastFocusedElement;
+    detail.querySelectorAll("video").forEach((video) => video.pause());
     detail.classList.remove("is-open");
     detail.setAttribute("aria-hidden", "true");
     activeProject = null;
-    body.classList.remove("is-locked");
-    setPageInert(false);
 
     window.setTimeout(() => {
       detail.hidden = true;
-      if (restoreFocus && lastFocusedElement instanceof HTMLElement) lastFocusedElement.focus({ preventScroll: true });
-    }, prefersReducedMotion.matches ? 0 : 360);
+      if (!activeProject) {
+        body.classList.remove("is-locked");
+        setPageInert(false);
+        if (restoreFocus && focusTarget instanceof HTMLElement) focusTarget.focus({ preventScroll: true });
+      }
+    }, prefersReducedMotion.matches ? 0 : 380);
   }
 
   function requestCloseProject() {
@@ -277,6 +295,20 @@
       preload.onerror = () => image.classList.remove("is-changing");
       preload.src = source;
     }));
+  });
+
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      document.querySelectorAll("video").forEach((video) => video.pause());
+      return;
+    }
+    viewportVideos.forEach((video) => {
+      const bounds = video.getBoundingClientRect();
+      const visible = bounds.bottom > 0 && bounds.top < window.innerHeight;
+      setVideoState(video, visible);
+    });
+    if (activeProject) setVideoState(activeProject.querySelector("video"), true);
   });
 
   document.getElementById("current-year").textContent = String(new Date().getFullYear());
