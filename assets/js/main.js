@@ -216,6 +216,19 @@
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
   });
 
+
+  document.querySelectorAll("img[data-fallback]").forEach((image) => {
+    const fallbackSource = image.dataset.fallback;
+    const applyFallback = () => {
+      if (!fallbackSource || image.dataset.fallbackApplied === "true") return;
+      image.dataset.fallbackApplied = "true";
+      image.src = fallbackSource;
+    };
+
+    image.addEventListener("error", applyFallback);
+    if (image.complete && image.naturalWidth === 0) applyFallback();
+  });
+
   document.querySelectorAll("[data-media-switcher]").forEach((switcher) => {
     const image = switcher.querySelector("[data-media-image]");
     const buttons = [...switcher.querySelectorAll("[data-media-src]")];
