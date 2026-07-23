@@ -3,28 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Pol Rovira is a game developer, frontend developer, pixel artist and 3D generalist creating expressive interactive products." />
-  <meta name="theme-color" content="#07090d" />
-
-  <title>Pol Rovira — Game & Product Developer</title>
+  <meta name="description" content="Pol Rovira is a multidisciplinary game developer designing systems, stories and interactive worlds through code, art and experimentation." />
+  <meta name="theme-color" content="#f3eee5" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Pol Rovira — Multidisciplinary Game Developer</title>
 
   <link rel="icon" href="assets/images/common/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,500;1,6..72,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body data-page-atmosphere="neutral">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="scroll-progress" aria-hidden="true"><span></span></div>
-  <div class="pointer-glow" aria-hidden="true"></div>
 
   <header class="site-header" id="site-header">
     <div class="site-header__inner">
       <a class="brand" href="#home" aria-label="Pol Rovira, home">
-        <span class="brand__mark" aria-hidden="true">PR</span>
-        <span class="brand__text">
-          <strong>Pol Rovira</strong>
-          <small>Game & product developer</small>
-        </span>
+        <img class="brand__symbol" src="assets/images/common/favicon.ico" alt="" width="40" height="40" data-fallback="assets/images/common/media-placeholder.svg" />
+        <span class="brand__name">Pol Rovira</span>
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
@@ -32,9 +30,10 @@
       </button>
 
       <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
-        <a href="#work" class="is-active">Work</a>
-        <a href="#apps">Web apps</a>
-        <a href="#art">Art lab</a>
+        <a href="#selected" class="is-active">Selected</a>
+        <a href="#masters">Master’s</a>
+        <a href="#products">Products</a>
+        <a href="#playground">Playground</a>
         <a href="#about">About</a>
         <a class="primary-nav__contact" href="#contact">Let’s talk</a>
       </nav>
@@ -42,244 +41,218 @@
   </header>
 
   <main id="main-content">
-    <section class="intro" id="home" aria-labelledby="intro-title">
-      <div class="intro__noise" aria-hidden="true"></div>
-      <div class="intro__grid" aria-hidden="true"></div>
-
-      <div class="intro__inner">
-        <div class="intro__copy reveal">
-          <div class="availability"><span></span> Open to creative opportunities</div>
-          <p class="eyebrow">Game development · Interactive products · Visual craft</p>
-          <h1 id="intro-title">Developer by <em>logic.</em><br />Artist by <span>instinct.</span></h1>
-          <p class="intro__lead">
-            I design and build games, web products and visual systems where code, interaction and art direction feel like one coherent experience.
-          </p>
-
-          <div class="intro__actions">
-            <a class="button button--primary" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
-            <a class="button button--ghost" href="resume.pdf" target="_blank" rel="noopener noreferrer">View résumé <span aria-hidden="true">↗</span></a>
-          </div>
-
-          <dl class="intro__facts" aria-label="Professional focus">
-            <div><dt>Core</dt><dd>Unity · C# · React</dd></div>
-            <div><dt>Visual</dt><dd>Pixel art · 3D</dd></div>
-            <div><dt>Based in</dt><dd>Catalonia, Spain</dd></div>
-          </dl>
-        </div>
-
-        <div class="intro-stage reveal" data-parallax-stage aria-label="A preview of selected projects">
-          <div class="intro-stage__halo" aria-hidden="true"></div>
-
-          <article class="stage-card stage-card--primary" data-tilt>
-            <img
-              src="assets/images/games/shotgun/shotgun-cover.webp"
-              data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg"
-              alt="Shotgun Battle Grid tactical combat arena"
-              width="960"
-              height="600"
-              fetchpriority="high"
-            />
-            <div class="stage-card__caption"><span>Featured game</span><strong>Shotgun Battle Grid</strong></div>
-          </article>
-
-          <article class="stage-card stage-card--secondary stage-card--power-app" data-tilt>
-            <img
-              src="assets/images/webapps/power-app/power-app-daily.webp"
-              alt="Power App mobile powerlifting training interface"
-              width="390"
-              height="844"
-              fetchpriority="high"
-            />
-            <div class="stage-card__caption"><span>Training product</span><strong>Power App</strong></div>
-          </article>
-
-          <article class="stage-card stage-card--tertiary" data-tilt>
-            <img src="assets/images/3d/pokeitems/pokeitems.gif" alt="Rotating low-poly Pokéitems collection" width="800" height="600" fetchpriority="high" />
-            <div class="stage-card__caption"><span>3D prop study</span><strong>Pokéitems</strong></div>
-          </article>
-
-          <div class="profile-chip">
-            <img src="assets/images/common/profile.png" alt="Portrait of Pol Rovira" width="72" height="72" />
-            <div><strong>Pol Rovira</strong><span>Creative technologist</span></div>
+    <section class="hero" id="home" aria-labelledby="hero-name">
+      <div class="hero__ornament hero__ornament--cobalt" aria-hidden="true"></div>
+      <div class="hero__ornament hero__ornament--coral" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__copy reveal">
+          <p class="availability"><span aria-hidden="true"></span>Open to collaborations and creative opportunities</p>
+          <p class="hero__role">Multidisciplinary game developer</p>
+          <h1 class="hero__name" id="hero-name"><span>Pol</span><span>Rovira</span></h1>
+          <h2 class="hero__statement">I design systems, <em>stories</em> and interactive worlds.</h2>
+          <p class="hero__lead">I bring programming, game design and visual direction together to build expressive experiences that feel intentional from the underlying state to the final moment of feedback.</p>
+          <div class="hero__actions">
+            <a class="button button--ink" href="#selected">Explore selected work <span aria-hidden="true">↘</span></a>
+            <a class="button button--line" href="resume.pdf" target="_blank" rel="noopener noreferrer">View résumé <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-      </div>
 
-      <div class="intro-marquee" aria-label="Areas of expertise">
-        <div>
-          <span>Game systems</span><i></i><span>Interaction design</span><i></i><span>Frontend architecture</span><i></i><span>Pixel art</span><i></i><span>Low-poly 3D</span><i></i><span>Game feel</span><i></i>
-          <span aria-hidden="true">Game systems</span><i aria-hidden="true"></i><span aria-hidden="true">Interaction design</span><i aria-hidden="true"></i><span aria-hidden="true">Frontend architecture</span><i aria-hidden="true"></i><span aria-hidden="true">Pixel art</span><i aria-hidden="true"></i><span aria-hidden="true">Low-poly 3D</span><i aria-hidden="true"></i><span aria-hidden="true">Game feel</span><i aria-hidden="true"></i>
+        <div class="hero-media reveal" aria-label="Featured Shotgun Battle Grid gameplay">
+          <div class="hero-media__frame">
+            <img class="hero-media__poster" src="assets/images/games/shotgun/shotgun-cover.webp" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" alt="Shotgun Battle Grid tactical arena" width="1600" height="1000" fetchpriority="high" />
+            <video class="hero-media__video" data-viewport-video muted loop playsinline preload="metadata" poster="assets/images/games/shotgun/shotgun-cover.webp">
+              <source src="assets/images/games/shotgun/shotgun-gameplay.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-media__wash" aria-hidden="true"></div>
+            <div class="hero-media__label">
+              <span>Featured process</span>
+              <strong>Shotgun Battle Grid</strong>
+              <small>Unity 6 · solo project · 2 weeks</small>
+            </div>
+            <button class="hero-media__open" type="button" data-project="shotgun">Open case study <span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="hero-media__caption"><span>01</span>A compact tactical duel where simultaneous choices become readable movement, projectiles and feedback.</p>
         </div>
       </div>
+      <a class="hero__scroll" href="#selected"><span>Scroll to selected work</span><i aria-hidden="true"></i></a>
     </section>
 
-    <section class="chapter chapter--work" id="work" aria-labelledby="work-title">
-      <div class="chapter-heading reveal">
-        <div><span class="chapter-heading__number">01</span><p class="eyebrow">Selected game work</p></div>
-        <h2 id="work-title">Five projects.<br /><span>Five different design problems.</span></h2>
-        <p>Original systems, narrative experiments and technical recreations presented through the decisions that shaped their feel, readability and structure.</p>
-      </div>
+    <section class="selected-work section" id="selected" data-active-atmosphere="shotgun" aria-labelledby="selected-title">
+      <div class="selected-work__ambient" aria-hidden="true"></div>
+      <header class="section-heading section-heading--inverse reveal">
+        <span class="section-number" aria-hidden="true">01</span>
+        <div><p class="kicker">Selected work</p><h2 id="selected-title">Three worlds that define how I work.</h2></div>
+        <p>Original projects chosen for the way they combine systems, narrative and visual judgement—not because they belong to the same discipline.</p>
+      </header>
 
-      <div class="work-grid">
-        <article class="case-card case-card--lead case-card--shotgun reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="shotgun" data-tilt>
-          <div class="case-card__media">
-            <img
-              src="assets/images/games/shotgun/shotgun-cover.webp"
-              data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg"
-              alt="Shotgun Battle Grid tactical cyberpunk arena"
-              loading="lazy"
-              decoding="async"
-            />
+      <div class="featured-list">
+        <article class="featured-project featured-project--shotgun reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="shotgun" data-atmosphere="shotgun">
+          <div class="featured-project__media">
+            <img src="assets/images/games/shotgun/shotgun-cover.webp" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" alt="Shotgun Battle Grid combat arena" width="1600" height="1000" loading="lazy" decoding="async" />
+            <span class="featured-project__index" aria-hidden="true">01</span>
           </div>
-          <div class="case-card__shade" aria-hidden="true"></div>
-          <div class="case-card__content">
-            <div class="case-card__top"><span>01 / Simultaneous tactics</span><span>2026</span></div>
-            <div><p class="case-card__kicker">Newest featured game</p><h3>Shotgun Battle Grid</h3><p>A neon turn-based arena where positioning, ammunition and simultaneous decisions transform a familiar mind game into readable tactical combat.</p></div>
-            <div class="case-card__bottom"><span>Unity 6 &middot; C# &middot; Pixel art</span><strong>Open case study &nearr;</strong></div>
+          <div class="featured-project__copy">
+            <p class="project-meta">Unity 6 · C# · 2 weeks · solo</p>
+            <h3>Shotgun Battle Grid</h3>
+            <p>A neon tactical arena that turns reload, shoot and shield into a spatial combat loop built around alignment, simultaneous resolution and game feel.</p>
+            <div class="project-pill-row"><span>Gameplay systems</span><span>Pixel art</span><span>Shaders</span><span>Feedback</span></div>
+            <strong class="project-cta">Explore the case study <span aria-hidden="true">↗</span></strong>
           </div>
         </article>
 
-        <article class="case-card case-card--tall reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="soma" data-tilt>
-          <div class="case-card__media"><img src="assets/images/games/soma/soma.gif" alt="SOMA gameplay" loading="lazy" decoding="async" /></div>
-          <div class="case-card__shade" aria-hidden="true"></div>
-          <div class="case-card__content">
-            <div class="case-card__top"><span>02 / Narrative action</span><span>2025</span></div>
-            <div><p class="case-card__kicker">Narrative systems</p><h3>SOMA</h3><p>A cyberpunk platformer where combat, branching dialogue and cinematic flow support a story about identity.</p></div>
-            <div class="case-card__bottom"><span>Unity &middot; C# &middot; Pixel art</span><strong>Open &nearr;</strong></div>
+        <article class="featured-project featured-project--reverse featured-project--soma reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="soma" data-atmosphere="soma">
+          <div class="featured-project__media">
+            <img src="assets/images/games/soma/soma-vanta.png" data-fallback="assets/images/common/media-placeholder.svg" alt="Nova in the cyberpunk world of SOMA" width="1600" height="1000" loading="lazy" decoding="async" />
+            <span class="featured-project__index" aria-hidden="true">02</span>
+          </div>
+          <div class="featured-project__copy">
+            <p class="project-meta">Unity · C# · narrative action · solo</p>
+            <h3>SOMA</h3>
+            <p>A narrative action platformer where dialogue, boss encounters and cinematic scene flow support a story about identity, memory and moral choice.</p>
+            <div class="project-pill-row"><span>Interactive narrative</span><span>Combat</span><span>Pixel art</span><span>Atmosphere</span></div>
+            <strong class="project-cta">Explore the case study <span aria-hidden="true">↗</span></strong>
           </div>
         </article>
 
-        <article class="case-card case-card--compact reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="monkey" data-tilt>
-          <div class="case-card__media"><img src="assets/images/games/monkey-island/monkeyisland.gif" alt="Monkey Island Fight gameplay" loading="lazy" decoding="async" /></div>
-          <div class="case-card__shade" aria-hidden="true"></div>
-          <div class="case-card__content">
-            <div class="case-card__top"><span>03 / Dialogue systems</span><span>2024</span></div>
-            <div><p class="case-card__kicker">Narrative mechanic</p><h3>Monkey Island Fight</h3><p>Branching insults, reactive timing and player feedback reconstructed as a reusable dialogue system.</p></div>
-            <div class="case-card__bottom"><span>Unity &middot; C#</span><strong>Open &nearr;</strong></div>
+        <article class="featured-project featured-project--bookverse reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="bookverse" data-atmosphere="bookverse">
+          <div class="featured-project__media featured-project__media--interface">
+            <img src="assets/images/webapps/bookverse/bookverse-cover.webp" data-fallback="assets/images/common/media-placeholder.svg" alt="Bookverse visual map of literary universes" width="1600" height="1000" loading="lazy" decoding="async" />
+            <span class="featured-project__index" aria-hidden="true">03</span>
           </div>
-        </article>
-
-        <article class="case-card case-card--compact reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="mario" data-tilt>
-          <div class="case-card__media"><img src="assets/images/games/mario/mario.gif" alt="Super Mario Bros recreation" loading="lazy" decoding="async" /></div>
-          <div class="case-card__shade" aria-hidden="true"></div>
-          <div class="case-card__content">
-            <div class="case-card__top"><span>04 / Technical recreation</span><span>2024</span></div>
-            <div><p class="case-card__kicker">Movement study</p><h3>Super Mario Bros</h3><p>A precision-focused reconstruction of movement, collision and level rhythm.</p></div>
-            <div class="case-card__bottom"><span>Unity &middot; C#</span><strong>Open &nearr;</strong></div>
-          </div>
-        </article>
-
-        <article class="case-card case-card--compact reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="mecha" data-tilt>
-          <div class="case-card__media"><img src="assets/images/games/mecha/mechas.gif" alt="Mecha Fight gameplay" loading="lazy" decoding="async" /></div>
-          <div class="case-card__shade" aria-hidden="true"></div>
-          <div class="case-card__content">
-            <div class="case-card__top"><span>05 / Tactical systems</span><span>2025</span></div>
-            <div><p class="case-card__kicker">Turn-based combat</p><h3>Mecha Fight</h3><p>Projectile physics, destructible terrain and modular tactical abilities.</p></div>
-            <div class="case-card__bottom"><span>Unity &middot; C#</span><strong>Open &nearr;</strong></div>
+          <div class="featured-project__copy">
+            <p class="project-meta">React · Konva · product design · solo</p>
+            <h3>Bookverse</h3>
+            <p>A desktop workspace that replaces flat reading lists with a spatial hierarchy, contextual editing and a navigable timeline of reading history.</p>
+            <div class="project-pill-row"><span>Canvas interaction</span><span>Information architecture</span><span>Persistence</span></div>
+            <strong class="project-cta">Explore the case study <span aria-hidden="true">↗</span></strong>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="chapter chapter--apps" id="apps" aria-labelledby="apps-title">
-      <div class="chapter-heading reveal">
-        <div><span class="chapter-heading__number">02</span><p class="eyebrow">Digital products</p></div>
-        <h2 id="apps-title">Useful tools with a <span>strong visual point of view.</span></h2>
-        <p>Personal products designed around real workflows, robust state and interfaces that make complex information feel manageable.</p>
-      </div>
+    <section class="masters section section--warm" id="masters" aria-labelledby="masters-title">
+      <header class="section-heading reveal">
+        <span class="section-number" aria-hidden="true">02</span>
+        <div><p class="kicker">Master’s projects</p><h2 id="masters-title">Focused studies in mechanics, dialogue and technical recreation.</h2></div>
+        <p>Academic projects presented honestly as targeted exercises: each one isolates a different game-development problem and turns it into a working system.</p>
+      </header>
 
-      <div class="apps-bento">
-        <article class="app-card app-card--bookverse reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="bookverse" data-tilt>
-          <div class="app-card__visual">
-            <div class="browser-frame"><div class="browser-frame__bar"><i></i><i></i><i></i><span>bookverse</span></div><img src="assets/images/webapps/bookverse/bookverse-cover.webp" alt="Bookverse application" loading="lazy" decoding="async" /></div>
+      <div class="masters-grid">
+        <article class="study-card study-card--lead reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="mecha">
+          <div class="study-card__media"><img src="assets/images/games/mecha/mecha-combat.png" data-fallback="assets/images/common/media-placeholder.svg" alt="Mecha Fight tactical projectile combat" loading="lazy" decoding="async" /></div>
+          <div class="study-card__copy"><p class="project-meta">Original academic game · Unity · C#</p><h3>Mecha Fight</h3><p>Turn-based combat built around projectile physics, destructible terrain and modular abilities.</p><span>Physics & tactical systems ↗</span></div>
+        </article>
+        <article class="study-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="monkey">
+          <div class="study-card__media"><img src="assets/images/games/monkey-island/monkey-image-3.png" data-fallback="assets/images/common/media-placeholder.svg" alt="Monkey Island Fight dialogue interface" loading="lazy" decoding="async" /></div>
+          <div class="study-card__copy"><p class="project-meta">Dialogue systems study · Unity · C#</p><h3>Monkey Island Fight</h3><p>A reconstruction of insult sword fighting focused on branching dialogue, comic timing and reactive feedback.</p><span>Narrative mechanic ↗</span></div>
+        </article>
+        <article class="study-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="mario">
+          <div class="study-card__media"><img src="assets/images/games/mario/mario-tileset.png" data-fallback="assets/images/common/media-placeholder.svg" alt="Super Mario Bros tile-based technical recreation" loading="lazy" decoding="async" /></div>
+          <div class="study-card__copy"><p class="project-meta">Technical recreation · Unity · C#</p><h3>Super Mario Bros</h3><p>A precision study of movement feel, collision, level rhythm and the hidden design decisions behind a classic.</p><span>Movement study ↗</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="products section" id="products" aria-labelledby="products-title">
+      <header class="section-heading reveal">
+        <span class="section-number" aria-hidden="true">03</span>
+        <div><p class="kicker">Personal products</p><h2 id="products-title">Tools built around real routines, not hypothetical briefs.</h2></div>
+        <p>Two complete products that translate repeated personal needs into clear interfaces, persistent state and practical daily use.</p>
+      </header>
+
+      <div class="product-list">
+        <article class="product-card product-card--power reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="power-app">
+          <div class="product-card__visual">
+            <img class="product-card__phone product-card__phone--front" src="assets/images/webapps/power-app/power-app-daily.webp" data-fallback="assets/images/common/media-placeholder.svg" alt="Power App daily workout interface" loading="lazy" decoding="async" />
+            <img class="product-card__phone product-card__phone--back" src="assets/images/webapps/power-app/power-app-dark.webp" data-fallback="assets/images/common/media-placeholder.svg" alt="Power App dark theme" loading="lazy" decoding="async" />
           </div>
-          <div class="app-card__content"><div class="app-card__meta"><span>React</span><span>Konva</span><span>Desktop app</span></div><p class="eyebrow">Interactive literary universe mapper</p><h3>Bookverse</h3><p>A zoomable workspace for organising universes, sagas and books through a spatial hierarchy and reading timeline.</p><span class="app-card__link">View featured case study ↗</span></div>
+          <div class="product-card__copy"><p class="project-meta">Vanilla JavaScript · PWA · 2026</p><h3>Power App</h3><p>A mobile-first training product that replaces the friction of consulting and editing a large powerlifting spreadsheet between sets.</p><div class="project-pill-row"><span>Local state</span><span>Editable programme</span><span>Installable PWA</span></div><strong>View product case study ↗</strong></div>
         </article>
 
-        <article class="app-card app-card--power reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="power-app" data-tilt>
-          <div class="app-card__visual"><div class="phone-frame"><span></span><img src="assets/images/webapps/power-app/power-app-daily.webp" alt="Power App daily workout screen" loading="lazy" decoding="async" /></div></div>
-          <div class="app-card__content"><div class="app-card__meta"><span>JavaScript</span><span>PWA</span></div><p class="eyebrow">Mobile training product</p><h3>Power App</h3><p>A purpose-built powerlifting workflow replacing the friction of a large training spreadsheet.</p><span class="app-card__link">View case study ↗</span></div>
-        </article>
-
-        <article class="app-card app-card--meal reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="weekly-meal-planner" data-tilt>
-          <div class="app-card__visual"><div class="browser-frame browser-frame--light"><div class="browser-frame__bar"><i></i><i></i><i></i><span>weekly-meal-planner</span></div><img src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-cover.webp" alt="Weekly Meal Planner application" loading="lazy" decoding="async" /></div></div>
-          <div class="app-card__content"><div class="app-card__meta"><span>React</span><span>TypeScript</span><span>Firebase</span></div><p class="eyebrow">Shared household planning</p><h3>Weekly Meal Planner</h3><p>Reusable menus, weekly assignments and a synchronised shopping list across devices.</p><span class="app-card__link">View case study ↗</span></div>
+        <article class="product-card product-card--meal reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="weekly-meal-planner">
+          <div class="product-card__visual product-card__visual--desktop">
+            <img class="product-card__desktop" src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-desktop.webp" data-fallback="assets/images/common/media-placeholder.svg" alt="Weekly Meal Planner desktop interface" loading="lazy" decoding="async" />
+            <img class="product-card__mobile" src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-mobile.webp" data-fallback="assets/images/common/media-placeholder.svg" alt="Weekly Meal Planner mobile interface" loading="lazy" decoding="async" />
+          </div>
+          <div class="product-card__copy"><p class="project-meta">React · TypeScript · Firebase · 2026</p><h3>Weekly Meal Planner</h3><p>A responsive household workflow for reusable menus, fourteen weekly meal slots and a shopping list synchronised across devices.</p><div class="project-pill-row"><span>Real-time data</span><span>Responsive UX</span><span>Shared workflow</span></div><strong>View product case study ↗</strong></div>
         </article>
       </div>
     </section>
 
-    <section class="chapter chapter--art" id="art" aria-labelledby="art-title">
-      <div class="chapter-heading reveal">
-        <div><span class="chapter-heading__number">03</span><p class="eyebrow">Art lab</p></div>
-        <h2 id="art-title">Small pixels.<br /><span>Clear silhouettes.</span></h2>
-        <p>Character design, animation and low-poly experiments focused on readability, identity and production-ready constraints.</p>
-      </div>
+    <section class="playground section section--playground" id="playground" aria-labelledby="playground-title">
+      <header class="section-heading reveal">
+        <span class="section-number" aria-hidden="true">04</span>
+        <div><p class="kicker">Playground</p><h2 id="playground-title">Visual experiments, character worlds and small production studies.</h2></div>
+        <p>A less formal space for work that tests silhouettes, animation, low-poly form and ideas that may later grow into larger projects.</p>
+      </header>
 
-      <div class="art-layout">
-        <div class="art-column art-column--wide">
-          <article class="art-card art-card--sentient reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="sentient" data-tilt>
-            <img src="assets/images/pixel-art/sentient/sentient-cover.gif" alt="Sentient pixel art cast" loading="lazy" decoding="async" data-pixel-art />
-            <div><span>Pixel art · Ongoing</span><h3>Sentient Characters</h3><p>Retro-futuristic units built for immediate role recognition at gameplay scale.</p><strong>Open gallery ↗</strong></div>
-          </article>
+      <div class="playground-grid">
+        <article class="play-card play-card--sentient reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="sentient">
+          <img src="assets/images/common/media-placeholder.svg" data-animated-src="assets/images/pixel-art/sentient/sentient-cover.gif" data-fallback="assets/images/common/media-placeholder.svg" alt="Sentient retro-futuristic pixel art cast" loading="lazy" decoding="async" />
+          <div><p class="project-meta">Game in development · visual development</p><h3>Sentient</h3><p>Player units, enemies and NPCs exploring a readable retro-futuristic world before its gameplay is ready to share.</p><strong>Open visual development ↗</strong></div>
+        </article>
 
-          <article class="art-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="bookcharacters" data-tilt>
-            <img src="assets/images/pixel-art/fantasy/bookcharacters.gif" alt="Fantasy literature pixel art characters" loading="lazy" decoding="async" data-pixel-art />
-            <div><span>Pixel art · Character study</span><h3>Fantasy Characters</h3><p>Literary characters translated through silhouette, posture and limited palettes.</p><strong>Open gallery ↗</strong></div>
-          </article>
-        </div>
+        <article class="play-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="bookcharacters">
+          <img src="assets/images/common/media-placeholder.svg" data-animated-src="assets/images/pixel-art/fantasy/bookcharacters.gif" data-fallback="assets/images/common/media-placeholder.svg" alt="Fantasy literature pixel art characters" loading="lazy" decoding="async" />
+          <div><p class="project-meta">Pixel art · character study</p><h3>Fantasy Characters</h3><strong>Open gallery ↗</strong></div>
+        </article>
 
-        <div class="art-column">
-          <article class="art-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="thrillercharacters" data-tilt>
-            <img src="assets/images/pixel-art/thriller/crime.gif" alt="Thriller pixel art cast" loading="lazy" decoding="async" data-pixel-art />
-            <div><span>Pixel art · Character study</span><h3>Thriller Cast</h3><p>A readable ensemble of mystery archetypes and suspicious personalities.</p><strong>Open gallery ↗</strong></div>
-          </article>
+        <article class="play-card reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="thrillercharacters">
+          <img src="assets/images/common/media-placeholder.svg" data-animated-src="assets/images/pixel-art/thriller/crime.gif" data-fallback="assets/images/common/media-placeholder.svg" alt="Thriller mystery pixel art cast" loading="lazy" decoding="async" />
+          <div><p class="project-meta">Pixel art · ensemble study</p><h3>Thriller Cast</h3><strong>Open gallery ↗</strong></div>
+        </article>
 
-          <article class="art-card art-card--3d reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="hoverbikes" data-tilt>
-            <img src="assets/images/3d/hoverbikes/hover-bike-1.gif" alt="Rotating low-poly hoverbike" loading="lazy" decoding="async" />
-            <div><span>3D · Vehicle collection</span><h3>Hoverbikes</h3><p>Four vehicles sharing one language while preserving distinctive mass and profiles.</p><strong>Open study ↗</strong></div>
-          </article>
-        </div>
-      </div>
+        <article class="play-card play-card--wide reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="hoverbikes">
+          <img src="assets/images/common/media-placeholder.svg" data-animated-src="assets/images/3d/hoverbikes/hover-bike-1.gif" data-fallback="assets/images/common/media-placeholder.svg" alt="Rotating low-poly hoverbike" loading="lazy" decoding="async" />
+          <div><p class="project-meta">3D · vehicle collection</p><h3>Hoverbikes</h3><p>Four vehicles using one visual language while preserving distinct profiles, mass and roles.</p><strong>Open study ↗</strong></div>
+        </article>
 
-      <div class="micro-projects reveal">
-        <article tabindex="0" role="button" aria-haspopup="dialog" data-project="malenia-helmet"><img src="assets/images/3d/malenia/malenia.gif" alt="Malenia helmet low-poly model" loading="lazy" /><div><span>Low-poly prop</span><h3>Malenia’s Helmet</h3></div><b>↗</b></article>
-        <article tabindex="0" role="button" aria-haspopup="dialog" data-project="pokeitems"><img src="assets/images/3d/pokeitems/pokeitems.gif" alt="Pokéitems low-poly set" loading="lazy" /><div><span>Low-poly props</span><h3>Pokéitems</h3></div><b>↗</b></article>
+        <article class="play-card play-card--small reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="malenia-helmet">
+          <img src="assets/images/common/media-placeholder.svg" data-animated-src="assets/images/3d/malenia/malenia.gif" data-fallback="assets/images/common/media-placeholder.svg" alt="Rotating low-poly Malenia helmet" loading="lazy" decoding="async" />
+          <div><p class="project-meta">Low-poly prop</p><h3>Malenia’s Helmet</h3><strong>Open ↗</strong></div>
+        </article>
+
+        <article class="play-card play-card--small reveal" tabindex="0" role="button" aria-haspopup="dialog" data-project="pokeitems">
+          <img src="assets/images/common/media-placeholder.svg" data-animated-src="assets/images/3d/pokeitems/pokeitems.gif" data-fallback="assets/images/common/media-placeholder.svg" alt="Rotating low-poly Pokéitems" loading="lazy" decoding="async" />
+          <div><p class="project-meta">Low-poly prop set</p><h3>Pokéitems</h3><strong>Open ↗</strong></div>
+        </article>
       </div>
     </section>
 
-    <section class="chapter chapter--about" id="about" aria-labelledby="about-title">
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <header class="section-heading reveal">
+        <span class="section-number" aria-hidden="true">05</span>
+        <div><p class="kicker">About</p><h2 id="about-title">I work where technical structure becomes a visual experience.</h2></div>
+        <p>My strongest work happens when I can understand the system, shape the interaction and polish the feedback rather than treating code, design and art as separate stages.</p>
+      </header>
+
       <div class="about-grid">
-        <div class="about-intro reveal">
-          <span class="chapter-heading__number">04</span>
-          <p class="eyebrow">About the work</p>
-          <h2 id="about-title">I like the point where <span>systems become experiences.</span></h2>
-          <p>I’m most useful when a project needs both technical structure and visual judgement: understanding the state, building the interaction and polishing the feedback until the whole thing feels intentional.</p>
+        <figure class="about-portrait reveal"><img src="assets/images/common/profile.png" data-fallback="assets/images/common/media-placeholder.svg" alt="Portrait of Pol Rovira" loading="lazy" decoding="async" /><figcaption>Based in Catalonia, Spain.</figcaption></figure>
+        <div class="about-copy reveal">
+          <p class="about-copy__lead">I am a multidisciplinary game developer with a background in multimedia and interactive products. I enjoy building readable systems, narrative mechanics and interfaces that communicate clearly through motion, sound and visual hierarchy.</p>
+          <p>I currently work at UManresa while completing a Master’s Degree in Video Game Design and Programming. The portfolio reflects both sides of my practice: original games and visual worlds, alongside personal web products built to solve concrete problems.</p>
           <a class="text-link" href="mailto:proviraguilar@gmail.com">proviraguilar@gmail.com <span aria-hidden="true">↗</span></a>
         </div>
-
-        <div class="about-panel reveal">
-          <div class="about-panel__profile"><img src="assets/images/common/profile.png" alt="Portrait of Pol Rovira" loading="lazy" /><div><p>Currently</p><strong>Working at UManresa and completing a Master’s in Video Game Design and Programming.</strong></div></div>
-          <div class="tool-groups">
-            <article><span>01</span><h3>Development</h3><p>C# · Unity · JavaScript · TypeScript · React · Firebase · HTML · CSS</p></article>
-            <article><span>02</span><h3>Visual creation</h3><p>Aseprite · Blender · Blockbench · Photoshop · Illustrator</p></article>
-            <article><span>03</span><h3>Workflow</h3><p>Visual Studio · Git · GitHub · GitLab · Product documentation</p></article>
-          </div>
+        <div class="capability-list reveal">
+          <article><span>01</span><div><h3>Game development</h3><p>Unity, C#, gameplay systems, state, AI, UI, animation and game feel.</p></div></article>
+          <article><span>02</span><div><h3>Interactive products</h3><p>JavaScript, TypeScript, React, Firebase, canvas interaction and PWA delivery.</p></div></article>
+          <article><span>03</span><div><h3>Visual production</h3><p>Pixel art, shaders, 2D animation, low-poly 3D and interface direction.</p></div></article>
         </div>
       </div>
 
-      <div class="education-list">
-        <article class="reveal"><span>2017 — 2021</span><div><p>University of Vic — Central University of Catalonia</p><h3>Bachelor’s Degree in Multimedia, Applications and Video Games</h3></div><b>Development · interaction · animation · production</b></article>
-        <article class="reveal"><span>2024 — Present</span><div><p>Universitat Oberta de Catalunya</p><h3>Master’s Degree in Video Game Design and Programming</h3></div><b>Unity · C# · AI · multiplayer · UX</b></article>
+      <div class="education-list reveal">
+        <article><span>2017—2021</span><div><p>University of Vic — Central University of Catalonia</p><h3>Bachelor’s Degree in Multimedia, Applications and Video Games</h3></div></article>
+        <article><span>2024—Present</span><div><p>Universitat Oberta de Catalunya</p><h3>Master’s Degree in Video Game Design and Programming</h3></div></article>
       </div>
     </section>
   </main>
 
   <footer class="contact" id="contact">
     <div class="contact__inner reveal">
-      <p class="eyebrow">Available for the right project</p>
-      <h2>Have something difficult,<br /><span>visual or interactive?</span></h2>
-      <div class="contact__bottom">
-        <a class="button button--primary" href="mailto:proviraguilar@gmail.com">Start a conversation ↗</a>
+      <p class="kicker">Open to collaborations and creative opportunities</p>
+      <h2>Let’s build something with a clear system and a world worth entering.</h2>
+      <div class="contact__actions">
+        <a class="button button--paper" href="mailto:proviraguilar@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
         <nav aria-label="Social links"><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a><a href="https://github.com/polroviraguilar" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/pol-rovira-aguilar-4257961b1/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://www.instagram.com/sentienthegame/" target="_blank" rel="noopener noreferrer">Instagram</a></nav>
       </div>
     </div>
@@ -289,1172 +262,884 @@
   <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 
   <!-- PROJECT DETAILS -->
-  <section class="project-detail" id="project-detail-shotgun" role="dialog" aria-modal="true" aria-labelledby="project-title-shotgun" hidden>
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar">
-        <button class="detail-back" type="button" data-close-project>&larr; Back to portfolio</button>
-        <span>Game case study</span>
-        <button class="detail-close" type="button" data-close-project aria-label="Close Shotgun Battle Grid case study">&times;</button>
-      </div>
-
-      <div class="detail-container">
-        <header class="detail-hero detail-hero--shotgun">
-          <video autoplay muted loop playsinline preload="metadata" poster="assets/images/games/shotgun/shotgun-placeholder.svg">
-            <source src="assets/images/games/shotgun/shotgun-gameplay.mp4" type="video/mp4" />
-          </video>
-          <div class="detail-hero__overlay">
-            <p>Unity 6000.0.65f1 &middot; Solo personal project &middot; 2 weeks</p>
-            <h2 id="project-title-shotgun">Shotgun Battle Grid</h2>
-          </div>
-        </header>
-
-        <div class="detail-summary">
-          <div>
-            <p class="eyebrow">Overview</p>
-            <p>
+<section aria-hidden="true" aria-labelledby="project-title-shotgun" aria-modal="true" class="project-detail project-detail--shotgun" hidden="" id="project-detail-shotgun" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar">
+<button class="detail-back" data-close-project="" type="button">← Back to portfolio</button>
+<span>Game case study</span>
+<button aria-label="Close Shotgun Battle Grid case study" class="detail-close" data-close-project="" type="button">×</button>
+</div>
+<div class="detail-container">
+<header class="detail-hero detail-hero--shotgun">
+<video loop="" muted="" playsinline="" poster="assets/images/games/shotgun/shotgun-placeholder.svg" preload="none">
+<source src="assets/images/games/shotgun/shotgun-gameplay.mp4" type="video/mp4"/>
+</video>
+<div class="detail-hero__overlay">
+<p>Unity 6000.0.65f1 · Solo personal project · 2 weeks</p>
+<h2 id="project-title-shotgun">Shotgun Battle Grid</h2>
+</div>
+</header>
+<div class="detail-summary">
+<div>
+<p class="eyebrow">Overview</p>
+<p>
               Shotgun Battle Grid transforms the immediate decision-making of the classic reload, shoot and shield hand game into a compact tactical arena. Two fighters move across separate three-by-three grids, manage ammunition and resolve simultaneous actions through readable animation, projectiles, effects and sound.
             </p>
-            <div class="shotgun-status-note">
-              <span>Availability</span>
-              <p>The project is complete as a polished combat prototype and remains ready for future expansion. A public repository and playable build may be released later.</p>
-            </div>
-          </div>
-
-          <dl>
-            <div><dt>Role</dt><dd>Solo developer and artist</dd></div>
-            <div><dt>Team</dt><dd>1</dd></div>
-            <div><dt>Type</dt><dd>Personal project</dd></div>
-            <div><dt>Time frame</dt><dd>2 weeks</dd></div>
-            <div><dt>Status</dt><dd>Completed, expansion planned</dd></div>
-            <div><dt>Engine</dt><dd>Unity 6000.0.65f1</dd></div>
-          </dl>
-        </div>
-
-        <article class="detail-story">
-          <section>
-            <div class="detail-story__number">01</div>
-            <div>
-              <p class="eyebrow">The idea</p>
-              <h3>A familiar mind game rebuilt as a spatial combat system.</h3>
-              <p>
+<div class="shotgun-status-note">
+<span>Availability</span>
+<p>The project is complete as a polished combat prototype and remains ready for future expansion. A public repository and playable build may be released later.</p>
+</div>
+</div>
+<dl>
+<div><dt>Role</dt><dd>Solo developer and artist</dd></div>
+<div><dt>Team</dt><dd>1</dd></div>
+<div><dt>Type</dt><dd>Personal project</dd></div>
+<div><dt>Time frame</dt><dd>2 weeks</dd></div>
+<div><dt>Status</dt><dd>Completed, expansion planned</dd></div>
+<div><dt>Engine</dt><dd>Unity 6000.0.65f1</dd></div>
+</dl>
+</div>
+<article class="detail-story">
+<section>
+<div class="detail-story__number">01</div>
+<div>
+<p class="eyebrow">The idea</p>
+<h3>A familiar mind game rebuilt as a spatial combat system.</h3>
+<p>
                 The original game is driven by anticipation: reload, shoot or defend. I preserved that immediate mental loop, then added positioning, alignment and visible projectiles so every decision has a physical consequence the player can read before the next turn begins.
               </p>
-            </div>
-          </section>
-
-          <section>
-            <div class="detail-story__number">02</div>
-            <div>
-              <p class="eyebrow">Positioning</p>
-              <h3>Movement changes whether a shot is dangerous.</h3>
-              <p>
+</div>
+</section>
+<section>
+<div class="detail-story__number">02</div>
+<div>
+<p class="eyebrow">Positioning</p>
+<h3>Movement changes whether a shot is dangerous.</h3>
+<p>
                 Each fighter occupies an independent three-by-three grid. Movement happens before the combat action, and a projectile can only damage the opponent when both fighters share the same row. Repositioning therefore changes the value of every reload, shot and shield without making the arena difficult to understand.
               </p>
-              <figure>
-                <img src="assets/images/games/shotgun/shotgun-battle-grid.webp" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" alt="The two perspective battle grids used in Shotgun Battle Grid" loading="lazy" decoding="async" />
-                <figcaption>Separate perspective grids turn row alignment into a visible tactical rule.</figcaption>
-              </figure>
-            </div>
-          </section>
-
-          <section>
-            <div class="detail-story__number">03</div>
-            <div>
-              <p class="eyebrow">Combat loop</p>
-              <h3>Simple actions create different outcomes when resolved together.</h3>
-              <p>
+<figure>
+<img alt="The two perspective battle grids used in Shotgun Battle Grid" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/shotgun/shotgun-battle-grid.webp"/>
+<figcaption>Separate perspective grids turn row alignment into a visible tactical rule.</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<div class="detail-story__number">03</div>
+<div>
+<p class="eyebrow">Combat loop</p>
+<h3>Simple actions create different outcomes when resolved together.</h3>
+<p>
                 The player may reposition, then selects one combat action while the enemy AI makes its own choice. The battle manager resolves both decisions as one controlled sequence so animation timing, projectile travel, blocking, damage and the return to player control remain consistent.
               </p>
-              <div class="shotgun-rule-grid" aria-label="Shotgun Battle Grid combat rules">
-                <article><span>01</span><h4>Reload</h4><p>Adds one bullet up to the configured ammunition limit.</p></article>
-                <article><span>02</span><h4>Shoot</h4><p>Consumes ammunition and threatens the opponent only when rows align.</p></article>
-                <article><span>03</span><h4>Shield</h4><p>Blocks an incoming aligned projectile without triggering damage feedback.</p></article>
-                <article><span>04</span><h4>Move</h4><p>Repositions the fighter before the turn action and changes the tactical risk.</p></article>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <div class="detail-story__number">04</div>
-            <div>
-              <p class="eyebrow">Simultaneous resolution</p>
-              <h3>When both fighters shoot, the projectiles can meet in the middle.</h3>
-              <p>
+<div aria-label="Shotgun Battle Grid combat rules" class="shotgun-rule-grid">
+<article><span>01</span><h4>Reload</h4><p>Adds one bullet up to the configured ammunition limit.</p></article>
+<article><span>02</span><h4>Shoot</h4><p>Consumes ammunition and threatens the opponent only when rows align.</p></article>
+<article><span>03</span><h4>Shield</h4><p>Blocks an incoming aligned projectile without triggering damage feedback.</p></article>
+<article><span>04</span><h4>Move</h4><p>Repositions the fighter before the turn action and changes the tactical risk.</p></article>
+</div>
+</div>
+</section>
+<section>
+<div class="detail-story__number">04</div>
+<div>
+<p class="eyebrow">Simultaneous resolution</p>
+<h3>When both fighters shoot, the projectiles can meet in the middle.</h3>
+<p>
                 If both fighters successfully fire while aligned, clash resolution takes priority over normal damage. Both projectiles travel toward the same midpoint, collide, generate a dedicated impact and disappear. Neither fighter is hit, making the simultaneous outcome visually distinct from a normal block or missed shot.
               </p>
-              <figure>
-                <img src="assets/images/games/shotgun/shotgun-projectile-clash.webp" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" alt="Player and enemy projectiles colliding at the centre of the arena" loading="lazy" decoding="async" />
-                <figcaption>Projectile clashes cancel normal damage and communicate a draw within the turn.</figcaption>
-              </figure>
-            </div>
-          </section>
-
-          <section>
-            <div class="detail-story__number">05</div>
-            <div>
-              <p class="eyebrow">Game feel</p>
-              <h3>Every result is reinforced through layered feedback.</h3>
-              <p>
+<figure>
+<img alt="Player and enemy projectiles colliding at the centre of the arena" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/shotgun/shotgun-projectile-clash.webp"/>
+<figcaption>Projectile clashes cancel normal damage and communicate a draw within the turn.</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<div class="detail-story__number">05</div>
+<div>
+<p class="eyebrow">Game feel</p>
+<h3>Every result is reinforced through layered feedback.</h3>
+<p>
                 Animation, audio and effects are timed around the gameplay result rather than played as independent decoration. Shield impacts, white damage flashes, blinking, animated hearts, ammunition feedback, reload particles, afterimages and screen shake all help the player understand what happened before the state machine advances.
               </p>
-              <div class="shotgun-gallery">
-                <figure><img src="assets/images/games/shotgun/shotgun-shield.webp" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" alt="Shield blocking an incoming projectile" loading="lazy" decoding="async" /><figcaption>Shield timing and a dedicated block impact.</figcaption></figure>
-                <figure><img src="assets/images/games/shotgun/shotgun-reload.webp" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" alt="Reload animation and neon particle feedback" loading="lazy" decoding="async" /><figcaption>Reload animation, particles and ammunition feedback.</figcaption></figure>
-                <figure><img src="assets/images/games/shotgun/shotgun-hit-feedback.webp" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" alt="Damage flash, hit reaction and animated health HUD" loading="lazy" decoding="async" /><figcaption>Damage feedback connects the fighter reaction with the HUD.</figcaption></figure>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <div class="detail-story__number">06</div>
-            <div>
-              <p class="eyebrow">Architecture</p>
-              <h3>One battle sequence coordinates several focused systems.</h3>
-              <p>
+<div class="shotgun-gallery">
+<figure><img alt="Shield blocking an incoming projectile" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/shotgun/shotgun-shield.webp"/><figcaption>Shield timing and a dedicated block impact.</figcaption></figure>
+<figure><img alt="Reload animation and neon particle feedback" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/shotgun/shotgun-reload.webp"/><figcaption>Reload animation, particles and ammunition feedback.</figcaption></figure>
+<figure><img alt="Damage flash, hit reaction and animated health HUD" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/shotgun/shotgun-hit-feedback.webp"/><figcaption>Damage feedback connects the fighter reaction with the HUD.</figcaption></figure>
+</div>
+</div>
+</section>
+<section>
+<div class="detail-story__number">06</div>
+<div>
+<p class="eyebrow">Architecture</p>
+<h3>One battle sequence coordinates several focused systems.</h3>
+<p>
                 BattleManager controls the turn and state flow, while fighter state, animation, projectile movement, interface feedback, audio and temporary effects remain in dedicated components. This separation keeps the sequence readable even though many events must happen in a precise order.
               </p>
-              <div class="shotgun-system-list" aria-label="Shotgun Battle Grid systems">
-                <span>BattleManager</span><span>BattleFighter</span><span>FighterAnimator</span><span>Projectile</span><span>BattleHUD</span><span>AudioManager</span><span>ScreenShake</span><span>Effect spawners</span>
-              </div>
-              <div class="shotgun-state-flow" aria-label="Battle state flow">
-                <span>WaitingToStart</span><i aria-hidden="true"></i><span>Starting</span><i aria-hidden="true"></i><span>Playing</span><i aria-hidden="true"></i><span>ResolvingTurn</span><i aria-hidden="true"></i><span>BattleEnded</span>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <div class="detail-story__number">07</div>
-            <div>
-              <p class="eyebrow">Result and next step</p>
-              <h3>A complete combat prototype with room to become a larger game.</h3>
-              <p>
+<div aria-label="Shotgun Battle Grid systems" class="shotgun-system-list">
+<span>BattleManager</span><span>BattleFighter</span><span>FighterAnimator</span><span>Projectile</span><span>BattleHUD</span><span>AudioManager</span><span>ScreenShake</span><span>Effect spawners</span>
+</div>
+<div aria-label="Battle state flow" class="shotgun-state-flow">
+<span>WaitingToStart</span><i aria-hidden="true"></i><span>Starting</span><i aria-hidden="true"></i><span>Playing</span><i aria-hidden="true"></i><span>ResolvingTurn</span><i aria-hidden="true"></i><span>BattleEnded</span>
+</div>
+</div>
+</section>
+<section>
+<div class="detail-story__number">07</div>
+<div>
+<p class="eyebrow">Result and next step</p>
+<h3>A complete combat prototype with room to become a larger game.</h3>
+<p>
                 The two-week project delivers a complete battle loop with player movement, enemy AI, health, ammunition, shields, projectile clashes, win and loss states, restart flow and a full audiovisual feedback layer. The next expansion could introduce smarter AI profiles, special actions, hazards, multiple rounds and a public playable build without changing the core rules.
               </p>
-              <figure>
-                <img src="assets/images/games/shotgun/shotgun-result.webp" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" alt="Completed Shotgun Battle Grid battle result screen" loading="lazy" decoding="async" />
-                <figcaption>The completed prototype supports victory, defeat, draw and restart states.</figcaption>
-              </figure>
-            </div>
-          </section>
-        </article>
-
-        <div class="detail-notes">
-          <div><p class="eyebrow">Created from scratch</p><p>Programming, game design, pixel art, shaders and custom visual assets.</p></div>
-          <div><p class="eyebrow">External resources</p><p>Remaining music, sound and supporting resources use free-to-use sources.</p></div>
-          <div><p class="eyebrow">Production focus</p><p>Simultaneous decisions, readable state resolution and high-impact feedback.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-detail" id="project-detail-monkey" role="dialog" aria-modal="true" aria-labelledby="project-title-monkey" hidden>
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar">
-        <button class="detail-back" type="button" data-close-project>← Back to portfolio</button>
-        <span>Game case study</span>
-        <button class="detail-close" type="button" data-close-project aria-label="Close Monkey Island Fight case study">×</button>
-      </div>
-      <div class="detail-container">
-        <header class="detail-hero">
-          <video src="assets/images/games/monkey-island/monkeyisland.mp4" autoplay muted loop playsinline preload="metadata"></video>
-          <div class="detail-hero__overlay">
-            <p>Unity / C# · Solo project · 2 months</p>
-            <h2 id="project-title-monkey">Monkey Island Fight</h2>
-          </div>
-        </header>
-        <div class="detail-summary">
-          <div><p class="eyebrow">About</p><p>A solo project that reimagines the classic insult-sword-fighting mechanic from the Monkey Island series. Built during my Master’s programme as both a tribute and a technical exercise in narrative design.</p></div>
-          <dl><div><dt>Role</dt><dd>Solo developer</dd></div><div><dt>Team</dt><dd>1</dd></div><div><dt>Time frame</dt><dd>2 months</dd></div><div><dt>Engine</dt><dd>Unity / C#</dd></div></dl>
-        </div>
-        <article class="detail-story">
-          <section><div class="detail-story__number">01</div><div><h3>Introduction</h3><p>My goal was to recreate the charm and rhythm of the original insult fights. The exchange needed to feel reactive, funny and sharp, with the player winning through understanding rather than simple selection.</p></div></section>
-          <section><div class="detail-story__number">02</div><div><h3>Dialogue system</h3><p>I designed a branching dialogue structure where insults and responses carry consequences, creating layered chains that escalate dynamically. The system uses C# ScriptableObjects and a focused state manager.</p><figure><img src="assets/images/games/monkey-island/monkey-image-1.png" alt="Dialogue system flowchart" loading="lazy" /><figcaption>The logic behind the insult-response dialogue system.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">03</div><div><h3>Interface and feedback</h3><p>The interface keeps a clean retro feel while using subtle motion and sound cues to reinforce the rhythm of the exchange. Each line and comeback receives synchronised visual feedback.</p><figure><img src="assets/images/games/monkey-island/monkey-image-3.png" alt="Monkey Island Fight interface concept" loading="lazy" /><figcaption>Dialogue options and timing feedback.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">04</div><div><h3>Timing and delivery</h3><p>Comedy depends on rhythm, so I built a delay-and-pause system to control delivery. Pauses adapt to line length and player choice timing, helping each exchange land more naturally.</p><figure><img src="assets/images/games/monkey-island/monkeyisland.gif" alt="Timing system demonstration" loading="lazy" /><figcaption>Dynamic timing between insults and comebacks.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">05</div><div><h3>What I learned</h3><p>This project showed me that humour in games is engineered through writing, pacing, agency and feedback. It also strengthened my work with state machines, dialogue trees and Unity UI systems.</p></div></section>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-detail" id="project-detail-mario" role="dialog" aria-modal="true" aria-labelledby="project-title-mario" hidden>
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>Game case study</span><button class="detail-close" type="button" data-close-project aria-label="Close Super Mario Bros case study">×</button></div>
-      <div class="detail-container">
-        <header class="detail-hero"><video src="assets/images/games/mario/mario.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="detail-hero__overlay"><p>Unity / C# · Solo project · 2 months</p><h2 id="project-title-mario">Super Mario Bros</h2></div></header>
-        <div class="detail-summary"><div><p class="eyebrow">About</p><p>A recreation of the first level of Super Mario Bros using Unity and C#, preserving the original structure, visual rhythm and tightly tuned gameplay.</p></div><dl><div><dt>Role</dt><dd>Solo developer</dd></div><div><dt>Team</dt><dd>1</dd></div><div><dt>Time frame</dt><dd>2 months</dd></div><div><dt>Engine</dt><dd>Unity / C#</dd></div></dl></div>
-        <article class="detail-story">
-          <section><div class="detail-story__number">01</div><div><h3>Introduction</h3><p>I focused on reproducing the feel and learning rhythm of the original first level, with particular attention to physics, collision, jump timing and enemy behaviour.</p></div></section>
-          <section><div class="detail-story__number">02</div><div><h3>Physics and player control</h3><p>The biggest challenge was matching Mario’s jump arc and momentum. Unity’s physics were heavily customised to produce a controller that feels both snappy and slightly floaty across grounded, airborne and sprinting states.</p><figure><img src="assets/images/games/mario/mario-jump.gif" alt="Custom Mario movement controller" loading="lazy" /><figcaption>Custom movement tuned to classic Mario physics.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">03</div><div><h3>Level design</h3><p>The level was recreated tile by tile from gameplay references. Blocks, pipes, gaps, enemies and power-ups were placed to retain the original pacing and teaching sequence.</p><figure><img src="assets/images/games/mario/mario-tileset.png" alt="Mario tilemap level structure" loading="lazy" /><figcaption>Tilemap-based recreation of the first NES level.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">04</div><div><h3>Interface and retro style</h3><p>The HUD mirrors the original score, coin and timer structure. Typography and pixel alignment were treated as part of the gameplay feel rather than decoration.</p><figure><img src="assets/images/games/mario/mario-ui.png" alt="Super Mario Bros interface recreation" loading="lazy" /><figcaption>HUD elements styled after the original NES interface.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">05</div><div><h3>What I learned</h3><p>Rebuilding a classic improved my understanding of design intent, custom character controllers, tile-based systems and the precision required to reproduce retro mechanics in a modern engine.</p></div></section>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-detail" id="project-detail-mecha" role="dialog" aria-modal="true" aria-labelledby="project-title-mecha" hidden>
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>Game case study</span><button class="detail-close" type="button" data-close-project aria-label="Close Mecha Fight case study">×</button></div>
-      <div class="detail-container">
-        <header class="detail-hero"><video src="assets/images/games/mecha/mecha.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="detail-hero__overlay"><p>Unity / C# · Solo project · 2 months</p><h2 id="project-title-mecha">Mecha Fight</h2></div></header>
-        <div class="detail-summary"><div><p class="eyebrow">About</p><p>A turn-based combat game inspired by classic artillery titles, featuring customisable mechs, tactical decisions, destructible terrain and physics-driven projectiles.</p></div><dl><div><dt>Role</dt><dd>Designer & programmer</dd></div><div><dt>Team</dt><dd>Solo</dd></div><div><dt>Time frame</dt><dd>2 months</dd></div><div><dt>Engine</dt><dd>Unity / C#</dd></div></dl></div>
-        <article class="detail-story">
-          <section><div class="detail-story__number">01</div><div><h3>Introduction</h3><p>The project explores an accessible tactical loop with enough depth to reward positioning, weapon choice and terrain awareness.</p></div></section>
-          <section><div class="detail-story__number">02</div><div><h3>Physics and aiming</h3><p>I implemented 2D movement and projectile behaviour with custom mech weight and friction values. An aim-assist system communicates the likely firing path without removing player judgement.</p><figure><img src="assets/images/games/mecha/mecha-combat.png" alt="Mecha Fight aiming system" loading="lazy" /><figcaption>Custom aiming support for projectile combat.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">03</div><div><h3>Destructible terrain</h3><p>The tile system reacts directly to projectile impacts. Bullets detect and remove tiles within a configurable impact radius, changing routes and cover during a match.</p><figure><img src="assets/images/games/mecha/mecha-tileset.png" alt="Destructible terrain tile system" loading="lazy" /><figcaption>Real-time terrain destruction triggered by collisions.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">04</div><div><h3>Interface and feedback</h3><p>The HUD prioritises health, abilities and turn information. Its industrial-futuristic language uses strong highlights to keep tactical information readable.</p><figure><img src="assets/images/games/mecha/mecha-ui.png" alt="Mecha Fight interface" loading="lazy" /><figcaption>A tactical HUD with a mecha-inspired visual language.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">05</div><div><h3>What I learned</h3><p>The project strengthened my understanding of turn-based architecture, physics integration, destructible environments and modular ability design.</p></div></section>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-detail" id="project-detail-soma" role="dialog" aria-modal="true" aria-labelledby="project-title-soma" hidden>
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>Game case study</span><button class="detail-close" type="button" data-close-project aria-label="Close SOMA case study">×</button></div>
-      <div class="detail-container">
-        <header class="detail-hero"><video src="assets/images/games/soma/soma.mp4" autoplay muted loop playsinline preload="metadata"></video><div class="detail-hero__overlay"><p>Unity / C# · Solo project · 2 months</p><h2 id="project-title-soma">SOMA</h2></div></header>
-        <div class="detail-summary"><div><p class="eyebrow">About</p><p>A narrative 2D action platformer set in a cyberpunk world of moral choices and memory manipulation. The player controls Nova, a rogue detective confronting Project SOMA and her sister Astra.</p></div><dl><div><dt>Role</dt><dd>Designer, writer & programmer</dd></div><div><dt>Team</dt><dd>Solo</dd></div><div><dt>Time frame</dt><dd>2 months</dd></div><div><dt>Engine</dt><dd>Unity / C#</dd></div></dl></div>
-        <article class="detail-story">
-          <section><div class="detail-story__number">01</div><div><h3>Identity as a system</h3><p>SOMA began as a storytelling experiment about identity. Player decisions shape Nova’s relationships, moral position and the revelations she encounters.</p><figure><img src="assets/images/games/soma/soma-vanta.png" alt="Nova in Neon Vanta" loading="lazy" /><figcaption>Nova begins her journey in Neon Vanta.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">02</div><div><h3>Combat</h3><p>Combat combines projectile attacks and evasive movement against aggressive AI. Bosses such as Cors and Astra introduce phase-based encounters that ask the player to adapt.</p><figure><img src="assets/images/games/soma/soma-astra.png" alt="Boss fight with Astra" loading="lazy" /><figcaption>Facing Astra, the leader behind Project SOMA.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">03</div><div><h3>Interactive dialogue</h3><p>Branching conversations allow the player to define Nova’s responses and influence her relationships. Typing effects, fades and internal monologues support the tone of each scene.</p><figure><img src="assets/images/games/soma/soma-dialogue.png" alt="SOMA branching dialogue" loading="lazy" /><figcaption>Branching dialogue with timed presentation.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">04</div><div><h3>Cinematic flow</h3><p>Scripted transitions, fades and controlled scenes shape pacing without separating narrative from play.</p><figure><img src="assets/images/games/soma/soma-cors.png" alt="SOMA cutscene" loading="lazy" /><figcaption>A scripted sequence revealing Cors’s motivations.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">05</div><div><h3>Visual and audio design</h3><p>Pixel art, fog particles, animated water and reflective surfaces establish the cyberpunk atmosphere. A custom audio manager handles ambience, enemies, interface sounds and dialogue typing.</p><figure><img src="assets/images/games/soma/soma-water.gif" alt="Animated water reflection in SOMA" loading="lazy" /><figcaption>Animated sewer water reflecting Nova’s silhouette.</figcaption></figure></div></section>
-          <section><div class="detail-story__number">06</div><div><h3>What I learned</h3><p>SOMA brought together modular development, combat, interactive storytelling, animation, audio management and scene transitions in one coherent project.</p></div></section>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-detail" id="project-detail-bookcharacters" role="dialog" aria-modal="true" aria-labelledby="project-title-bookcharacters" hidden>
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>Pixel art gallery</span><button class="detail-close" type="button" data-close-project aria-label="Close Fantasy Characters gallery">×</button></div>
-      <div class="detail-container">
-        <header class="detail-hero detail-hero--pixel"><img src="assets/images/pixel-art/fantasy/bookcharacters.gif" alt="Fantasy Characters animation" data-pixel-art /><div class="detail-hero__overlay"><p>Aseprite · Character design · 7 days</p><h2 id="project-title-bookcharacters">Fantasy Characters</h2></div></header>
-        <div class="detail-summary detail-summary--single"><div><p class="eyebrow">Concept</p><p>A pixel-art collection inspired by fantasy literature. Each sprite translates a recognisable character into a limited visual language built around silhouette, posture, palette and a few defining details.</p></div></div>
-        <section class="character-section"><div class="character-section__heading"><span>01</span><div><p class="eyebrow">Character set</p><h3>Gallery</h3></div></div><div class="character-gallery">
-          <article class="character-card"><img src="assets/images/pixel-art/fantasy/Bayaz.png" alt="Pixel art interpretation of Bayaz" loading="lazy" data-pixel-art /><div><h4>Bayaz</h4><p>The First of the Magi: brilliant, manipulative and intimidating beneath a composed exterior.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/fantasy/Ferro%20Maljinn.png" alt="Pixel art interpretation of Ferro Maljinn" loading="lazy" data-pixel-art /><div><h4>Ferro Maljinn</h4><p>A relentless warrior driven by vengeance, communicated through stance and restrained colour.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/fantasy/Jezal%20Dan%20Luthar.png" alt="Pixel art interpretation of Jezal dan Luthar" loading="lazy" data-pixel-art /><div><h4>Jezal dan Luthar</h4><p>An arrogant noble whose polished appearance contrasts with the uncertainty beneath it.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/fantasy/Kvothe.png" alt="Pixel art interpretation of Kvothe" loading="lazy" data-pixel-art /><div><h4>Kvothe</h4><p>A gifted musician, magician and swordsman represented through a confident, theatrical silhouette.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/fantasy/Logen%20Ninefingers.png" alt="Pixel art interpretation of Logen Ninefingers" loading="lazy" data-pixel-art /><div><h4>Logen Ninefingers</h4><p>The Bloody-Nine: a hardened warrior whose heavy silhouette carries a violent history.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/fantasy/Sand%20Dan%20Glokta.png" alt="Pixel art interpretation of Sand dan Glokta" loading="lazy" data-pixel-art /><div><h4>Sand dan Glokta</h4><p>An inquisitor defined by physical damage, sharp intelligence and an unmistakable crooked posture.</p></div></article>
-        </div></section>
-        <div class="detail-notes"><div><p class="eyebrow">Tools</p><p>Aseprite · Pixel art and pose exploration</p></div><div><p class="eyebrow">References</p><p>The First Law · The Kingkiller Chronicle</p></div><div><p class="eyebrow">Focus</p><p>Clean silhouettes, unique palettes and expressive poses.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-detail" id="project-detail-thrillercharacters" role="dialog" aria-modal="true" aria-labelledby="project-title-thrillercharacters" hidden>
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>Pixel art gallery</span><button class="detail-close" type="button" data-close-project aria-label="Close Thriller Characters gallery">×</button></div>
-      <div class="detail-container">
-        <header class="detail-hero detail-hero--pixel"><img src="assets/images/pixel-art/thriller/crime.gif" alt="Thriller Characters animation" data-pixel-art /><div class="detail-hero__overlay"><p>Aseprite · Character design · 7 days</p><h2 id="project-title-thrillercharacters">Thriller Characters</h2></div></header>
-        <div class="detail-summary detail-summary--single"><div><p class="eyebrow">Concept</p><p>A mystery cast designed as readable archetypes. Costume, posture and silhouette do most of the storytelling, giving each figure an immediate role while leaving room for suspicion.</p></div></div>
-        <section class="character-section"><div class="character-section__heading"><span>01</span><div><p class="eyebrow">Cast</p><h3>NPCs and characters</h3></div></div><div class="character-gallery">
-          <article class="character-card"><img src="assets/images/pixel-art/thriller/Artist.png" alt="Pixel art artist character" loading="lazy" data-pixel-art /><div><h4>Artist</h4><p>A bohemian painter with a sharp eye for colour and gossip.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/thriller/Chef.png" alt="Pixel art chef character" loading="lazy" data-pixel-art /><div><h4>Chef</h4><p>A perfectionist whose temper is as hot as the kitchen.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/thriller/Enterpreneur.png" alt="Pixel art entrepreneur character" loading="lazy" data-pixel-art /><div><h4>Entrepreneur</h4><p>A deal-maker with grand plans and more confidence than certainty.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/thriller/Owner.png" alt="Pixel art owner character" loading="lazy" data-pixel-art /><div><h4>Owner</h4><p>An influential landlord accustomed to controlling the room.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/thriller/Heiress.png" alt="Pixel art heiress character" loading="lazy" data-pixel-art /><div><h4>Heiress</h4><p>Pampered, clever and more observant than people expect.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/thriller/Twins.png" alt="Pixel art twin characters" loading="lazy" data-pixel-art /><div><h4>Twins</h4><p>An inseparable pair with a talent for coordinated mischief.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/thriller/Old%20Lady.png" alt="Pixel art old lady character" loading="lazy" data-pixel-art /><div><h4>Old Lady</h4><p>An eccentric matriarch with a cane and a sharper wit than she reveals.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/thriller/Detective.png" alt="Pixel art detective character" loading="lazy" data-pixel-art /><div><h4>Detective</h4><p>A street-smart investigator guided by instinct and accumulated evidence.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/thriller/Butler.png" alt="Pixel art butler character" loading="lazy" data-pixel-art /><div><h4>Butler</h4><p>Impeccable manners, impeccable alibis and an unreadable expression.</p></div></article>
-        </div></section>
-        <div class="detail-notes"><div><p class="eyebrow">Tools</p><p>Aseprite · Pixel art and character exploration</p></div><div><p class="eyebrow">Focus</p><p>Silhouette, costume, personality and visual contrast.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-detail" id="project-detail-sentient" role="dialog" aria-modal="true" aria-labelledby="project-title-sentient" hidden>
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>Pixel art gallery</span><button class="detail-close" type="button" data-close-project aria-label="Close Sentient Characters gallery">×</button></div>
-      <div class="detail-container">
-        <header class="detail-hero detail-hero--pixel"><img src="assets/images/pixel-art/sentient/sentient-cover.gif" alt="Sentient character animation" data-pixel-art /><div class="detail-hero__overlay"><p>Aseprite · Character design · Ongoing</p><h2 id="project-title-sentient">Sentient Characters</h2></div></header>
-        <div class="detail-summary detail-summary--single"><div><p class="eyebrow">Concept</p><p>A set of pixel-art characters for Sentient. The visual language combines a retro-futuristic mood with strong silhouettes and controlled colour contrast so players can distinguish roles instantly during play.</p></div></div>
-        <section class="character-section"><div class="character-section__heading"><span>01</span><div><p class="eyebrow">Game cast</p><h3>Characters and units</h3></div></div><div class="character-gallery">
-          <article class="character-card"><img src="assets/images/pixel-art/sentient/sentient_player.png" alt="Sentient player unit" loading="lazy" data-pixel-art /><div><h4>Player Unit</h4><p>An agile protagonist designed for clear motion and fast-paced encounters.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/sentient/sentient_boss.png" alt="Sentient boss projection" loading="lazy" data-pixel-art /><div><h4>Boss Projection</h4><p>A towering sentient AI presence built around scale, symmetry and area attacks.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/sentient/sentient_npc.png" alt="Sentient mysterious NPC" loading="lazy" data-pixel-art /><div><h4>Mysterious NPC</h4><p>A compact, enigmatic figure who guides the player through cryptic messages.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/sentient/sentient_enemy1.png" alt="Sentient bipedal enemy unit" loading="lazy" data-pixel-art /><div><h4>Bipedal Enemy</h4><p>A grounded combat unit equipped with a flamethrower and a heavy industrial silhouette.</p></div></article>
-          <article class="character-card"><img src="assets/images/pixel-art/sentient/sentient_enemy3.png" alt="Sentient crawler enemy unit" loading="lazy" data-pixel-art /><div><h4>Crawler Enemy</h4><p>A scouting unit that attacks through ground spikes and low, compact movement.</p></div></article>
-        </div></section>
-        <div class="detail-notes"><div><p class="eyebrow">Tools</p><p>Aseprite · Pixel art and animation</p></div><div><p class="eyebrow">Art direction</p><p>Retro-futurism, readability and role distinction.</p></div><div><p class="eyebrow">Production goal</p><p>Sprites that remain legible at small in-game sizes.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-detail" id="project-detail-pokeitems" role="dialog" aria-modal="true" aria-labelledby="project-title-pokeitems" hidden>
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>3D model study</span><button class="detail-close" type="button" data-close-project aria-label="Close Pokéitems model study">×</button></div>
-      <div class="detail-container">
-        <header class="detail-hero"><img src="assets/images/3d/pokeitems/pokeitems.gif" alt="Rotating low-poly Pokéitems collection" /><div class="detail-hero__overlay"><p>Blockbench · Prop set · 1 day</p><h2 id="project-title-pokeitems">Pokéitems</h2></div></header>
-        <div class="detail-summary"><div><p class="eyebrow">Overview</p><p>A compact low-poly prop study translating familiar item shapes into a simplified real-time style. The focus is immediate recognition with minimal geometry.</p></div><dl><div><dt>Role</dt><dd>3D artist</dd></div><div><dt>Type</dt><dd>Prop set</dd></div><div><dt>Time frame</dt><dd>1 day</dd></div><div><dt>Tool</dt><dd>Blockbench</dd></div></dl></div>
-        <div class="detail-notes"><div><p class="eyebrow">Focus</p><p>Readable silhouettes and compact geometry.</p></div><div><p class="eyebrow">Approach</p><p>Simple forms, restrained detail and strong colour blocking.</p></div><div><p class="eyebrow">Use case</p><p>Real-time games and stylised scenes.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="project-detail" id="project-detail-malenia-helmet" role="dialog" aria-modal="true" aria-labelledby="project-title-malenia" hidden>
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>3D model study</span><button class="detail-close" type="button" data-close-project aria-label="Close Malenia's Helmet model study">×</button></div>
-      <div class="detail-container">
-        <header class="detail-hero"><img src="assets/images/3d/malenia/malenia.gif" alt="Rotating low-poly recreation of Malenia's helmet" /><div class="detail-hero__overlay"><p>Blockbench · Helmet · 2 days</p><h2 id="project-title-malenia">Malenia’s Helmet</h2></div></header>
-        <div class="detail-summary"><div><p class="eyebrow">Overview</p><p>A low-poly recreation of Malenia’s winged helmet, prioritising the recognisable profile, layered metal forms and ornamental rhythm while keeping the model economical.</p></div><dl><div><dt>Role</dt><dd>3D artist</dd></div><div><dt>Type</dt><dd>Wearable prop</dd></div><div><dt>Time frame</dt><dd>2 days</dd></div><div><dt>Tool</dt><dd>Blockbench</dd></div></dl></div>
-        <div class="detail-notes"><div><p class="eyebrow">Focus</p><p>Iconic silhouette and layered construction.</p></div><div><p class="eyebrow">Challenge</p><p>Simplifying ornamental forms without losing identity.</p></div><div><p class="eyebrow">Style</p><p>Stylised low-poly interpretation.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DETAIL: POWER APP -->
-<section
-  class="project-detail"
-  id="project-detail-power-app"
-  role="dialog"
-  aria-modal="true"
-  aria-labelledby="project-title-power-app"
-  hidden
->
-  <div class="project-detail__panel">
-    <div class="project-detail__toolbar">
-      <button class="detail-back" type="button" data-close-project>← Back to portfolio</button>
-      <span>Web application case study</span>
-      <button class="detail-close" type="button" data-close-project aria-label="Close Power App case study">×</button>
-    </div>
-
-    <div class="detail-container">
-      <header class="detail-hero detail-hero--webapp">
-        <div class="webapp-hero__canvas" aria-hidden="true">
-          <div class="webapp-hero__glow"></div>
-          <img
-            class="webapp-hero__screen webapp-hero__screen--primary"
-            src="assets/images/webapps/power-app/power-app-daily.webp"
-            alt=""
-          />
-          <img
-            class="webapp-hero__screen webapp-hero__screen--secondary"
-            src="assets/images/webapps/power-app/power-app-dark.webp"
-            alt=""
-          />
-        </div>
-
-        <div class="detail-hero__overlay">
-          <p>Vanilla JavaScript · PWA · Product design</p>
-          <h2 id="project-title-power-app">Power App</h2>
-        </div>
-      </header>
-
-      <div class="detail-summary">
-        <div>
-          <p class="eyebrow">Overview</p>
-          <p>
+<figure>
+<img alt="Completed Shotgun Battle Grid battle result screen" data-fallback="assets/images/games/shotgun/shotgun-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/shotgun/shotgun-result.webp"/>
+<figcaption>The completed prototype supports victory, defeat, draw and restart states.</figcaption>
+</figure>
+</div>
+</section>
+</article>
+<div class="detail-notes"><div><p class="eyebrow">Outcome</p><p>A complete two-week combat prototype with movement, AI, ammunition, health, shields, projectile clashes and full audiovisual feedback.</p></div><div><p class="eyebrow">My contribution</p><p>Solo development from concept to final presentation: programming, game design, pixel art, shaders, interface, effects and integration.</p></div><div><p class="eyebrow">What comes next</p><p>Smarter AI profiles, new actions, grid hazards, multi-round matches and a possible public repository or playable build.</p></div></div>
+</div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-monkey" aria-modal="true" class="project-detail project-detail--monkey" hidden="" id="project-detail-monkey" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar">
+<button class="detail-back" data-close-project="" type="button">← Back to portfolio</button>
+<span>Game case study</span>
+<button aria-label="Close Monkey Island Fight case study" class="detail-close" data-close-project="" type="button">×</button>
+</div>
+<div class="detail-container">
+<header class="detail-hero">
+<video loop="" muted="" playsinline="" preload="none" src="assets/images/games/monkey-island/monkeyisland.mp4"></video>
+<div class="detail-hero__overlay">
+<p>Unity / C# · Solo project · 2 months</p>
+<h2 id="project-title-monkey">Monkey Island Fight</h2>
+</div>
+</header>
+<div class="detail-summary">
+<div><p class="eyebrow">About</p><p>A solo project that reimagines the classic insult-sword-fighting mechanic from the Monkey Island series. Built during my Master’s programme as both a tribute and a technical exercise in narrative design.</p></div>
+<dl><div><dt>Role</dt><dd>Solo developer</dd></div><div><dt>Team</dt><dd>1</dd></div><div><dt>Time frame</dt><dd>2 months</dd></div><div><dt>Engine</dt><dd>Unity / C#</dd></div></dl>
+</div>
+<article class="detail-story">
+<section><div class="detail-story__number">01</div><div><h3>Introduction</h3><p>My goal was to recreate the charm and rhythm of the original insult fights. The exchange needed to feel reactive, funny and sharp, with the player winning through understanding rather than simple selection.</p></div></section>
+<section><div class="detail-story__number">02</div><div><h3>Dialogue system</h3><p>I designed a branching dialogue structure where insults and responses carry consequences, creating layered chains that escalate dynamically. The system uses C# ScriptableObjects and a focused state manager.</p><figure><img alt="Dialogue system flowchart" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/monkey-island/monkey-image-1.png"/><figcaption>The logic behind the insult-response dialogue system.</figcaption></figure></div></section>
+<section><div class="detail-story__number">03</div><div><h3>Interface and feedback</h3><p>The interface keeps a clean retro feel while using subtle motion and sound cues to reinforce the rhythm of the exchange. Each line and comeback receives synchronised visual feedback.</p><figure><img alt="Monkey Island Fight interface concept" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/monkey-island/monkey-image-3.png"/><figcaption>Dialogue options and timing feedback.</figcaption></figure></div></section>
+<section><div class="detail-story__number">04</div><div><h3>Timing and delivery</h3><p>Comedy depends on rhythm, so I built a delay-and-pause system to control delivery. Pauses adapt to line length and player choice timing, helping each exchange land more naturally.</p><figure><img alt="Timing system demonstration" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/monkey-island/monkeyisland.gif"/><figcaption>Dynamic timing between insults and comebacks.</figcaption></figure></div></section>
+<section><div class="detail-story__number">05</div><div><h3>What I learned</h3><p>This project showed me that humour in games is engineered through writing, pacing, agency and feedback. It also strengthened my work with state machines, dialogue trees and Unity UI systems.</p></div></section>
+</article>
+</div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-mario" aria-modal="true" class="project-detail project-detail--mario" hidden="" id="project-detail-mario" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar"><button class="detail-back" data-close-project="" type="button">← Back to portfolio</button><span>Game case study</span><button aria-label="Close Super Mario Bros case study" class="detail-close" data-close-project="" type="button">×</button></div>
+<div class="detail-container">
+<header class="detail-hero"><video loop="" muted="" playsinline="" preload="none" src="assets/images/games/mario/mario.mp4"></video><div class="detail-hero__overlay"><p>Unity / C# · Solo project · 2 months</p><h2 id="project-title-mario">Super Mario Bros</h2></div></header>
+<div class="detail-summary"><div><p class="eyebrow">About</p><p>A recreation of the first level of Super Mario Bros using Unity and C#, preserving the original structure, visual rhythm and tightly tuned gameplay.</p></div><dl><div><dt>Role</dt><dd>Solo developer</dd></div><div><dt>Team</dt><dd>1</dd></div><div><dt>Time frame</dt><dd>2 months</dd></div><div><dt>Engine</dt><dd>Unity / C#</dd></div></dl></div>
+<article class="detail-story">
+<section><div class="detail-story__number">01</div><div><h3>Introduction</h3><p>I focused on reproducing the feel and learning rhythm of the original first level, with particular attention to physics, collision, jump timing and enemy behaviour.</p></div></section>
+<section><div class="detail-story__number">02</div><div><h3>Physics and player control</h3><p>The biggest challenge was matching Mario’s jump arc and momentum. Unity’s physics were heavily customised to produce a controller that feels both snappy and slightly floaty across grounded, airborne and sprinting states.</p><figure><img alt="Custom Mario movement controller" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/mario/mario-jump.gif"/><figcaption>Custom movement tuned to classic Mario physics.</figcaption></figure></div></section>
+<section><div class="detail-story__number">03</div><div><h3>Level design</h3><p>The level was recreated tile by tile from gameplay references. Blocks, pipes, gaps, enemies and power-ups were placed to retain the original pacing and teaching sequence.</p><figure><img alt="Mario tilemap level structure" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/mario/mario-tileset.png"/><figcaption>Tilemap-based recreation of the first NES level.</figcaption></figure></div></section>
+<section><div class="detail-story__number">04</div><div><h3>Interface and retro style</h3><p>The HUD mirrors the original score, coin and timer structure. Typography and pixel alignment were treated as part of the gameplay feel rather than decoration.</p><figure><img alt="Super Mario Bros interface recreation" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/mario/mario-ui.png"/><figcaption>HUD elements styled after the original NES interface.</figcaption></figure></div></section>
+<section><div class="detail-story__number">05</div><div><h3>What I learned</h3><p>Rebuilding a classic improved my understanding of design intent, custom character controllers, tile-based systems and the precision required to reproduce retro mechanics in a modern engine.</p></div></section>
+</article>
+</div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-mecha" aria-modal="true" class="project-detail project-detail--mecha" hidden="" id="project-detail-mecha" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar"><button class="detail-back" data-close-project="" type="button">← Back to portfolio</button><span>Game case study</span><button aria-label="Close Mecha Fight case study" class="detail-close" data-close-project="" type="button">×</button></div>
+<div class="detail-container">
+<header class="detail-hero"><video loop="" muted="" playsinline="" preload="none" src="assets/images/games/mecha/mecha.mp4"></video><div class="detail-hero__overlay"><p>Unity / C# · Solo project · 2 months</p><h2 id="project-title-mecha">Mecha Fight</h2></div></header>
+<div class="detail-summary"><div><p class="eyebrow">About</p><p>A turn-based combat game inspired by classic artillery titles, featuring customisable mechs, tactical decisions, destructible terrain and physics-driven projectiles.</p></div><dl><div><dt>Role</dt><dd>Designer &amp; programmer</dd></div><div><dt>Team</dt><dd>Solo</dd></div><div><dt>Time frame</dt><dd>2 months</dd></div><div><dt>Engine</dt><dd>Unity / C#</dd></div></dl></div>
+<article class="detail-story">
+<section><div class="detail-story__number">01</div><div><h3>Introduction</h3><p>The project explores an accessible tactical loop with enough depth to reward positioning, weapon choice and terrain awareness.</p></div></section>
+<section><div class="detail-story__number">02</div><div><h3>Physics and aiming</h3><p>I implemented 2D movement and projectile behaviour with custom mech weight and friction values. An aim-assist system communicates the likely firing path without removing player judgement.</p><figure><img alt="Mecha Fight aiming system" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/mecha/mecha-combat.png"/><figcaption>Custom aiming support for projectile combat.</figcaption></figure></div></section>
+<section><div class="detail-story__number">03</div><div><h3>Destructible terrain</h3><p>The tile system reacts directly to projectile impacts. Bullets detect and remove tiles within a configurable impact radius, changing routes and cover during a match.</p><figure><img alt="Destructible terrain tile system" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/mecha/mecha-tileset.png"/><figcaption>Real-time terrain destruction triggered by collisions.</figcaption></figure></div></section>
+<section><div class="detail-story__number">04</div><div><h3>Interface and feedback</h3><p>The HUD prioritises health, abilities and turn information. Its industrial-futuristic language uses strong highlights to keep tactical information readable.</p><figure><img alt="Mecha Fight interface" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/mecha/mecha-ui.png"/><figcaption>A tactical HUD with a mecha-inspired visual language.</figcaption></figure></div></section>
+<section><div class="detail-story__number">05</div><div><h3>What I learned</h3><p>The project strengthened my understanding of turn-based architecture, physics integration, destructible environments and modular ability design.</p></div></section>
+</article>
+</div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-soma" aria-modal="true" class="project-detail project-detail--soma" hidden="" id="project-detail-soma" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar"><button class="detail-back" data-close-project="" type="button">← Back to portfolio</button><span>Game case study</span><button aria-label="Close SOMA case study" class="detail-close" data-close-project="" type="button">×</button></div>
+<div class="detail-container">
+<header class="detail-hero"><video loop="" muted="" playsinline="" preload="none" src="assets/images/games/soma/soma.mp4"></video><div class="detail-hero__overlay"><p>Unity / C# · Solo project · 2 months</p><h2 id="project-title-soma">SOMA</h2></div></header>
+<div class="detail-summary"><div><p class="eyebrow">About</p><p>A narrative 2D action platformer set in a cyberpunk world of moral choices and memory manipulation. The player controls Nova, a rogue detective confronting Project SOMA and her sister Astra.</p></div><dl><div><dt>Role</dt><dd>Designer, writer &amp; programmer</dd></div><div><dt>Team</dt><dd>Solo</dd></div><div><dt>Time frame</dt><dd>2 months</dd></div><div><dt>Engine</dt><dd>Unity / C#</dd></div></dl></div>
+<article class="detail-story">
+<section><div class="detail-story__number">01</div><div><h3>Identity as a system</h3><p>SOMA began as a storytelling experiment about identity. Player decisions shape Nova’s relationships, moral position and the revelations she encounters.</p><figure><img alt="Nova in Neon Vanta" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/soma/soma-vanta.png"/><figcaption>Nova begins her journey in Neon Vanta.</figcaption></figure></div></section>
+<section><div class="detail-story__number">02</div><div><h3>Combat</h3><p>Combat combines projectile attacks and evasive movement against aggressive AI. Bosses such as Cors and Astra introduce phase-based encounters that ask the player to adapt.</p><figure><img alt="Boss fight with Astra" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/soma/soma-astra.png"/><figcaption>Facing Astra, the leader behind Project SOMA.</figcaption></figure></div></section>
+<section><div class="detail-story__number">03</div><div><h3>Interactive dialogue</h3><p>Branching conversations allow the player to define Nova’s responses and influence her relationships. Typing effects, fades and internal monologues support the tone of each scene.</p><figure><img alt="SOMA branching dialogue" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/soma/soma-dialogue.png"/><figcaption>Branching dialogue with timed presentation.</figcaption></figure></div></section>
+<section><div class="detail-story__number">04</div><div><h3>Cinematic flow</h3><p>Scripted transitions, fades and controlled scenes shape pacing without separating narrative from play.</p><figure><img alt="SOMA cutscene" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/soma/soma-cors.png"/><figcaption>A scripted sequence revealing Cors’s motivations.</figcaption></figure></div></section>
+<section><div class="detail-story__number">05</div><div><h3>Visual and audio design</h3><p>Pixel art, fog particles, animated water and reflective surfaces establish the cyberpunk atmosphere. A custom audio manager handles ambience, enemies, interface sounds and dialogue typing.</p><figure><img alt="Animated water reflection in SOMA" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/games/soma/soma-water.gif"/><figcaption>Animated sewer water reflecting Nova’s silhouette.</figcaption></figure></div></section>
+<section><div class="detail-story__number">06</div><div><h3>What I learned</h3><p>SOMA brought together modular development, combat, interactive storytelling, animation, audio management and scene transitions in one coherent project.</p></div></section>
+</article>
+<div class="detail-notes"><div><p class="eyebrow">Outcome</p><p>A cohesive narrative action prototype combining combat, dialogue, boss encounters, scripted scenes and environmental atmosphere.</p></div><div><p class="eyebrow">My contribution</p><p>Solo design, writing and programming, with responsibility for the systems that connect player choice, combat and presentation.</p></div><div><p class="eyebrow">What comes next</p><p>A future iteration would deepen the consequences of dialogue choices, refine combat encounters and expand the world beyond the current prototype.</p></div></div></div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-bookcharacters" aria-modal="true" class="project-detail project-detail--fantasy" hidden="" id="project-detail-bookcharacters" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar"><button class="detail-back" data-close-project="" type="button">← Back to portfolio</button><span>Pixel art gallery</span><button aria-label="Close Fantasy Characters gallery" class="detail-close" data-close-project="" type="button">×</button></div>
+<div class="detail-container">
+<header class="detail-hero detail-hero--pixel"><img alt="Fantasy Characters animation" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/fantasy/bookcharacters.gif"/><div class="detail-hero__overlay"><p>Aseprite · Character design · 7 days</p><h2 id="project-title-bookcharacters">Fantasy Characters</h2></div></header>
+<div class="detail-summary detail-summary--single"><div><p class="eyebrow">Concept</p><p>A pixel-art collection inspired by fantasy literature. Each sprite translates a recognisable character into a limited visual language built around silhouette, posture, palette and a few defining details.</p></div></div>
+<section class="character-section"><div class="character-section__heading"><span>01</span><div><p class="eyebrow">Character set</p><h3>Gallery</h3></div></div><div class="character-gallery">
+<article class="character-card"><img alt="Pixel art interpretation of Bayaz" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/fantasy/Bayaz.png"/><div><h4>Bayaz</h4><p>The First of the Magi: brilliant, manipulative and intimidating beneath a composed exterior.</p></div></article>
+<article class="character-card"><img alt="Pixel art interpretation of Ferro Maljinn" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/fantasy/Ferro%20Maljinn.png"/><div><h4>Ferro Maljinn</h4><p>A relentless warrior driven by vengeance, communicated through stance and restrained colour.</p></div></article>
+<article class="character-card"><img alt="Pixel art interpretation of Jezal dan Luthar" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/fantasy/Jezal%20Dan%20Luthar.png"/><div><h4>Jezal dan Luthar</h4><p>An arrogant noble whose polished appearance contrasts with the uncertainty beneath it.</p></div></article>
+<article class="character-card"><img alt="Pixel art interpretation of Kvothe" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/fantasy/Kvothe.png"/><div><h4>Kvothe</h4><p>A gifted musician, magician and swordsman represented through a confident, theatrical silhouette.</p></div></article>
+<article class="character-card"><img alt="Pixel art interpretation of Logen Ninefingers" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/fantasy/Logen%20Ninefingers.png"/><div><h4>Logen Ninefingers</h4><p>The Bloody-Nine: a hardened warrior whose heavy silhouette carries a violent history.</p></div></article>
+<article class="character-card"><img alt="Pixel art interpretation of Sand dan Glokta" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/fantasy/Sand%20Dan%20Glokta.png"/><div><h4>Sand dan Glokta</h4><p>An inquisitor defined by physical damage, sharp intelligence and an unmistakable crooked posture.</p></div></article>
+</div></section>
+<div class="detail-notes"><div><p class="eyebrow">Tools</p><p>Aseprite · Pixel art and pose exploration</p></div><div><p class="eyebrow">References</p><p>The First Law · The Kingkiller Chronicle</p></div><div><p class="eyebrow">Focus</p><p>Clean silhouettes, unique palettes and expressive poses.</p></div></div>
+</div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-thrillercharacters" aria-modal="true" class="project-detail project-detail--thriller" hidden="" id="project-detail-thrillercharacters" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar"><button class="detail-back" data-close-project="" type="button">← Back to portfolio</button><span>Pixel art gallery</span><button aria-label="Close Thriller Characters gallery" class="detail-close" data-close-project="" type="button">×</button></div>
+<div class="detail-container">
+<header class="detail-hero detail-hero--pixel"><img alt="Thriller Characters animation" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/thriller/crime.gif"/><div class="detail-hero__overlay"><p>Aseprite · Character design · 7 days</p><h2 id="project-title-thrillercharacters">Thriller Characters</h2></div></header>
+<div class="detail-summary detail-summary--single"><div><p class="eyebrow">Concept</p><p>A mystery cast designed as readable archetypes. Costume, posture and silhouette do most of the storytelling, giving each figure an immediate role while leaving room for suspicion.</p></div></div>
+<section class="character-section"><div class="character-section__heading"><span>01</span><div><p class="eyebrow">Cast</p><h3>NPCs and characters</h3></div></div><div class="character-gallery">
+<article class="character-card"><img alt="Pixel art artist character" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/thriller/Artist.png"/><div><h4>Artist</h4><p>A bohemian painter with a sharp eye for colour and gossip.</p></div></article>
+<article class="character-card"><img alt="Pixel art chef character" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/thriller/Chef.png"/><div><h4>Chef</h4><p>A perfectionist whose temper is as hot as the kitchen.</p></div></article>
+<article class="character-card"><img alt="Pixel art entrepreneur character" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/thriller/Enterpreneur.png"/><div><h4>Entrepreneur</h4><p>A deal-maker with grand plans and more confidence than certainty.</p></div></article>
+<article class="character-card"><img alt="Pixel art owner character" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/thriller/Owner.png"/><div><h4>Owner</h4><p>An influential landlord accustomed to controlling the room.</p></div></article>
+<article class="character-card"><img alt="Pixel art heiress character" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/thriller/Heiress.png"/><div><h4>Heiress</h4><p>Pampered, clever and more observant than people expect.</p></div></article>
+<article class="character-card"><img alt="Pixel art twin characters" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/thriller/Twins.png"/><div><h4>Twins</h4><p>An inseparable pair with a talent for coordinated mischief.</p></div></article>
+<article class="character-card"><img alt="Pixel art old lady character" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/thriller/Old%20Lady.png"/><div><h4>Old Lady</h4><p>An eccentric matriarch with a cane and a sharper wit than she reveals.</p></div></article>
+<article class="character-card"><img alt="Pixel art detective character" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/thriller/Detective.png"/><div><h4>Detective</h4><p>A street-smart investigator guided by instinct and accumulated evidence.</p></div></article>
+<article class="character-card"><img alt="Pixel art butler character" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/thriller/Butler.png"/><div><h4>Butler</h4><p>Impeccable manners, impeccable alibis and an unreadable expression.</p></div></article>
+</div></section>
+<div class="detail-notes"><div><p class="eyebrow">Tools</p><p>Aseprite · Pixel art and character exploration</p></div><div><p class="eyebrow">Focus</p><p>Silhouette, costume, personality and visual contrast.</p></div></div>
+</div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-sentient" aria-modal="true" class="project-detail project-detail--sentient" hidden="" id="project-detail-sentient" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar"><button class="detail-back" data-close-project="" type="button">← Back to portfolio</button><span>Game in development · Visual development</span><button aria-label="Close Sentient Characters gallery" class="detail-close" data-close-project="" type="button">×</button></div>
+<div class="detail-container">
+<header class="detail-hero detail-hero--pixel"><img alt="Sentient character animation" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/sentient/sentient-cover.gif"/><div class="detail-hero__overlay"><p>Aseprite · Visual development · Game in progress</p><h2 id="project-title-sentient">Sentient</h2></div></header>
+<div class="detail-summary detail-summary--single"><div><p class="eyebrow">Concept</p><p>Sentient is a game in development. This portfolio entry focuses on the visual direction currently ready to share: player units, enemies, NPCs and the retro-futuristic world they are being designed to inhabit.</p></div></div>
+<section class="character-section"><div class="character-section__heading"><span>01</span><div><p class="eyebrow">Game cast</p><h3>Characters and units</h3></div></div><div class="character-gallery">
+<article class="character-card"><img alt="Sentient player unit" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/sentient/sentient_player.png"/><div><h4>Player Unit</h4><p>An agile protagonist designed for clear motion and fast-paced encounters.</p></div></article>
+<article class="character-card"><img alt="Sentient boss projection" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/sentient/sentient_boss.png"/><div><h4>Boss Projection</h4><p>A towering sentient AI presence built around scale, symmetry and area attacks.</p></div></article>
+<article class="character-card"><img alt="Sentient mysterious NPC" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/sentient/sentient_npc.png"/><div><h4>Mysterious NPC</h4><p>A compact, enigmatic figure who guides the player through cryptic messages.</p></div></article>
+<article class="character-card"><img alt="Sentient bipedal enemy unit" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/sentient/sentient_enemy1.png"/><div><h4>Bipedal Enemy</h4><p>A grounded combat unit equipped with a flamethrower and a heavy industrial silhouette.</p></div></article>
+<article class="character-card"><img alt="Sentient crawler enemy unit" data-fallback="assets/images/common/media-placeholder.svg" data-pixel-art="" decoding="async" loading="lazy" src="assets/images/pixel-art/sentient/sentient_enemy3.png"/><div><h4>Crawler Enemy</h4><p>A scouting unit that attacks through ground spikes and low, compact movement.</p></div></article>
+</div></section>
+<div class="detail-notes"><div><p class="eyebrow">Tools</p><p>Aseprite · Pixel art and animation</p></div><div><p class="eyebrow">Art direction</p><p>Retro-futurism, readability and role distinction.</p></div><div><p class="eyebrow">Production goal</p><p>Sprites that remain legible at small in-game sizes.</p></div></div>
+</div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-pokeitems" aria-modal="true" class="project-detail project-detail--pokeitems" hidden="" id="project-detail-pokeitems" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar"><button class="detail-back" data-close-project="" type="button">← Back to portfolio</button><span>3D model study</span><button aria-label="Close Pokéitems model study" class="detail-close" data-close-project="" type="button">×</button></div>
+<div class="detail-container">
+<header class="detail-hero"><img alt="Rotating low-poly Pokéitems collection" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/3d/pokeitems/pokeitems.gif"/><div class="detail-hero__overlay"><p>Blockbench · Prop set · 1 day</p><h2 id="project-title-pokeitems">Pokéitems</h2></div></header>
+<div class="detail-summary"><div><p class="eyebrow">Overview</p><p>A compact low-poly prop study translating familiar item shapes into a simplified real-time style. The focus is immediate recognition with minimal geometry.</p></div><dl><div><dt>Role</dt><dd>3D artist</dd></div><div><dt>Type</dt><dd>Prop set</dd></div><div><dt>Time frame</dt><dd>1 day</dd></div><div><dt>Tool</dt><dd>Blockbench</dd></div></dl></div>
+<div class="detail-notes"><div><p class="eyebrow">Focus</p><p>Readable silhouettes and compact geometry.</p></div><div><p class="eyebrow">Approach</p><p>Simple forms, restrained detail and strong colour blocking.</p></div><div><p class="eyebrow">Use case</p><p>Real-time games and stylised scenes.</p></div></div>
+</div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-malenia" aria-modal="true" class="project-detail project-detail--malenia" hidden="" id="project-detail-malenia-helmet" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar"><button class="detail-back" data-close-project="" type="button">← Back to portfolio</button><span>3D model study</span><button aria-label="Close Malenia's Helmet model study" class="detail-close" data-close-project="" type="button">×</button></div>
+<div class="detail-container">
+<header class="detail-hero"><img alt="Rotating low-poly recreation of Malenia's helmet" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/3d/malenia/malenia.gif"/><div class="detail-hero__overlay"><p>Blockbench · Helmet · 2 days</p><h2 id="project-title-malenia">Malenia’s Helmet</h2></div></header>
+<div class="detail-summary"><div><p class="eyebrow">Overview</p><p>A low-poly recreation of Malenia’s winged helmet, prioritising the recognisable profile, layered metal forms and ornamental rhythm while keeping the model economical.</p></div><dl><div><dt>Role</dt><dd>3D artist</dd></div><div><dt>Type</dt><dd>Wearable prop</dd></div><div><dt>Time frame</dt><dd>2 days</dd></div><div><dt>Tool</dt><dd>Blockbench</dd></div></dl></div>
+<div class="detail-notes"><div><p class="eyebrow">Focus</p><p>Iconic silhouette and layered construction.</p></div><div><p class="eyebrow">Challenge</p><p>Simplifying ornamental forms without losing identity.</p></div><div><p class="eyebrow">Style</p><p>Stylised low-poly interpretation.</p></div></div>
+</div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-power-app" aria-modal="true" class="project-detail project-detail--power" hidden="" id="project-detail-power-app" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar">
+<button class="detail-back" data-close-project="" type="button">← Back to portfolio</button>
+<span>Web application case study</span>
+<button aria-label="Close Power App case study" class="detail-close" data-close-project="" type="button">×</button>
+</div>
+<div class="detail-container">
+<header class="detail-hero detail-hero--webapp">
+<div aria-hidden="true" class="webapp-hero__canvas">
+<div class="webapp-hero__glow"></div>
+<img alt="" class="webapp-hero__screen webapp-hero__screen--primary" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/power-app/power-app-daily.webp"/>
+<img alt="" class="webapp-hero__screen webapp-hero__screen--secondary" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/power-app/power-app-dark.webp"/>
+</div>
+<div class="detail-hero__overlay">
+<p>Vanilla JavaScript · PWA · Product design</p>
+<h2 id="project-title-power-app">Power App</h2>
+</div>
+</header>
+<div class="detail-summary">
+<div>
+<p class="eyebrow">Overview</p>
+<p>
             Power App turns a detailed powerlifting spreadsheet into a focused mobile product. It organises each training day, tracks completed work, records actual performance and keeps the full programme editable without requiring an account or backend.
           </p>
-
-          <div class="detail-actions" aria-label="Power App project links">
-            <a
-              class="button button--primary"
-              href="https://polroviraguilar.github.io/power-app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+<div aria-label="Power App project links" class="detail-actions">
+<a class="button button--primary" href="https://polroviraguilar.github.io/power-app/" rel="noopener noreferrer" target="_blank">
               Open live app <span aria-hidden="true">↗</span>
-            </a>
-
-            <a
-              class="button button--secondary"
-              href="https://github.com/polroviraguilar/power-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+</a>
+<a class="button button--secondary" href="https://github.com/polroviraguilar/power-app" rel="noopener noreferrer" target="_blank">
               View source code <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-
-        <dl>
-          <div><dt>Role</dt><dd>Frontend developer & UX/UI designer</dd></div>
-          <div><dt>Type</dt><dd>Progressive web application</dd></div>
-          <div><dt>Platform</dt><dd>Mobile-first web</dd></div>
-          <div><dt>Year</dt><dd>2026</dd></div>
-          <div><dt>Stack</dt><dd>HTML, CSS, JavaScript</dd></div>
-          <div><dt>Deployment</dt><dd>GitHub Pages</dd></div>
-        </dl>
-      </div>
-
-      <div class="detail-story">
-        <section>
-          <span class="detail-story__number">01</span>
-          <div>
-            <p class="eyebrow">Problem</p>
-            <h3>Spreadsheets work for planning, but not during training.</h3>
-            <p>
+</a>
+</div>
+</div>
+<dl>
+<div><dt>Role</dt><dd>Frontend developer &amp; UX/UI designer</dd></div>
+<div><dt>Type</dt><dd>Progressive web application</dd></div>
+<div><dt>Platform</dt><dd>Mobile-first web</dd></div>
+<div><dt>Year</dt><dd>2026</dd></div>
+<div><dt>Stack</dt><dd>HTML, CSS, JavaScript</dd></div>
+<div><dt>Deployment</dt><dd>GitHub Pages</dd></div>
+</dl>
+</div>
+<div class="detail-story">
+<section>
+<span class="detail-story__number">01</span>
+<div>
+<p class="eyebrow">Problem</p>
+<h3>Spreadsheets work for planning, but not during training.</h3>
+<p>
               The original programme contained several weeks, five training days, warm-ups, mobility work, prescribed loads and real performance data. The challenge was to preserve that depth while making each workout quick to read and operate from a phone.
             </p>
-
-            <figure class="webapp-figure webapp-figure--single">
-              <img
-                src="assets/images/webapps/power-app/power-app-daily.webp"
-                alt="Power App daily view with the selected training day expanded"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>Daily view prioritising the current session, progress and actual performance.</figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section>
-          <span class="detail-story__number">02</span>
-          <div>
-            <p class="eyebrow">Product solution</p>
-            <h3>One shared programme, presented through purpose-built views.</h3>
-            <p>
+<figure class="webapp-figure webapp-figure--single">
+<img alt="Power App daily view with the selected training day expanded" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/power-app/power-app-daily.webp"/>
+<figcaption>Daily view prioritising the current session, progress and actual performance.</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<span class="detail-story__number">02</span>
+<div>
+<p class="eyebrow">Product solution</p>
+<h3>One shared programme, presented through purpose-built views.</h3>
+<p>
               Daily, Plan, Program, Warm-up and Mobility views read from the same underlying training data. Users can move between immediate workout execution and the complete programme without duplicating information or losing context.
             </p>
-
-            <div class="webapp-feature-grid">
-              <article>
-                <span>01</span>
-                <h4>Daily tracking</h4>
-                <p>Complete exercises, review prescriptions and record real results.</p>
-              </article>
-              <article>
-                <span>02</span>
-                <h4>Editable plan</h4>
-                <p>Modify phases, exercises, loads and notes directly in the interface.</p>
-              </article>
-              <article>
-                <span>03</span>
-                <h4>Local persistence</h4>
-                <p>Keep edits, completion states and actual results in the browser.</p>
-              </article>
-              <article>
-                <span>04</span>
-                <h4>Installable PWA</h4>
-                <p>Use the product as a standalone mobile application.</p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <span class="detail-story__number">03</span>
-          <div>
-            <p class="eyebrow">Interface system</p>
-            <h3>A mobile-first hierarchy designed for use between sets.</h3>
-            <p>
+<div class="webapp-feature-grid">
+<article>
+<span>01</span>
+<h4>Daily tracking</h4>
+<p>Complete exercises, review prescriptions and record real results.</p>
+</article>
+<article>
+<span>02</span>
+<h4>Editable plan</h4>
+<p>Modify phases, exercises, loads and notes directly in the interface.</p>
+</article>
+<article>
+<span>03</span>
+<h4>Local persistence</h4>
+<p>Keep edits, completion states and actual results in the browser.</p>
+</article>
+<article>
+<span>04</span>
+<h4>Installable PWA</h4>
+<p>Use the product as a standalone mobile application.</p>
+</article>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">03</span>
+<div>
+<p class="eyebrow">Interface system</p>
+<h3>A mobile-first hierarchy designed for use between sets.</h3>
+<p>
               Large day labels, compact controls, clear completion states and generous touch targets reduce friction in a gym environment. Light and dark themes preserve the same information hierarchy while adapting to different lighting conditions.
             </p>
-
-            <div class="webapp-gallery">
-              <figure>
-                <img
-                  src="assets/images/webapps/power-app/power-app-plan.webp"
-                  alt="Power App general plan view"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>General programme view and week controls.</figcaption>
-              </figure>
-
-              <figure>
-                <img
-                  src="assets/images/webapps/power-app/power-app-editor.webp"
-                  alt="Power App programme editor"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>Editable exercises, phases, notes and programme data.</figcaption>
-              </figure>
-
-              <figure>
-                <img
-                  src="assets/images/webapps/power-app/power-app-dark.webp"
-                  alt="Power App daily view using the dark theme"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>Dark theme using the same interaction and layout system.</figcaption>
-              </figure>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <span class="detail-story__number">04</span>
-          <div>
-            <p class="eyebrow">Technical approach</p>
-            <h3>A framework-free application with explicit state and browser-native storage.</h3>
-            <p>
+<div class="webapp-gallery">
+<figure>
+<img alt="Power App general plan view" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/power-app/power-app-plan.webp"/>
+<figcaption>General programme view and week controls.</figcaption>
+</figure>
+<figure>
+<img alt="Power App programme editor" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/power-app/power-app-editor.webp"/>
+<figcaption>Editable exercises, phases, notes and programme data.</figcaption>
+</figure>
+<figure>
+<img alt="Power App daily view using the dark theme" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/power-app/power-app-dark.webp"/>
+<figcaption>Dark theme using the same interaction and layout system.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">04</span>
+<div>
+<p class="eyebrow">Technical approach</p>
+<h3>A framework-free application with explicit state and browser-native storage.</h3>
+<p>
               The interface is rendered from JavaScript state and a separate programme data source. LocalStorage persists the editable plan, exercise completion and actual results. A web app manifest and service worker provide installable, app-like behaviour.
             </p>
-
-            <div class="webapp-tech-list" aria-label="Power App technologies">
-              <span>Semantic HTML</span>
-              <span>CSS custom properties</span>
-              <span>Vanilla JavaScript</span>
-              <span>LocalStorage</span>
-              <span>Service Worker</span>
-              <span>Web App Manifest</span>
-              <span>GitHub Pages</span>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <span class="detail-story__number">05</span>
-          <div>
-            <p class="eyebrow">Result</p>
-            <h3>A personal training tool that behaves like a focused product.</h3>
-            <p>
+<div aria-label="Power App technologies" class="webapp-tech-list">
+<span>Semantic HTML</span>
+<span>CSS custom properties</span>
+<span>Vanilla JavaScript</span>
+<span>LocalStorage</span>
+<span>Service Worker</span>
+<span>Web App Manifest</span>
+<span>GitHub Pages</span>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">05</span>
+<div>
+<p class="eyebrow">Result</p>
+<h3>A personal training tool that behaves like a focused product.</h3>
+<p>
               The finished application replaces the friction of consulting a large spreadsheet during training with a dedicated, editable and installable workflow. It also demonstrates product thinking beyond visual implementation: data structure, persistence, progressive enhancement and task-focused UX.
             </p>
-          </div>
-        </section>
-      </div>
-
-      <div class="detail-notes">
-        <div>
-          <p class="eyebrow">Product focus</p>
-          <p>Fast workout execution and low-friction editing.</p>
-        </div>
-        <div>
-          <p class="eyebrow">Technical focus</p>
-          <p>Shared state, local persistence and progressive web app behaviour.</p>
-        </div>
-        <div>
-          <p class="eyebrow">Design focus</p>
-          <p>Mobile hierarchy, touch interaction and clear completion feedback.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
 </section>
-
-
-
-  <!-- DETAIL: WEEKLY MEAL PLANNER -->
-  <section
-    class="project-detail"
-    id="project-detail-weekly-meal-planner"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="project-title-weekly-meal-planner"
-    hidden
-  >
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar">
-        <button class="detail-back" type="button" data-close-project>← Back to portfolio</button>
-        <span>Web application case study</span>
-        <button class="detail-close" type="button" data-close-project aria-label="Close Weekly Meal Planner case study">×</button>
-      </div>
-
-      <div class="detail-container">
-        <header class="detail-hero detail-hero--webapp detail-hero--meal">
-          <div class="webapp-hero__canvas" aria-hidden="true">
-            <div class="webapp-hero__glow"></div>
-            <img
-              class="meal-hero__screen meal-hero__screen--desktop"
-              src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-desktop.webp"
-              alt=""
-            />
-            <img
-              class="meal-hero__screen meal-hero__screen--mobile"
-              src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-mobile.webp"
-              alt=""
-            />
-          </div>
-
-          <div class="detail-hero__overlay">
-            <p>React · TypeScript · Firebase · PWA</p>
-            <h2 id="project-title-weekly-meal-planner">Weekly Meal Planner</h2>
-          </div>
-        </header>
-
-        <div class="detail-summary">
-          <div>
-            <p class="eyebrow">Overview</p>
-            <p>
+</div>
+<div class="detail-notes">
+<div>
+<p class="eyebrow">Product focus</p>
+<p>Fast workout execution and low-friction editing.</p>
+</div>
+<div>
+<p class="eyebrow">Technical focus</p>
+<p>Shared state, local persistence and progressive web app behaviour.</p>
+</div>
+<div>
+<p class="eyebrow">Design focus</p>
+<p>Mobile hierarchy, touch interaction and clear completion feedback.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-weekly-meal-planner" aria-modal="true" class="project-detail project-detail--meal" hidden="" id="project-detail-weekly-meal-planner" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar">
+<button class="detail-back" data-close-project="" type="button">← Back to portfolio</button>
+<span>Web application case study</span>
+<button aria-label="Close Weekly Meal Planner case study" class="detail-close" data-close-project="" type="button">×</button>
+</div>
+<div class="detail-container">
+<header class="detail-hero detail-hero--webapp detail-hero--meal">
+<div aria-hidden="true" class="webapp-hero__canvas">
+<div class="webapp-hero__glow"></div>
+<img alt="" class="meal-hero__screen meal-hero__screen--desktop" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-desktop.webp"/>
+<img alt="" class="meal-hero__screen meal-hero__screen--mobile" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-mobile.webp"/>
+</div>
+<div class="detail-hero__overlay">
+<p>React · TypeScript · Firebase · PWA</p>
+<h2 id="project-title-weekly-meal-planner">Weekly Meal Planner</h2>
+</div>
+</header>
+<div class="detail-summary">
+<div>
+<p class="eyebrow">Overview</p>
+<p>
               Weekly Meal Planner is a responsive household application for organising lunches and dinners, maintaining a reusable menu library and sharing a shopping list across connected devices.
             </p>
-
-            <div class="detail-actions" aria-label="Weekly Meal Planner project links">
-              <a
-                class="button button--primary"
-                href="https://github.com/polroviraguilar/weekly-meal-planner"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+<div aria-label="Weekly Meal Planner project links" class="detail-actions">
+<a class="button button--primary" href="https://github.com/polroviraguilar/weekly-meal-planner" rel="noopener noreferrer" target="_blank">
                 View source code <span aria-hidden="true">↗</span>
-              </a>
-
-              <span class="private-demo-note">
+</a>
+<span class="private-demo-note">
                 Live deployment kept private to protect household data.
               </span>
-            </div>
-          </div>
-
-          <dl>
-            <div><dt>Role</dt><dd>Solo developer & UX/UI designer</dd></div>
-            <div><dt>Team</dt><dd>1</dd></div>
-            <div><dt>Type</dt><dd>Personal project</dd></div>
-            <div><dt>Status</dt><dd>Completed</dd></div>
-            <div><dt>Year</dt><dd>2026</dd></div>
-            <div><dt>Platform</dt><dd>Responsive PWA</dd></div>
-          </dl>
-        </div>
-
-        <div class="detail-story">
-          <section>
-            <span class="detail-story__number">01</span>
-            <div>
-              <p class="eyebrow">Problem</p>
-              <h3>Household meal planning was scattered across memory, notes and messages.</h3>
-              <p>
+</div>
+</div>
+<dl>
+<div><dt>Role</dt><dd>Solo developer &amp; UX/UI designer</dd></div>
+<div><dt>Team</dt><dd>1</dd></div>
+<div><dt>Type</dt><dd>Personal project</dd></div>
+<div><dt>Status</dt><dd>Completed</dd></div>
+<div><dt>Year</dt><dd>2026</dd></div>
+<div><dt>Platform</dt><dd>Responsive PWA</dd></div>
+</dl>
+</div>
+<div class="detail-story">
+<section>
+<span class="detail-story__number">01</span>
+<div>
+<p class="eyebrow">Problem</p>
+<h3>Household meal planning was scattered across memory, notes and messages.</h3>
+<p>
                 The product needed to make a complete week understandable at a glance while also supporting reusable menus, external plans, different household members and a shopping list that stays synchronised between devices.
               </p>
-
-              <figure class="webapp-figure webapp-figure--wide">
-                <img
-                  src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-desktop.webp"
-                  alt="Weekly Meal Planner desktop layout with the meal plan and shopping list"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>A desktop layout that keeps the weekly planner and shopping workflow visible together.</figcaption>
-              </figure>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">02</span>
-            <div>
-              <p class="eyebrow">Product solution</p>
-              <h3>One reusable week, fourteen meal slots and a shared source of truth.</h3>
-              <p>
+<figure class="webapp-figure webapp-figure--wide">
+<img alt="Weekly Meal Planner desktop layout with the meal plan and shopping list" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-desktop.webp"/>
+<figcaption>A desktop layout that keeps the weekly planner and shopping workflow visible together.</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<span class="detail-story__number">02</span>
+<div>
+<p class="eyebrow">Product solution</p>
+<h3>One reusable week, fourteen meal slots and a shared source of truth.</h3>
+<p>
                 Each lunch and dinner slot can remain empty, reference a saved menu or represent an external event. Assignments can belong to either person or both, making the weekly plan useful without turning it into a complex calendar product.
               </p>
-
-              <div class="webapp-feature-grid">
-                <article>
-                  <span>01</span>
-                  <h4>Weekly planner</h4>
-                  <p>Fourteen structured slots covering lunch and dinner from Monday to Sunday.</p>
-                </article>
-                <article>
-                  <span>02</span>
-                  <h4>Reusable menus</h4>
-                  <p>Create, edit, tag and reuse meal combinations across different slots.</p>
-                </article>
-                <article>
-                  <span>03</span>
-                  <h4>Shared shopping list</h4>
-                  <p>Add pending items and mark purchases with immediate visual feedback.</p>
-                </article>
-                <article>
-                  <span>04</span>
-                  <h4>Real-time sync</h4>
-                  <p>Firestore listeners propagate changes between connected devices.</p>
-                </article>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">03</span>
-            <div>
-              <p class="eyebrow">Responsive experience</p>
-              <h3>The same workflow adapts from a wide planning surface to a focused mobile flow.</h3>
-              <p>
+<div class="webapp-feature-grid">
+<article>
+<span>01</span>
+<h4>Weekly planner</h4>
+<p>Fourteen structured slots covering lunch and dinner from Monday to Sunday.</p>
+</article>
+<article>
+<span>02</span>
+<h4>Reusable menus</h4>
+<p>Create, edit, tag and reuse meal combinations across different slots.</p>
+</article>
+<article>
+<span>03</span>
+<h4>Shared shopping list</h4>
+<p>Add pending items and mark purchases with immediate visual feedback.</p>
+</article>
+<article>
+<span>04</span>
+<h4>Real-time sync</h4>
+<p>Firestore listeners propagate changes between connected devices.</p>
+</article>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">03</span>
+<div>
+<p class="eyebrow">Responsive experience</p>
+<h3>The same workflow adapts from a wide planning surface to a focused mobile flow.</h3>
+<p>
                 On desktop, the shopping list becomes a sticky companion to the planner. On mobile, the content stacks vertically and a fixed bottom navigation keeps the two principal areas easy to reach.
               </p>
-
-              <div class="webapp-gallery webapp-gallery--meal">
-                <figure class="webapp-gallery__wide">
-                  <img
-                    src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-desktop.webp"
-                    alt="Weekly Meal Planner desktop experience"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption>Desktop planning surface with the shopping list visible alongside the week.</figcaption>
-                </figure>
-
-                <figure class="webapp-gallery__phone">
-                  <img
-                    src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-mobile.webp"
-                    alt="Weekly Meal Planner mobile experience"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption>Mobile layout with fixed navigation and stacked content.</figcaption>
-                </figure>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">04</span>
-            <div>
-              <p class="eyebrow">Interaction design</p>
-              <h3>Reusable content and quick actions reduce repeated work.</h3>
-              <p>
+<div class="webapp-gallery webapp-gallery--meal">
+<figure class="webapp-gallery__wide">
+<img alt="Weekly Meal Planner desktop experience" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-desktop.webp"/>
+<figcaption>Desktop planning surface with the shopping list visible alongside the week.</figcaption>
+</figure>
+<figure class="webapp-gallery__phone">
+<img alt="Weekly Meal Planner mobile experience" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-mobile.webp"/>
+<figcaption>Mobile layout with fixed navigation and stacked content.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">04</span>
+<div>
+<p class="eyebrow">Interaction design</p>
+<h3>Reusable content and quick actions reduce repeated work.</h3>
+<p>
                 Menus are managed separately from the weekly plan, so dishes, notes and tags only need to be entered once. The shopping list stays deliberately lightweight, with a two-second completion animation that confirms an action before the item disappears from the active list.
               </p>
-
-              <div class="webapp-gallery webapp-gallery--meal webapp-gallery--equal">
-                <figure>
-                  <img
-                    src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-menu.webp"
-                    alt="Weekly Meal Planner menu creation and editing interface"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption>Menu creation and editing with dishes, notes and tags.</figcaption>
-                </figure>
-
-                <figure>
-                  <img
-                    src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-shopping.webp"
-                    alt="Weekly Meal Planner shared shopping list"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption>Shared shopping list with pending count and completion feedback.</figcaption>
-                </figure>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">05</span>
-            <div>
-              <p class="eyebrow">Technical architecture</p>
-              <h3>Typed React components backed by real-time Firestore services.</h3>
-              <p>
+<div class="webapp-gallery webapp-gallery--meal webapp-gallery--equal">
+<figure>
+<img alt="Weekly Meal Planner menu creation and editing interface" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-menu.webp"/>
+<figcaption>Menu creation and editing with dishes, notes and tags.</figcaption>
+</figure>
+<figure>
+<img alt="Weekly Meal Planner shared shopping list" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/weekly-meal-planner/weekly-meal-planner-shopping.webp"/>
+<figcaption>Shared shopping list with pending count and completion feedback.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">05</span>
+<div>
+<p class="eyebrow">Technical architecture</p>
+<h3>Typed React components backed by real-time Firestore services.</h3>
+<p>
                 A central data hook coordinates household bootstrap, subscriptions and mutations. Firestore operations are separated into menu, planner and shopping services, while TypeScript models keep the interface and persistence layer aligned. Vite and Workbox provide the production build and installable PWA shell.
               </p>
-
-              <div class="webapp-tech-list" aria-label="Weekly Meal Planner technologies">
-                <span>React 19</span>
-                <span>TypeScript</span>
-                <span>Vite</span>
-                <span>Tailwind CSS</span>
-                <span>Firebase Firestore</span>
-                <span>Snapshot listeners</span>
-                <span>Service Worker</span>
-                <span>Workbox</span>
-                <span>GitHub Pages</span>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">06</span>
-            <div>
-              <p class="eyebrow">Privacy boundary</p>
-              <h3>The deployed product remains private even though the implementation is public.</h3>
-              <p>
+<div aria-label="Weekly Meal Planner technologies" class="webapp-tech-list">
+<span>React 19</span>
+<span>TypeScript</span>
+<span>Vite</span>
+<span>Tailwind CSS</span>
+<span>Firebase Firestore</span>
+<span>Snapshot listeners</span>
+<span>Service Worker</span>
+<span>Workbox</span>
+<span>GitHub Pages</span>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">06</span>
+<div>
+<p class="eyebrow">Privacy boundary</p>
+<h3>The deployed product remains private even though the implementation is public.</h3>
+<p>
                 The application was designed for one household and does not currently include authentication. Because anonymous visitors could otherwise write to the same Firestore data, the portfolio links to the source code and documents the product through screenshots rather than exposing the private live workflow.
               </p>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">07</span>
-            <div>
-              <p class="eyebrow">Result</p>
-              <h3>A complete personal product spanning interface, data and deployment.</h3>
-              <p>
+</div>
+</section>
+<section>
+<span class="detail-story__number">07</span>
+<div>
+<p class="eyebrow">Result</p>
+<h3>A complete personal product spanning interface, data and deployment.</h3>
+<p>
                 Weekly Meal Planner demonstrates end-to-end product development: problem definition, information architecture, responsive interaction design, typed component development, real-time data synchronisation and progressive web app delivery.
               </p>
-            </div>
-          </section>
-        </div>
-
-        <div class="detail-notes">
-          <div>
-            <p class="eyebrow">Product focus</p>
-            <p>Meal planning, reusable content and shared household coordination.</p>
-          </div>
-          <div>
-            <p class="eyebrow">Technical focus</p>
-            <p>React architecture, typed models and real-time Firestore data.</p>
-          </div>
-          <div>
-            <p class="eyebrow">Design focus</p>
-            <p>Responsive planning, quick actions and clear visual ownership.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <!-- DETAIL: BOOKVERSE -->
-  <section
-    class="project-detail"
-    id="project-detail-bookverse"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="project-title-bookverse"
-    hidden
-  >
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar">
-        <button class="detail-back" type="button" data-close-project>← Back to portfolio</button>
-        <span>Web application case study</span>
-        <button class="detail-close" type="button" data-close-project aria-label="Close Bookverse case study">×</button>
-      </div>
-
-      <div class="detail-container">
-        <header class="detail-hero detail-hero--webapp detail-hero--bookverse">
-          <div class="bookverse-hero__canvas" aria-hidden="true">
-            <div class="bookverse-hero__glow"></div>
-            <img
-              class="bookverse-hero__screen bookverse-hero__screen--primary"
-              src="assets/images/webapps/bookverse/bookverse-cover.webp"
-              alt=""
-            />
-            <img
-              class="bookverse-hero__screen bookverse-hero__screen--secondary"
-              src="assets/images/webapps/bookverse/bookverse-universe.webp"
-              alt=""
-            />
-          </div>
-
-          <div class="detail-hero__overlay">
-            <p>React · Konva · Canvas interaction · Local persistence</p>
-            <h2 id="project-title-bookverse">Bookverse</h2>
-          </div>
-        </header>
-
-        <div class="detail-summary">
-          <div>
-            <p class="eyebrow">Overview</p>
-            <p>
+</div>
+</section>
+</div>
+<div class="detail-notes">
+<div>
+<p class="eyebrow">Product focus</p>
+<p>Meal planning, reusable content and shared household coordination.</p>
+</div>
+<div>
+<p class="eyebrow">Technical focus</p>
+<p>React architecture, typed models and real-time Firestore data.</p>
+</div>
+<div>
+<p class="eyebrow">Design focus</p>
+<p>Responsive planning, quick actions and clear visual ownership.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-bookverse" aria-modal="true" class="project-detail project-detail--bookverse" hidden="" id="project-detail-bookverse" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar">
+<button class="detail-back" data-close-project="" type="button">← Back to portfolio</button>
+<span>Web application case study</span>
+<button aria-label="Close Bookverse case study" class="detail-close" data-close-project="" type="button">×</button>
+</div>
+<div class="detail-container">
+<header class="detail-hero detail-hero--webapp detail-hero--bookverse">
+<div aria-hidden="true" class="bookverse-hero__canvas">
+<div class="bookverse-hero__glow"></div>
+<img alt="" class="bookverse-hero__screen bookverse-hero__screen--primary" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/bookverse/bookverse-cover.webp"/>
+<img alt="" class="bookverse-hero__screen bookverse-hero__screen--secondary" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/bookverse/bookverse-universe.webp"/>
+</div>
+<div class="detail-hero__overlay">
+<p>React · Konva · Canvas interaction · Local persistence</p>
+<h2 id="project-title-bookverse">Bookverse</h2>
+</div>
+</header>
+<div class="detail-summary">
+<div>
+<p class="eyebrow">Overview</p>
+<p>
               Bookverse is an interactive desktop workspace for organising literary universes, sagas and books as a visual hierarchy rather than a flat catalogue. It combines canvas navigation, contextual editing, reading history and portable browser-based persistence.
             </p>
-
-            <div class="detail-actions" aria-label="Bookverse project links">
-              <a
-                class="button button--primary"
-                href="https://polroviraguilar.github.io/bookverse/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+<div aria-label="Bookverse project links" class="detail-actions">
+<a class="button button--primary" href="https://polroviraguilar.github.io/bookverse/" rel="noopener noreferrer" target="_blank">
                 Open live app <span aria-hidden="true">↗</span>
-              </a>
-
-              <a
-                class="button button--secondary"
-                href="https://github.com/polroviraguilar/bookverse"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+</a>
+<a class="button button--secondary" href="https://github.com/polroviraguilar/bookverse" rel="noopener noreferrer" target="_blank">
                 View source code <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
-
-          <dl>
-            <div><dt>Role</dt><dd>Solo developer & UX/UI designer</dd></div>
-            <div><dt>Team</dt><dd>1</dd></div>
-            <div><dt>Type</dt><dd>Personal project</dd></div>
-            <div><dt>Status</dt><dd>Completed</dd></div>
-            <div><dt>Year</dt><dd>2026</dd></div>
-            <div><dt>Platform</dt><dd>Desktop web application</dd></div>
-          </dl>
-        </div>
-
-        <div class="detail-story">
-          <section>
-            <span class="detail-story__number">01</span>
-            <div>
-              <p class="eyebrow">Problem</p>
-              <h3>Flat reading lists hide the relationships that make fictional worlds interesting.</h3>
-              <p>
+</a>
+</div>
+</div>
+<dl>
+<div><dt>Role</dt><dd>Solo developer &amp; UX/UI designer</dd></div>
+<div><dt>Team</dt><dd>1</dd></div>
+<div><dt>Type</dt><dd>Personal project</dd></div>
+<div><dt>Status</dt><dd>Completed</dd></div>
+<div><dt>Year</dt><dd>2026</dd></div>
+<div><dt>Platform</dt><dd>Desktop web application</dd></div>
+</dl>
+</div>
+<div class="detail-story">
+<section>
+<span class="detail-story__number">01</span>
+<div>
+<p class="eyebrow">Problem</p>
+<h3>Flat reading lists hide the relationships that make fictional worlds interesting.</h3>
+<p>
                 A conventional library view can store titles, but it does not communicate how universes, sagas and individual books connect. The goal was to create a workspace where those relationships become the primary navigation model.
               </p>
-
-              <figure class="webapp-figure webapp-figure--wide bookverse-figure">
-                <img
-                  src="assets/images/webapps/bookverse/bookverse-canvas.webp"
-                  alt="Bookverse global canvas with universes, sagas, books and animated relationships"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>The global canvas turns a collection into a navigable map of literary relationships.</figcaption>
-              </figure>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">02</span>
-            <div>
-              <p class="eyebrow">Information model</p>
-              <h3>A flexible hierarchy built from universes, sagas and books.</h3>
-              <p>
+<figure class="webapp-figure webapp-figure--wide bookverse-figure">
+<img alt="Bookverse global canvas with universes, sagas, books and animated relationships" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/bookverse/bookverse-canvas.webp"/>
+<figcaption>The global canvas turns a collection into a navigable map of literary relationships.</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<span class="detail-story__number">02</span>
+<div>
+<p class="eyebrow">Information model</p>
+<h3>A flexible hierarchy built from universes, sagas and books.</h3>
+<p>
                 Every entity lives in one flat node collection and stores its relationships through identifiers. This supports books inside sagas, books attached directly to a universe and completely standalone titles without duplicating nested data.
               </p>
-
-              <div class="webapp-feature-grid">
-                <article>
-                  <span>01</span>
-                  <h4>Universe level</h4>
-                  <p>Groups connected settings, sagas and standalone books.</p>
-                </article>
-                <article>
-                  <span>02</span>
-                  <h4>Saga level</h4>
-                  <p>Orders related books and derives progress and rating statistics.</p>
-                </article>
-                <article>
-                  <span>03</span>
-                  <h4>Book level</h4>
-                  <p>Stores reading dates, status, rating, tags, notes and cover art.</p>
-                </article>
-                <article>
-                  <span>04</span>
-                  <h4>Flexible relationships</h4>
-                  <p>Supports nested and standalone content through ID-based links.</p>
-                </article>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">03</span>
-            <div>
-              <p class="eyebrow">Interactive canvas</p>
-              <h3>Zoom, pan and focused navigation turn the hierarchy into an explorable space.</h3>
-              <p>
+<div class="webapp-feature-grid">
+<article>
+<span>01</span>
+<h4>Universe level</h4>
+<p>Groups connected settings, sagas and standalone books.</p>
+</article>
+<article>
+<span>02</span>
+<h4>Saga level</h4>
+<p>Orders related books and derives progress and rating statistics.</p>
+</article>
+<article>
+<span>03</span>
+<h4>Book level</h4>
+<p>Stores reading dates, status, rating, tags, notes and cover art.</p>
+</article>
+<article>
+<span>04</span>
+<h4>Flexible relationships</h4>
+<p>Supports nested and standalone content through ID-based links.</p>
+</article>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">03</span>
+<div>
+<p class="eyebrow">Interactive canvas</p>
+<h3>Zoom, pan and focused navigation turn the hierarchy into an explorable space.</h3>
+<p>
                 Konva powers a pointer-centred zoom system, canvas panning, draggable nodes, animated connections, hover states and focused universe or saga views. A circular minimap keeps large collections understandable while preserving spatial freedom.
               </p>
-
-              <div class="webapp-gallery bookverse-gallery">
-                <figure>
-                  <img
-                    src="assets/images/webapps/bookverse/bookverse-universe.webp"
-                    alt="Bookverse focused universe view with connected sagas and books"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption>A focused universe view reveals its internal sagas and books.</figcaption>
-                </figure>
-
-                <figure>
-                  <img
-                    src="assets/images/webapps/bookverse/bookverse-editor.webp"
-                    alt="Bookverse contextual editor for a selected book"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <figcaption>The contextual sidebar edits metadata without leaving the map.</figcaption>
-                </figure>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">04</span>
-            <div>
-              <p class="eyebrow">Reading history</p>
-              <h3>The same collection can be understood spatially or chronologically.</h3>
-              <p>
+<div class="webapp-gallery bookverse-gallery">
+<figure>
+<img alt="Bookverse focused universe view with connected sagas and books" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/bookverse/bookverse-universe.webp"/>
+<figcaption>A focused universe view reveals its internal sagas and books.</figcaption>
+</figure>
+<figure>
+<img alt="Bookverse contextual editor for a selected book" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/bookverse/bookverse-editor.webp"/>
+<figcaption>The contextual sidebar edits metadata without leaving the map.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">04</span>
+<div>
+<p class="eyebrow">Reading history</p>
+<h3>The same collection can be understood spatially or chronologically.</h3>
+<p>
                 Books with reading dates appear on a dedicated horizontal timeline. Zoom and range controls reveal reading periods, genre colours and overlapping activity while the main canvas remains focused on relationships.
               </p>
-
-              <figure class="webapp-figure webapp-figure--wide bookverse-figure">
-                <img
-                  src="assets/images/webapps/bookverse/bookverse-timeline.webp"
-                  alt="Bookverse reading timeline with dated book intervals and genre colours"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>The timeline provides a second view of the collection based on reading dates.</figcaption>
-              </figure>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">05</span>
-            <div>
-              <p class="eyebrow">Persistence and portability</p>
-              <h3>Browser-native storage keeps the tool private while JSON keeps it portable.</h3>
-              <p>
+<figure class="webapp-figure webapp-figure--wide bookverse-figure">
+<img alt="Bookverse reading timeline with dated book intervals and genre colours" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/bookverse/bookverse-timeline.webp"/>
+<figcaption>The timeline provides a second view of the collection based on reading dates.</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<span class="detail-story__number">05</span>
+<div>
+<p class="eyebrow">Persistence and portability</p>
+<h3>Browser-native storage keeps the tool private while JSON keeps it portable.</h3>
+<p>
                 The application autosaves nodes, view state, camera position and selection to LocalStorage. Versioned JSON export and import provide a manual backup path without requiring accounts, a server API or a shared database.
               </p>
-
-              <div class="webapp-feature-grid">
-                <article>
-                  <span>01</span>
-                  <h4>Debounced autosave</h4>
-                  <p>Preserves collection and workspace state after relevant changes.</p>
-                </article>
-                <article>
-                  <span>02</span>
-                  <h4>Versioned export</h4>
-                  <p>Downloads a portable JSON snapshot of the current collection.</p>
-                </article>
-                <article>
-                  <span>03</span>
-                  <h4>Private by default</h4>
-                  <p>Collection data remains inside the visitor's own browser profile.</p>
-                </article>
-                <article>
-                  <span>04</span>
-                  <h4>Safe hierarchy deletion</h4>
-                  <p>Confirmed cascading removal respects universe and saga relationships.</p>
-                </article>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">06</span>
-            <div>
-              <p class="eyebrow">Technical architecture</p>
-              <h3>React coordinates product state while Konva handles high-frequency visual interaction.</h3>
-              <p>
+<div class="webapp-feature-grid">
+<article>
+<span>01</span>
+<h4>Debounced autosave</h4>
+<p>Preserves collection and workspace state after relevant changes.</p>
+</article>
+<article>
+<span>02</span>
+<h4>Versioned export</h4>
+<p>Downloads a portable JSON snapshot of the current collection.</p>
+</article>
+<article>
+<span>03</span>
+<h4>Private by default</h4>
+<p>Collection data remains inside the visitor's own browser profile.</p>
+</article>
+<article>
+<span>04</span>
+<h4>Safe hierarchy deletion</h4>
+<p>Confirmed cascading removal respects universe and saga relationships.</p>
+</article>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">06</span>
+<div>
+<p class="eyebrow">Technical architecture</p>
+<h3>React coordinates product state while Konva handles high-frequency visual interaction.</h3>
+<p>
                 Application state, filtering, navigation and persistence remain in React. Canvas rendering, node movement and animation are delegated to Konva components. Performance work includes memoised relationships, requestAnimationFrame interpolation, cached starfield layers and direct node-reference updates for live effects.
               </p>
-
-              <div class="webapp-tech-list" aria-label="Bookverse technologies">
-                <span>React 19</span>
-                <span>JavaScript / JSX</span>
-                <span>Vite</span>
-                <span>Konva 10</span>
-                <span>react-konva</span>
-                <span>Lucide React</span>
-                <span>LocalStorage</span>
-                <span>FileReader</span>
-                <span>Canvas animation</span>
-                <span>GitHub Pages</span>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">07</span>
-            <div>
-              <p class="eyebrow">Platform boundary</p>
-              <h3>A deliberately desktop-first interaction model.</h3>
-              <p>
+<div aria-label="Bookverse technologies" class="webapp-tech-list">
+<span>React 19</span>
+<span>JavaScript / JSX</span>
+<span>Vite</span>
+<span>Konva 10</span>
+<span>react-konva</span>
+<span>Lucide React</span>
+<span>LocalStorage</span>
+<span>FileReader</span>
+<span>Canvas animation</span>
+<span>GitHub Pages</span>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">07</span>
+<div>
+<p class="eyebrow">Platform boundary</p>
+<h3>A deliberately desktop-first interaction model.</h3>
+<p>
                 Bookverse is designed around mouse and trackpad input: precision dragging, wheel zoom, canvas panning, minimap navigation and a persistent editor. The portfolio remains responsive, but the product itself is presented honestly as a desktop web application rather than a mobile-ready experience.
               </p>
-            </div>
-          </section>
-
-          <section>
-            <span class="detail-story__number">08</span>
-            <div>
-              <p class="eyebrow">Result</p>
-              <h3>A specialised organisational tool with a distinct interaction language.</h3>
-              <p>
+</div>
+</section>
+<section>
+<span class="detail-story__number">08</span>
+<div>
+<p class="eyebrow">Result</p>
+<h3>A specialised organisational tool with a distinct interaction language.</h3>
+<p>
                 Bookverse demonstrates product design beyond conventional dashboards: spatial information architecture, animated canvas interaction, derived collection statistics, browser persistence and a visual system tailored to literary world-building.
               </p>
-            </div>
-          </section>
-        </div>
-
-        <div class="detail-notes">
-          <div>
-            <p class="eyebrow">Product focus</p>
-            <p>Visual organisation of interconnected literary collections.</p>
-          </div>
-          <div>
-            <p class="eyebrow">Technical focus</p>
-            <p>Canvas interaction, hierarchical state and browser persistence.</p>
-          </div>
-          <div>
-            <p class="eyebrow">Design focus</p>
-            <p>Spatial navigation, contextual editing and cosmic visual feedback.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="project-detail" id="project-detail-hoverbikes" role="dialog" aria-modal="true" aria-labelledby="project-title-hoverbikes" hidden>
-    <div class="project-detail__panel">
-      <div class="project-detail__toolbar"><button class="detail-back" type="button" data-close-project>← Back to portfolio</button><span>3D model study</span><button class="detail-close" type="button" data-close-project aria-label="Close Hoverbikes model study">×</button></div>
-      <div class="detail-container">
-        <header
-          class="detail-hero detail-hero--switcher"
-          data-media-switcher
-        >
-          <div
-            class="detail-media-tabs"
-            aria-label="Select a hoverbike model"
-          >
-            <button
-              class="detail-media-tab is-active"
-              type="button"
-              data-media-src="assets/images/3d/hoverbikes/hover-bike-1.gif"
-              data-media-alt="Rotating low-poly Hover Bike 1"
-              aria-pressed="true"
-            >
+</div>
+</section>
+</div>
+<div class="detail-notes"><div><p class="eyebrow">Outcome</p><p>A specialised desktop product that turns a reading collection into a spatial map, contextual editor and chronological timeline.</p></div><div><p class="eyebrow">My contribution</p><p>Solo product definition, UX/UI design and frontend implementation across React state, Konva interaction and browser persistence.</p></div><div><p class="eyebrow">What comes next</p><p>Potential directions include richer filters, optional cloud sync and further performance work for very large collections.</p></div></div>
+</div>
+</div>
+</section>
+<section aria-hidden="true" aria-labelledby="project-title-hoverbikes" aria-modal="true" class="project-detail project-detail--hoverbikes" hidden="" id="project-detail-hoverbikes" role="dialog">
+<div class="project-detail__panel"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar"><button class="detail-back" data-close-project="" type="button">← Back to portfolio</button><span>3D model study</span><button aria-label="Close Hoverbikes model study" class="detail-close" data-close-project="" type="button">×</button></div>
+<div class="detail-container">
+<header class="detail-hero detail-hero--switcher" data-media-switcher="">
+<div aria-label="Select a hoverbike model" class="detail-media-tabs">
+<button aria-pressed="true" class="detail-media-tab is-active" data-media-alt="Rotating low-poly Hover Bike 1" data-media-src="assets/images/3d/hoverbikes/hover-bike-1.gif" type="button">
               Hover Bike 1
             </button>
-        
-            <button
-              class="detail-media-tab"
-              type="button"
-              data-media-src="assets/images/3d/hoverbikes/hover-bike-2.gif"
-              data-media-alt="Rotating low-poly Hover Bike 2"
-              aria-pressed="false"
-            >
+<button aria-pressed="false" class="detail-media-tab" data-media-alt="Rotating low-poly Hover Bike 2" data-media-src="assets/images/3d/hoverbikes/hover-bike-2.gif" type="button">
               Hover Bike 2
             </button>
-        
-            <button
-              class="detail-media-tab"
-              type="button"
-              data-media-src="assets/images/3d/hoverbikes/hover-bike-3.gif"
-              data-media-alt="Rotating low-poly Hover Bike 3"
-              aria-pressed="false"
-            >
+<button aria-pressed="false" class="detail-media-tab" data-media-alt="Rotating low-poly Hover Bike 3" data-media-src="assets/images/3d/hoverbikes/hover-bike-3.gif" type="button">
               Hover Bike 3
             </button>
-        
-            <button
-              class="detail-media-tab"
-              type="button"
-              data-media-src="assets/images/3d/hoverbikes/hover-bike-4.gif"
-              data-media-alt="Rotating low-poly Hover Bike 4"
-              aria-pressed="false"
-            >
+<button aria-pressed="false" class="detail-media-tab" data-media-alt="Rotating low-poly Hover Bike 4" data-media-src="assets/images/3d/hoverbikes/hover-bike-4.gif" type="button">
               Hover Bike 4
             </button>
-          </div>
-        
-          <img
-            class="detail-media-image"
-            src="assets/images/3d/hoverbikes/hover-bike-1.gif"
-            alt="Rotating low-poly Hover Bike 1"
-            data-media-image
-            decoding="async"
-          />
-        
-          <div class="detail-hero__overlay">
-            <p>Blockbench · Vehicles · 4 models · 5 days</p>
-            <h2 id="project-title-hoverbikes">Hoverbikes</h2>
-          </div>
-        </header>
-        <div class="detail-summary"><div><p class="eyebrow">Overview</p><p>A small collection of futuristic vehicles exploring how proportion, mass and profile can create distinct identities while maintaining a shared visual language.</p></div><dl><div><dt>Role</dt><dd>3D artist</dd></div><div><dt>Type</dt><dd>Vehicle set</dd></div><div><dt>Time frame</dt><dd>5 days</dd></div><div><dt>Tool</dt><dd>Blockbench</dd></div></dl></div>
-        <div class="detail-notes"><div><p class="eyebrow">Focus</p><p>Variant design within one coherent family.</p></div><div><p class="eyebrow">Approach</p><p>Strong silhouettes, simple planes and purposeful colour accents.</p></div><div><p class="eyebrow">Use case</p><p>Stylised real-time vehicle assets.</p></div></div>
-      </div>
-    </div>
-  </section>
-
+</div>
+<img alt="Rotating low-poly Hover Bike 1" class="detail-media-image" data-fallback="assets/images/common/media-placeholder.svg" data-media-image="" decoding="async" loading="lazy" src="assets/images/3d/hoverbikes/hover-bike-1.gif"/>
+<div class="detail-hero__overlay">
+<p>Blockbench · Vehicles · 4 models · 5 days</p>
+<h2 id="project-title-hoverbikes">Hoverbikes</h2>
+</div>
+</header>
+<div class="detail-summary"><div><p class="eyebrow">Overview</p><p>A small collection of futuristic vehicles exploring how proportion, mass and profile can create distinct identities while maintaining a shared visual language.</p></div><dl><div><dt>Role</dt><dd>3D artist</dd></div><div><dt>Type</dt><dd>Vehicle set</dd></div><div><dt>Time frame</dt><dd>5 days</dd></div><div><dt>Tool</dt><dd>Blockbench</dd></div></dl></div>
+<div class="detail-notes"><div><p class="eyebrow">Focus</p><p>Variant design within one coherent family.</p></div><div><p class="eyebrow">Approach</p><p>Strong silhouettes, simple planes and purposeful colour accents.</p></div><div><p class="eyebrow">Use case</p><p>Stylised real-time vehicle assets.</p></div></div>
+</div>
+</div>
+</section>
 </body>
 </html>
