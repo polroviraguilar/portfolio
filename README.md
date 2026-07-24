@@ -1,5 +1,7 @@
 # Pol Rovira Portfolio
 
+[View live portfolio](https://polroviraguilar.github.io/portfolio/)
+
 A responsive, single-page portfolio website for Pol Rovira, a multidisciplinary game developer focused on gameplay systems, interactive storytelling, visual development, and practical web products.
 
 The website presents selected games, academic projects, personal applications, pixel-art work, and low-poly 3D studies. Each portfolio item can open an in-page case study with its own visual theme, media, project summary, process breakdown, and supporting details.
