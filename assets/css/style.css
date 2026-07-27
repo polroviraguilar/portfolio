@@ -201,6 +201,136 @@ p { text-wrap: pretty; }
 .product-card__copy > p:not(.project-meta) { margin-top: 22px; color: var(--ink-soft); line-height: 1.75; }
 .product-card__copy strong { margin-top: auto; padding-top: 34px; color: var(--ink); font-size: .76rem; }
 
+
+/* Programeta product card */
+.product-card--programeta .product-card__visual {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(255,255,255,.58), transparent 21rem),
+    linear-gradient(135deg, #f7d769 0%, #ead59a 100%);
+}
+.product-card--programeta .product-card__visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .24;
+  background-image:
+    linear-gradient(rgba(58,47,18,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58,47,18,.08) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(to bottom, black, transparent 94%);
+}
+.product-card__programeta-desktop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(82%, 790px);
+  border: 1px solid rgba(58,47,18,.18);
+  border-radius: 22px;
+  box-shadow: 0 32px 86px rgba(58,47,18,.24), 0 0 0 9px rgba(255,255,255,.18);
+  transform: translate(-60%,-52%) rotate(-2deg);
+}
+.product-card__programeta-mobile {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  z-index: 2;
+  width: min(22%, 205px);
+  border: 1px solid rgba(58,47,18,.18);
+  border-radius: 27px;
+  box-shadow: 0 30px 70px rgba(58,47,18,.28), 0 0 0 7px rgba(255,255,255,.22);
+  transform: translate(-50%,-44%) rotate(5deg);
+}
+.product-card--programeta .product-card__copy h3 { color: #8a6510; }
+
+/* Programeta case study */
+.detail-hero--programeta {
+  min-height: 620px;
+  background: #e9c957;
+}
+.detail-hero--programeta > img {
+  object-position: center;
+}
+.detail-hero--programeta::after {
+  background: linear-gradient(180deg, rgba(40,32,12,.02) 34%, rgba(35,28,10,.88));
+}
+.project-detail--programeta {
+  --bg: #1c1810;
+  --bg-deep: #100d08;
+  --surface: #292217;
+  --surface-elevated: #352c1e;
+  --text: #fff8e8;
+  --text-soft: rgba(255,244,219,.75);
+  --text-muted: rgba(255,244,219,.5);
+  --yellow: #f6d365;
+  --yellow-soft: #ffe9a0;
+  --orange: #d7aa46;
+  --line: rgba(246,211,101,.16);
+  --line-strong: rgba(246,211,101,.32);
+  --button-primary-text: #3a2f12;
+}
+.programeta-status-note {
+  margin-top: 28px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+}
+.programeta-status-note span {
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.programeta-status-note p {
+  margin-top: 7px;
+  color: var(--text-soft);
+  font-size: .84rem;
+}
+.programeta-figure img {
+  aspect-ratio: 1900 / 940;
+  object-fit: cover;
+  object-position: top;
+}
+.programeta-gallery {
+  display: grid;
+  grid-template-columns: minmax(0,1.8fr) minmax(230px,.58fr);
+  align-items: start;
+  gap: 18px;
+  margin-top: 36px;
+}
+.programeta-gallery figure {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+.programeta-gallery img {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.programeta-gallery__wide img {
+  aspect-ratio: 1900 / 942;
+  object-fit: cover;
+  object-position: top;
+}
+.programeta-gallery__phone img {
+  width: min(100%, 385px);
+  margin-inline: auto;
+  aspect-ratio: 385 / 843;
+  object-fit: cover;
+  object-position: top;
+}
+.programeta-gallery figcaption {
+  margin-top: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: .68rem;
+}
+
 .section--playground { background: #222126; color: #f2eee6; }
 .section--playground .section-number { color: white; }
 .section--playground .section-heading > p { color: rgba(255,255,255,.66); }
@@ -574,4 +704,27 @@ p { text-wrap: pretty; }
 .detail-media-tab:focus-visible {
   outline: 2px solid var(--yellow);
   outline-offset: 3px;
+}
+
+
+/* Programeta responsive refinements */
+@media (max-width: 900px) {
+  .product-card__programeta-desktop { width: min(86%, 760px); }
+  .product-card__programeta-mobile { left: 73%; width: min(23%, 205px); }
+}
+
+@media (max-width: 700px) {
+  .product-card--programeta .product-card__visual { min-height: 460px; }
+  .product-card__programeta-desktop {
+    width: 590px;
+    transform: translate(-69%,-53%) rotate(-2deg);
+  }
+  .product-card__programeta-mobile {
+    left: 67%;
+    width: 165px;
+  }
+  .detail-hero--programeta { min-height: 470px; }
+  .detail-hero--programeta > img { height: min(54vh, 470px); }
+  .programeta-gallery { grid-template-columns: 1fr; }
+  .programeta-gallery__phone { display: grid; justify-items: center; }
 }
