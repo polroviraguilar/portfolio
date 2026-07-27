@@ -728,3 +728,361 @@ p { text-wrap: pretty; }
   .programeta-gallery { grid-template-columns: 1fr; }
   .programeta-gallery__phone { display: grid; justify-items: center; }
 }
+
+/* =========================================================
+   PROGRAMETA — CHROMATIC RESTRUCTURE
+   Warm light-first identity with umbra, pastel yellow and sage.
+   These rules only affect Programeta's product card and case study.
+   ========================================================= */
+
+/* Product card: use the product's actual brand palette. */
+.product-card--programeta .product-card__visual {
+  background:
+    radial-gradient(circle at 82% 14%, rgba(255,255,255,.62), transparent 20rem),
+    radial-gradient(circle at 8% 88%, rgba(255,244,198,.5), transparent 18rem),
+    linear-gradient(135deg, #f6d365 0%, #f4d77c 54%, #e8dfc9 100%);
+}
+
+.product-card--programeta .product-card__visual::before {
+  opacity: .18;
+  background-image:
+    linear-gradient(rgba(58,47,18,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58,47,18,.07) 1px, transparent 1px);
+}
+
+.product-card--programeta .product-card__copy h3 {
+  color: #3a2f12;
+}
+
+/* Light-first case-study palette. */
+.project-detail--programeta {
+  --bg: #f3eee5;
+  --bg-deep: #e8dfcc;
+  --surface: #fffaf1;
+  --surface-elevated: #ffffff;
+  --text: #3a2f12;
+  --text-soft: rgba(58,47,18,.76);
+  --text-muted: rgba(58,47,18,.54);
+  --yellow: #f6d365;
+  --yellow-soft: #ffedac;
+  --orange: #64735e;
+  --line: rgba(58,47,18,.14);
+  --line-strong: rgba(58,47,18,.27);
+  --shadow-soft: 0 18px 52px rgba(58,47,18,.10);
+  --button-primary-text: #3a2f12;
+  --programeta-umbra: #3a2f12;
+  --programeta-umbra-deep: #1c1810;
+  --programeta-cream: #f3eee5;
+  --programeta-ivory: #fffaf1;
+  --programeta-yellow: #f6d365;
+  --programeta-yellow-soft: #ffedac;
+  --programeta-sage: #dfe7da;
+  --programeta-sage-ink: #53634e;
+  --programeta-beige: #e8dfcc;
+}
+
+.project-detail--programeta .project-detail__panel {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(246,211,101,.23), transparent 30rem),
+    linear-gradient(180deg, #f8f4ec 0%, var(--programeta-cream) 42%, #ece4d5 100%);
+}
+
+.project-detail--programeta .project-detail__toolbar {
+  border-bottom-color: rgba(58,47,18,.12);
+  background: rgba(255,250,241,.88);
+  color: var(--programeta-umbra);
+}
+
+.project-detail--programeta .detail-progress span {
+  background: linear-gradient(90deg, var(--programeta-yellow), #8ca184);
+  box-shadow: 0 0 18px rgba(246,211,101,.36);
+}
+
+/* Hero keeps the strongest brand-yellow moment. */
+.detail-hero--programeta {
+  min-height: 620px;
+  border-color: rgba(58,47,18,.18);
+  background:
+    radial-gradient(circle at 86% 9%, rgba(255,255,255,.34), transparent 26rem),
+    var(--programeta-yellow);
+  box-shadow: 0 30px 90px rgba(58,47,18,.18);
+}
+
+.detail-hero--programeta::after {
+  background: linear-gradient(
+    180deg,
+    rgba(58,47,18,0) 28%,
+    rgba(58,47,18,.10) 54%,
+    rgba(36,29,11,.91) 100%
+  );
+}
+
+.project-detail--programeta .detail-hero__overlay p {
+  color: var(--programeta-yellow-soft);
+}
+
+.project-detail--programeta .detail-hero__overlay h2 {
+  color: #fff8e8;
+}
+
+/* Overview becomes a warm, contained introduction rather than a dark block. */
+.project-detail--programeta .detail-summary {
+  margin-top: 24px;
+  padding: clamp(34px, 5vw, 58px);
+  border: 1px solid rgba(58,47,18,.14);
+  border-radius: 30px;
+  background:
+    linear-gradient(135deg, rgba(255,250,241,.98), rgba(255,244,198,.55));
+  box-shadow: 0 18px 55px rgba(58,47,18,.08);
+}
+
+.project-detail--programeta .detail-summary dl {
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(255,255,255,.54);
+}
+
+.project-detail--programeta .programeta-status-note {
+  border-color: rgba(83,99,78,.22);
+  background: var(--programeta-sage);
+  box-shadow: 0 12px 32px rgba(83,99,78,.08);
+}
+
+.project-detail--programeta .programeta-status-note span {
+  color: var(--programeta-sage-ink);
+}
+
+.project-detail--programeta .programeta-status-note p {
+  color: rgba(58,47,18,.76);
+}
+
+/* Chapter cards create a deliberate chromatic rhythm. */
+.project-detail--programeta .detail-story {
+  display: grid;
+  gap: 18px;
+  padding: 30px 0 72px;
+}
+
+.project-detail--programeta .detail-story > section {
+  margin: 0;
+  padding: clamp(34px, 5vw, 58px);
+  border: 1px solid rgba(58,47,18,.13);
+  border-radius: 30px;
+  background: var(--programeta-ivory);
+  box-shadow: 0 16px 48px rgba(58,47,18,.065);
+}
+
+.project-detail--programeta .detail-story > section:nth-child(1) {
+  background:
+    radial-gradient(circle at 96% 8%, rgba(246,211,101,.32), transparent 16rem),
+    var(--programeta-ivory);
+}
+
+.project-detail--programeta .detail-story > section:nth-child(2) {
+  background: #ffffff;
+}
+
+.project-detail--programeta .detail-story > section:nth-child(3) {
+  background: linear-gradient(135deg, #f2ead9, #fffaf1);
+}
+
+.project-detail--programeta .detail-story > section:nth-child(4) {
+  background: linear-gradient(135deg, #fffdf7, #f8f0d5);
+}
+
+/* Responsive and dark-theme chapter: one purposeful umbra section. */
+.project-detail--programeta .detail-story > section:nth-child(5) {
+  border-color: rgba(246,211,101,.18);
+  background:
+    radial-gradient(circle at 84% 18%, rgba(246,211,101,.13), transparent 24rem),
+    var(--programeta-umbra-deep);
+  color: #fff8e8;
+  box-shadow: 0 24px 70px rgba(28,24,16,.22);
+}
+
+.project-detail--programeta .detail-story > section:nth-child(5) .detail-story__number,
+.project-detail--programeta .detail-story > section:nth-child(5) .eyebrow {
+  color: var(--programeta-yellow);
+}
+
+.project-detail--programeta .detail-story > section:nth-child(5) h3 {
+  color: #fff8e8;
+}
+
+.project-detail--programeta .detail-story > section:nth-child(5) > div > p {
+  color: rgba(255,248,232,.74);
+}
+
+.project-detail--programeta .detail-story > section:nth-child(5) .programeta-gallery figure {
+  border-color: rgba(246,211,101,.18);
+  background: #292217;
+}
+
+.project-detail--programeta .detail-story > section:nth-child(5) .programeta-gallery img {
+  border-color: rgba(246,211,101,.15);
+}
+
+.project-detail--programeta .detail-story > section:nth-child(5) .programeta-gallery figcaption {
+  color: rgba(255,248,232,.58);
+}
+
+/* Firebase chapter: use sage to represent sync, stability and persistence. */
+.project-detail--programeta .detail-story > section:nth-child(6) {
+  border-color: rgba(83,99,78,.20);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255,255,255,.50), transparent 18rem),
+    var(--programeta-sage);
+}
+
+.project-detail--programeta .detail-story > section:nth-child(6) .detail-story__number,
+.project-detail--programeta .detail-story > section:nth-child(6) .eyebrow {
+  color: var(--programeta-sage-ink);
+}
+
+.project-detail--programeta .detail-story > section:nth-child(6) .webapp-tech-list span {
+  border-color: rgba(83,99,78,.28);
+  background: rgba(255,255,255,.42);
+  color: #42503f;
+}
+
+/* Result chapter closes with a softer yellow brand echo. */
+.project-detail--programeta .detail-story > section:nth-child(7) {
+  border-color: rgba(181,143,37,.18);
+  background:
+    radial-gradient(circle at 92% 18%, rgba(255,255,255,.48), transparent 17rem),
+    linear-gradient(135deg, var(--programeta-yellow-soft), #f9e6a8);
+}
+
+/* Feature cards alternate ivory and sage instead of inheriting generic dark cards. */
+.project-detail--programeta .webapp-feature-grid article {
+  border-color: rgba(58,47,18,.14);
+  background: rgba(255,255,255,.72);
+  box-shadow: 0 12px 32px rgba(58,47,18,.065);
+}
+
+.project-detail--programeta .webapp-feature-grid article:nth-child(2),
+.project-detail--programeta .webapp-feature-grid article:nth-child(4) {
+  border-color: rgba(83,99,78,.20);
+  background: var(--programeta-sage);
+}
+
+.project-detail--programeta .webapp-feature-grid article > span {
+  color: var(--programeta-sage-ink);
+}
+
+.project-detail--programeta .webapp-feature-grid h4 {
+  color: var(--programeta-umbra);
+}
+
+.project-detail--programeta .webapp-feature-grid p {
+  color: rgba(58,47,18,.70);
+}
+
+/* Figures read as warm editorial plates. */
+.project-detail--programeta .webapp-figure,
+.project-detail--programeta .programeta-gallery figure {
+  border-color: rgba(58,47,18,.13);
+  background: rgba(255,250,241,.82);
+  box-shadow: 0 16px 44px rgba(58,47,18,.07);
+}
+
+.project-detail--programeta .webapp-figure img,
+.project-detail--programeta .programeta-gallery img {
+  border-color: rgba(58,47,18,.12);
+  box-shadow: 0 14px 38px rgba(58,47,18,.08);
+}
+
+.project-detail--programeta .detail-story figcaption,
+.project-detail--programeta .programeta-gallery figcaption {
+  color: rgba(58,47,18,.56);
+}
+
+/* Links and buttons stay legible on the light palette. */
+.project-detail--programeta .button--primary {
+  border-color: var(--programeta-umbra);
+  background: var(--programeta-umbra);
+  color: #fff8e8;
+  box-shadow: 0 14px 34px rgba(58,47,18,.18);
+}
+
+.project-detail--programeta .button--primary:hover {
+  border-color: #211b0b;
+  background: #211b0b;
+  color: #fff8e8;
+}
+
+.project-detail--programeta .button--secondary {
+  border-color: rgba(58,47,18,.30);
+  background: rgba(255,255,255,.45);
+  color: var(--programeta-umbra);
+}
+
+.project-detail--programeta .button--secondary:hover {
+  border-color: var(--programeta-umbra);
+  background: var(--programeta-yellow-soft);
+  color: var(--programeta-umbra);
+}
+
+/* Closing notes become three distinct product-colour cards. */
+.project-detail--programeta .detail-notes {
+  gap: 14px;
+  border: 0;
+  background: transparent;
+}
+
+.project-detail--programeta .detail-notes > div {
+  min-height: 170px;
+  border: 1px solid rgba(58,47,18,.13);
+  border-radius: 22px;
+  background: var(--programeta-ivory);
+  box-shadow: 0 14px 38px rgba(58,47,18,.06);
+}
+
+.project-detail--programeta .detail-notes > div:nth-child(2) {
+  border-color: rgba(83,99,78,.20);
+  background: var(--programeta-sage);
+}
+
+.project-detail--programeta .detail-notes > div:nth-child(3) {
+  background: var(--programeta-yellow-soft);
+}
+
+.project-detail--programeta .detail-notes .eyebrow {
+  color: var(--programeta-sage-ink);
+}
+
+.project-detail--programeta .detail-notes > div > p:last-child {
+  color: rgba(58,47,18,.72);
+}
+
+@media (max-width: 900px) {
+  .project-detail--programeta .detail-summary {
+    padding: 34px;
+  }
+
+  .project-detail--programeta .detail-story > section {
+    padding: 38px;
+  }
+}
+
+@media (max-width: 700px) {
+  .project-detail--programeta .detail-summary {
+    margin-top: 14px;
+    padding: 26px 22px;
+    border-radius: 22px;
+  }
+
+  .project-detail--programeta .detail-story {
+    gap: 12px;
+    padding-top: 18px;
+  }
+
+  .project-detail--programeta .detail-story > section {
+    padding: 30px 22px;
+    border-radius: 22px;
+  }
+
+  .project-detail--programeta .detail-notes {
+    gap: 10px;
+  }
+}
