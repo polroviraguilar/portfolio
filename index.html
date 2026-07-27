@@ -227,6 +227,17 @@
 </header>
 <div class="product-list">
 
+<article aria-haspopup="dialog" class="product-card product-card--idearium reveal" data-project="idearium" role="button" tabindex="0">
+<div class="product-card__visual product-card__visual--idearium">
+<div aria-hidden="true" class="idearium-card__brand">
+<img alt="" decoding="async" src="assets/images/webapps/idearium/idearium-icon.png"/>
+</div>
+<img alt="Idearium idea workspace on desktop" class="product-card__idearium-desktop" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" sizes="(max-width: 900px) calc(100vw - 28px), min(62vw, 780px)" src="assets/images/webapps/idearium/idearium-desktop-960.webp" srcset="assets/images/webapps/idearium/idearium-desktop-640.webp 640w, assets/images/webapps/idearium/idearium-desktop-960.webp 960w, assets/images/webapps/idearium/idearium-desktop-1600.webp 1600w"/>
+<img alt="Idearium installed PWA on mobile" class="product-card__idearium-mobile" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/idearium/idearium-mobile-390.webp"/>
+</div>
+<div class="product-card__copy"><p class="project-meta">React · TypeScript · Supabase · Cloudflare · PWA · 2026</p><h3>Idearium</h3><p>An offline-first personal workspace for capturing, organising and developing ideas through text, voice transcription, attachments and private cross-device synchronisation.</p><div class="project-pill-row"><span>Offline-first</span><span>Voice transcription</span><span>Private sync</span><span>Installable PWA</span></div><strong>View product case study ↗</strong></div>
+</article>
+
 <article aria-haspopup="dialog" class="product-card product-card--programeta reveal" data-project="programeta" role="button" tabindex="0">
 <div class="product-card__visual product-card__visual--programeta">
 <img alt="Programeta weekly teaching schedule on desktop" class="product-card__programeta-desktop" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" sizes="(max-width: 900px) calc(100vw - 28px), min(62vw, 780px)" src="assets/images/webapps/programeta/programeta-weekly-960.webp" srcset="assets/images/webapps/programeta/programeta-weekly-640.webp 640w, assets/images/webapps/programeta/programeta-weekly-960.webp 960w, assets/images/webapps/programeta/programeta-weekly-1600.webp 1600w"/>
@@ -755,6 +766,136 @@
 </div>
 </section>
 
+
+<section aria-hidden="true" aria-labelledby="project-title-idearium" aria-modal="true" class="project-detail project-detail--idearium" hidden="" id="project-detail-idearium" role="dialog">
+<div class="project-detail__panel" tabindex="-1"><div aria-hidden="true" class="detail-progress"><span></span></div>
+<div class="project-detail__toolbar">
+<button class="detail-back" data-close-project="" type="button">← Back to portfolio</button>
+<span>Web application case study</span>
+<button aria-label="Close Idearium case study" class="detail-close" data-close-project="" type="button">×</button>
+</div>
+<div class="detail-container">
+<header class="detail-hero detail-hero--idearium">
+<div aria-hidden="true" class="idearium-hero__canvas">
+<div class="idearium-hero__glow"></div>
+<img alt="" class="idearium-hero__mark" decoding="async" src="assets/images/webapps/idearium/idearium-icon.png"/>
+<img alt="" class="idearium-hero__screen idearium-hero__screen--desktop" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/idearium/idearium-desktop-1600.webp"/>
+<img alt="" class="idearium-hero__screen idearium-hero__screen--mobile" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/idearium/idearium-mobile-390.webp"/>
+</div>
+<div class="detail-hero__overlay">
+<p>React · TypeScript · Supabase · Cloudflare · Offline-first PWA</p>
+<h2 id="project-title-idearium">Idearium</h2>
+</div>
+</header>
+<div class="detail-summary">
+<div>
+<p class="eyebrow">Overview</p>
+<p>Idearium is a private, offline-first workspace for capturing ideas before they disappear and developing them later through text, voice notes, categories, tags and attached material. Local persistence keeps the product responsive and usable without a stable connection, while Supabase synchronises the same personal workspace across devices.</p>
+<div aria-label="Idearium project links" class="detail-actions">
+<a class="button button--primary" href="https://idearium.pages.dev" rel="noopener noreferrer" target="_blank">Open live app <span aria-hidden="true">↗</span></a>
+<a class="button button--secondary" href="https://github.com/polroviraguilar/idearium" rel="noopener noreferrer" target="_blank">View source code <span aria-hidden="true">↗</span></a>
+</div>
+<div class="idearium-status-note"><span>Production release</span><p>The public deployment supports authenticated accounts, private synchronisation, encrypted transport, installable PWA behaviour and server-side voice transcription.</p></div>
+</div>
+<dl>
+<div><dt>Role</dt><dd>Solo developer &amp; product designer</dd></div>
+<div><dt>Team</dt><dd>1</dd></div>
+<div><dt>Type</dt><dd>Personal productivity product</dd></div>
+<div><dt>Status</dt><dd>Completed v1.0</dd></div>
+<div><dt>Year</dt><dd>2026</dd></div>
+<div><dt>Platform</dt><dd>Responsive PWA</dd></div>
+</dl>
+</div>
+<div class="detail-story">
+<section>
+<span class="detail-story__number">01</span>
+<div>
+<p class="eyebrow">Problem</p>
+<h3>Ideas arrive before they are organised.</h3>
+<p>Useful thoughts often appear as unfinished sentences, quick recordings, references or files. Traditional note products make capture easy but frequently separate voice, materials and later organisation into different workflows. Idearium was designed around one continuous process: capture first, review later and preserve the original context throughout.</p>
+</div>
+</section>
+<section>
+<span class="detail-story__number">02</span>
+<div>
+<p class="eyebrow">Capture workflow</p>
+<h3>Text, voice and supporting material enter the same workspace.</h3>
+<p>The main interface combines categories, a searchable note list and a focused editor. Notes can be pinned, tagged, moved between states and enriched with images, documents, links, video or audio without turning the product into a document-management system.</p>
+<figure class="webapp-figure webapp-figure--wide idearium-figure">
+<img alt="Idearium desktop workspace with categories, notes and an open editor" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" sizes="(max-width: 900px) calc(100vw - 24px), min(100%, 1200px)" src="assets/images/webapps/idearium/idearium-desktop-960.webp" srcset="assets/images/webapps/idearium/idearium-desktop-640.webp 640w, assets/images/webapps/idearium/idearium-desktop-960.webp 960w, assets/images/webapps/idearium/idearium-desktop-1600.webp 1600w"/>
+<figcaption>The desktop workspace keeps navigation, note selection and editing visible as one continuous flow.</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<span class="detail-story__number">03</span>
+<div>
+<p class="eyebrow">Voice transcription</p>
+<h3>A recording becomes an editable note without losing its original audio.</h3>
+<p>The recorder captures audio in the browser, lets the user choose a language or automatic detection, and accepts optional context for names or specialist terms. A protected Cloudflare Pages Function validates the Supabase session before sending the recording to Workers AI. Failed requests preserve the audio and can be retried safely from the note.</p>
+<figure class="webapp-figure webapp-figure--wide idearium-figure">
+<img alt="Idearium voice recorder with language selection and transcription controls" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" sizes="(max-width: 900px) calc(100vw - 24px), min(100%, 1200px)" src="assets/images/webapps/idearium/idearium-voice-960.webp" srcset="assets/images/webapps/idearium/idearium-voice-640.webp 640w, assets/images/webapps/idearium/idearium-voice-960.webp 960w, assets/images/webapps/idearium/idearium-voice-1600.webp 1600w"/>
+<figcaption>Voice capture, language selection and recovery states are handled inside one focused modal.</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<span class="detail-story__number">04</span>
+<div>
+<p class="eyebrow">Offline-first architecture</p>
+<h3>Local data remains usable before the network responds.</h3>
+<p>Each authenticated account receives its own Dexie database in IndexedDB. Interface operations write locally first, while synchronisation metadata records what still needs to reach the cloud. This keeps editing immediate, avoids blocking the product on network latency and allows pending work to continue after a temporary disconnection.</p>
+<div class="webapp-feature-grid idearium-feature-grid">
+<article><span>01</span><h4>User-specific IndexedDB</h4><p>Every account uses an isolated local database instead of sharing one browser-wide workspace.</p></article>
+<article><span>02</span><h4>Pending change queue</h4><p>Notes, categories and attachments retain their local state until synchronisation succeeds.</p></article>
+<article><span>03</span><h4>Conflict preservation</h4><p>Overlapping changes create a recoverable conflict copy rather than silently discarding work.</p></article>
+<article><span>04</span><h4>Connection recovery</h4><p>Pending operations resume when the browser returns online and the session remains valid.</p></article>
+</div>
+<div aria-label="Idearium data flow" class="idearium-state-flow">
+<span>React interface</span><i aria-hidden="true"></i><span>Dexie / IndexedDB</span><i aria-hidden="true"></i><span>Sync engine</span><i aria-hidden="true"></i><span>Supabase</span>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">05</span>
+<div>
+<p class="eyebrow">Private synchronisation</p>
+<h3>Local speed and cloud continuity work as one system.</h3>
+<p>Supabase Auth identifies the active account, PostgreSQL stores structured records and Row Level Security limits every query to the authenticated owner. Binary attachments use a private Storage bucket organised by user, note and attachment identifiers. The same workspace can therefore be reconstructed on another device without exposing files publicly.</p>
+<div aria-label="Idearium technologies" class="webapp-tech-list">
+<span>React 18</span><span>TypeScript</span><span>Vite</span><span>Dexie</span><span>IndexedDB</span><span>Supabase Auth</span><span>PostgreSQL</span><span>Row Level Security</span><span>Supabase Storage</span><span>Cloudflare Pages</span><span>Pages Functions</span><span>Workers AI</span>
+</div>
+</div>
+</section>
+<section>
+<span class="detail-story__number">06</span>
+<div>
+<p class="eyebrow">Attachments and recovery</p>
+<h3>Notes remain portable without reducing them to plain text.</h3>
+<p>Images, audio, video, documents and links are represented as first-class attachments. Binary content is cached locally for later access and stored remotely in a private bucket. Full JSON exports include note data and encoded attachment content, making it possible to restore the workspace without creating duplicate remote records.</p>
+<figure class="webapp-figure webapp-figure--wide idearium-figure">
+<img alt="Idearium note containing image, audio, document and link attachments" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" sizes="(max-width: 900px) calc(100vw - 24px), min(100%, 1200px)" src="assets/images/webapps/idearium/idearium-attachments-960.webp" srcset="assets/images/webapps/idearium/idearium-attachments-640.webp 640w, assets/images/webapps/idearium/idearium-attachments-960.webp 960w, assets/images/webapps/idearium/idearium-attachments-1600.webp 1600w"/>
+<figcaption>Different materials remain attached to the same idea and follow it across devices.</figcaption>
+</figure>
+</div>
+</section>
+<section>
+<span class="detail-story__number">07</span>
+<div>
+<p class="eyebrow">Responsive product</p>
+<h3>The same personal workspace adapts from desktop to an installed mobile PWA.</h3>
+<p>The desktop layout keeps three levels of context visible, while mobile narrows the experience to the current task and uses touch-friendly navigation. Light and dark themes preserve the hierarchy, and the service worker makes the product installable and keeps the application shell available between sessions.</p>
+<div class="idearium-gallery">
+<figure><img alt="Idearium installed on a mobile device" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" src="assets/images/webapps/idearium/idearium-mobile-390.webp"/><figcaption>The mobile PWA focuses navigation and editing into a compact, touch-oriented flow.</figcaption></figure>
+<figure><img alt="Idearium desktop workspace using the dark theme" data-fallback="assets/images/common/media-placeholder.svg" decoding="async" loading="lazy" sizes="(max-width: 900px) calc(100vw - 24px), min(72vw, 960px)" src="assets/images/webapps/idearium/idearium-dark-960.webp" srcset="assets/images/webapps/idearium/idearium-dark-640.webp 640w, assets/images/webapps/idearium/idearium-dark-960.webp 960w, assets/images/webapps/idearium/idearium-dark-1600.webp 1600w"/><figcaption>The dark theme uses the same information structure without relying on pure black.</figcaption></figure>
+</div>
+</div>
+</section>
+</div>
+<div class="detail-notes"><div><p class="eyebrow">Product focus</p><p>Low-friction capture followed by deliberate review and organisation.</p></div><div><p class="eyebrow">Technical focus</p><p>Offline-first persistence, private cloud synchronisation and resilient file handling.</p></div><div><p class="eyebrow">Design focus</p><p>A warm, focused workspace that remains clear across desktop, mobile, light and dark themes.</p></div></div>
+</div>
+</div>
+</section>
 <section aria-hidden="true" aria-labelledby="project-title-programeta" aria-modal="true" class="project-detail project-detail--programeta" hidden="" id="project-detail-programeta" role="dialog">
 <div class="project-detail__panel" tabindex="-1"><div aria-hidden="true" class="detail-progress"><span></span></div>
 <div class="project-detail__toolbar">
