@@ -118,7 +118,12 @@ async function main() {
   const imageJobs = [
     ["assets/images/games/soma/soma-vanta.png", [640, 960, 1600], 80],
     ["assets/images/games/mecha/mecha-combat.png", [640, 960, 1600], 80],
-    ["assets/images/games/monkey-island/monkey-image-3.png", [640, 960, 1600], 80]
+    ["assets/images/games/monkey-island/monkey-image-3.png", [640, 960, 1600], 80],
+    ["assets/images/webapps/programeta/programeta-weekly.png", [640, 960, 1600], 82],
+    ["assets/images/webapps/programeta/programeta-annual.png", [640, 960, 1600], 82],
+    ["assets/images/webapps/programeta/programeta-dark.png", [640, 960, 1600], 82],
+    ["assets/images/webapps/programeta/programeta-login.png", [640, 960, 1600], 82],
+    ["assets/images/webapps/programeta/programeta-mobile.png", [385], 84]
   ];
 
   for (const [input, widths, quality] of imageJobs) {
